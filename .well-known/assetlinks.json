@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "dev.miyab.vantage",
+      "sha256_cert_fingerprints": [
+        "1C:77:86:76:EE:05:45:6D:1E:5F:55:7D:01:12:B3:B4:F3:C5:3C:EB:96:3C:33:F3:72:9D:D8:4D:F8:E0:9B:1F"
+      ]
+    }
+  }
+]
