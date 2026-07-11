@@ -26,7 +26,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_JSON = ROOT / "kumamap" / "incidents.json"
 STATUS_JSON = ROOT / "kumamap" / "status.json"
 
-USER_AGENT = "KumaMapDataUpdater/1.0"
+USER_AGENT = "KumaMapDataUpdater/1.1"
 
 
 def fetch_bytes(url: str) -> bytes:
@@ -80,27 +80,36 @@ def normalize_header(value: str) -> str:
 
 
 def find_column(headers: Iterable[str], names: Iterable[str]) -> str | None:
-    normalized = {normalize_header(h).lower(): h for h in headers}
+    normalized = {normalize_header(header).lower(): header for header in headers}
+
     for name in names:
         key = normalize_header(name).lower()
         if key in normalized:
             return normalized[key]
+
     return None
 
 
 def parse_rows(text: str) -> list[dict[str, str]]:
     sample = text[:4096]
+
     try:
         dialect = csv.Sniffer().sniff(sample, delimiters=",\t;")
     except csv.Error:
         dialect = csv.excel
 
     reader = csv.DictReader(io.StringIO(text), dialect=dialect)
+
     if not reader.fieldnames:
         raise RuntimeError("CSVのヘッダーを検出できませんでした。")
 
-    headers = [normalize_header(h) for h in reader.fieldnames if h is not None]
-    required = {
+    headers = [
+        normalize_header(header)
+        for header in reader.fieldnames
+        if header is not None
+    ]
+
+    detected = {
         "date": find_column(headers, ("出没日時", "発見日時", "日時", "日付")),
         "location": find_column(headers, ("出没場所", "発見場所", "場所", "所在地")),
         "longitude": find_column(headers, ("経度", "longitude", "lng", "x")),
@@ -111,9 +120,11 @@ def parse_rows(text: str) -> list[dict[str, str]]:
     }
 
     missing = [
-        key for key in ("date", "location", "longitude", "latitude")
-        if not required[key]
+        key
+        for key in ("date", "location", "longitude", "latitude")
+        if not detected[key]
     ]
+
     if missing:
         raise RuntimeError(
             "必要な列を検出できません: "
@@ -122,21 +133,24 @@ def parse_rows(text: str) -> list[dict[str, str]]:
         )
 
     rows: list[dict[str, str]] = []
+
     for raw_row in reader:
         row = {
-            normalize_header(key): (str(value).strip() if value is not None else "")
+            normalize_header(key): (
+                str(value).strip() if value is not None else ""
+            )
             for key, value in raw_row.items()
             if key is not None
         }
-        if any(row.values()):
-            row["_date_col"] = required["date"] or ""
-            row["_location_col"] = required["location"] or ""
-            row["_longitude_col"] = required["longitude"] or ""
-            row["_latitude_col"] = required["latitude"] or ""
-            row["_category_col"] = required["category"] or ""
-            row["_size_col"] = required["size"] or ""
-            row["_other_col"] = required["other"] or ""
-            rows.append(row)
+
+        if not any(row.values()):
+            continue
+
+        for key, column in detected.items():
+            row[f"_{key}_col"] = column or ""
+
+        rows.append(row)
+
     return rows
 
 
@@ -147,19 +161,30 @@ def get(row: dict[str, str], marker: str) -> str:
 
 def normalize_date(value: str) -> str:
     text = value.strip()
+
     if not text:
         return ""
 
-    gregorian = re.search(r"(20\d{2})[年/.\-](\d{1,2})[月/.\-](\d{1,2})", text)
+    gregorian = re.search(
+        r"(20\d{2})[年/.\-](\d{1,2})[月/.\-](\d{1,2})",
+        text,
+    )
     if gregorian:
         year, month, day = map(int, gregorian.groups())
         return f"{year:04d}-{month:02d}-{day:02d}"
 
-    reiwa = re.search(r"令和\s*(\d+|元)\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})", text)
+    reiwa = re.search(
+        r"令和\s*(\d+|元)\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})",
+        text,
+    )
     if reiwa:
         era_year_text, month_text, day_text = reiwa.groups()
         era_year = 1 if era_year_text == "元" else int(era_year_text)
-        return f"{2018 + era_year:04d}-{int(month_text):02d}-{int(day_text):02d}"
+        return (
+            f"{2018 + era_year:04d}-"
+            f"{int(month_text):02d}-"
+            f"{int(day_text):02d}"
+        )
 
     abbreviated = re.search(
         r"R\s*(\d+)\s*[./\-]\s*(\d{1,2})\s*[./\-]\s*(\d{1,2})",
@@ -176,8 +201,10 @@ def normalize_date(value: str) -> str:
 def parse_float(value: str) -> float | None:
     cleaned = value.replace(",", "").strip()
     match = re.search(r"-?\d+(?:\.\d+)?", cleaned)
+
     if not match:
         return None
+
     try:
         return float(match.group(0))
     except ValueError:
@@ -185,25 +212,44 @@ def parse_float(value: str) -> float | None:
 
 
 def normalize_category(value: str, combined_text: str) -> str:
-    text = f"{value} {combined_text}"
-    if any(word in text for word in ("人身", "負傷", "けが", "ケガ", "襲撃")):
+    raw_category = value.strip()
+
+    # 仙台市CSVの「分類」列には、出没種別ではなく
+    # データセット名が入る場合があるため、その場合は無視する。
+    generic_category = (
+        not raw_category
+        or "クマ出没情報" in raw_category
+        or "熊出没情報" in raw_category
+    )
+
+    text = combined_text if generic_category else f"{raw_category} {combined_text}"
+
+    if any(word in text for word in ("人身", "負傷", "けが", "ケガ", "襲撃", "襲われ")):
         return "被害"
+
     if any(word in text for word in ("捕獲", "駆除")):
         return "捕獲"
+
     if any(word in text for word in ("痕跡", "足跡", "ふん", "フン", "糞", "食痕")):
         return "痕跡"
-    return value.strip() or "目撃"
+
+    if not generic_category:
+        return raw_category
+
+    return "目撃"
 
 
 def infer_municipality(location: str) -> str:
     for ward in ("青葉区", "宮城野区", "若林区", "太白区", "泉区"):
         if ward in location:
             return f"仙台市{ward}"
+
     return "仙台市"
 
 
 def infer_risk_level(category: str, location: str, description: str) -> str:
     text = f"{category} {location} {description}"
+
     if category == "被害":
         return "高"
 
@@ -212,10 +258,13 @@ def infer_risk_level(category: str, location: str, description: str) -> str:
         "幼稚園", "保育園", "市街地", "駅", "公園",
         "通学路", "道路", "敷地", "店舗",
     )
+
     if any(word in text for word in high_words):
         return "高"
+
     if category in ("目撃", "痕跡"):
         return "中"
+
     return "低"
 
 
@@ -239,28 +288,41 @@ def build_incidents(rows: list[dict[str, str]]) -> list[dict[str, object]]:
 
         if latitude is None or longitude is None:
             continue
-        if not (20.0 <= latitude <= 50.0 and 120.0 <= longitude <= 155.0):
+
+        if not (
+            20.0 <= latitude <= 50.0
+            and 120.0 <= longitude <= 155.0
+        ):
             continue
 
         description_parts = [
-            part for part in (
+            part
+            for part in (
                 f"頭数・体長：{size_text}" if size_text else "",
                 other_text,
             )
             if part
         ]
+
         description = " / ".join(description_parts) or "詳細情報なし"
 
         category = normalize_category(
             raw_category,
             f"{location} {size_text} {other_text}",
         )
+
         municipality = infer_municipality(location)
         risk_level = infer_risk_level(category, location, description)
 
         incidents.append(
             {
-                "id": stable_id(date_text, location, latitude, longitude, category),
+                "id": stable_id(
+                    date_text,
+                    location,
+                    latitude,
+                    longitude,
+                    category,
+                ),
                 "date": date_text,
                 "prefecture": "宮城県",
                 "municipality": municipality,
@@ -276,9 +338,13 @@ def build_incidents(rows: list[dict[str, str]]) -> list[dict[str, object]]:
         )
 
     incidents.sort(
-        key=lambda item: (str(item.get("date", "")), str(item.get("id", ""))),
+        key=lambda item: (
+            str(item.get("date", "")),
+            str(item.get("id", "")),
+        ),
         reverse=True,
     )
+
     return incidents
 
 
@@ -292,21 +358,29 @@ def main() -> int:
     incidents = build_incidents(rows)
 
     if not incidents:
-        raise RuntimeError("変換結果が0件のため、既存JSONを更新しません。")
+        raise RuntimeError(
+            "変換結果が0件のため、既存JSONを更新しません。"
+        )
 
     OUTPUT_JSON.parent.mkdir(parents=True, exist_ok=True)
+
     OUTPUT_JSON.write_text(
         json.dumps(incidents, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
 
     status = {
-        "updatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"),
+        "updatedAt": (
+            datetime.now(timezone.utc)
+            .isoformat(timespec="seconds")
+            .replace("+00:00", "Z")
+        ),
         "count": len(incidents),
         "sourceName": "仙台市",
         "sourceCsvUrl": csv_url,
         "sourcePageUrl": SOURCE_PAGE_URL,
     }
+
     STATUS_JSON.write_text(
         json.dumps(status, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
