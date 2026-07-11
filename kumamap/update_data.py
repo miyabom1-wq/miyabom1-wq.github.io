@@ -1821,6 +1821,51 @@ def write_json(
     )
 
 
+
+def load_previous_miyagi_incidents() -> list[dict[str, object]]:
+    if not OUTPUT_JSON.exists():
+        return []
+
+    try:
+        value = json.loads(
+            OUTPUT_JSON.read_text(encoding="utf-8")
+        )
+    except Exception:
+        return []
+
+    if not isinstance(value, list):
+        return []
+
+    preserved: list[dict[str, object]] = []
+
+    for item in value:
+        if not isinstance(item, dict):
+            continue
+
+        source_name = str(
+            item.get("sourceName", "")
+        )
+
+        if "宮城県" not in source_name:
+            continue
+
+        latitude = item.get("latitude")
+        longitude = item.get("longitude")
+
+        if not isinstance(
+            latitude,
+            (int, float),
+        ) or not isinstance(
+            longitude,
+            (int, float),
+        ):
+            continue
+
+        preserved.append(item)
+
+    return preserved
+
+
 def main() -> int:
     sendai_csv_url = discover_sendai_csv_url()
     print(f"仙台市CSV取得先: {sendai_csv_url}")
@@ -1844,6 +1889,10 @@ def main() -> int:
         .isoformat(timespec="seconds")
         .replace("+00:00", "Z")
     )
+    previous_miyagi_incidents = (
+        load_previous_miyagi_incidents()
+    )
+
     diagnostics: dict[str, object] = {
         "updatedAt": updated_at,
         "sendaiCount": len(sendai_incidents),
@@ -1910,17 +1959,39 @@ def main() -> int:
             miyagi_incidents
         )
     except Exception as error:
-        diagnostics["miyagiStatus"] = "取得失敗"
         errors = list(
             diagnostics.get("miyagiErrors", [])
         )
         errors.append(str(error))
         diagnostics["miyagiErrors"] = errors
-        miyagi_incidents = []
-        print(
-            "宮城県データ取得に失敗したため、"
-            f"仙台市データのみ使用します: {error}"
-        )
+
+        if previous_miyagi_incidents:
+            diagnostics["miyagiStatus"] = (
+                "前回データ保持"
+            )
+            diagnostics["miyagiPreservedCount"] = (
+                len(previous_miyagi_incidents)
+            )
+            miyagi_incidents = (
+                previous_miyagi_incidents
+            )
+            print(
+                "宮城県データ取得に失敗したため、"
+                f"前回の宮城県データ"
+                f"{len(previous_miyagi_incidents)}件を保持します: "
+                f"{error}"
+            )
+        else:
+            diagnostics["miyagiStatus"] = (
+                "取得失敗"
+            )
+            diagnostics["miyagiPreservedCount"] = 0
+            miyagi_incidents = []
+            print(
+                "宮城県データ取得に失敗し、"
+                "保持可能な前回データもありません: "
+                f"{error}"
+            )
 
     incidents, miyagi_added_count = merge_incidents(
         sendai_incidents,
@@ -1956,6 +2027,10 @@ def main() -> int:
             len(miyagi_incidents) - miyagi_added_count
         ),
         "miyagiStatus": diagnostics["miyagiStatus"],
+        "miyagiPreservedCount": diagnostics.get(
+            "miyagiPreservedCount",
+            0,
+        ),
         "sourceCsvUrl": sendai_csv_url,
         "sourcePageUrl": SENDAI_SOURCE_PAGE_URL,
         "miyagiSourcePageUrl": MIYAGI_SOURCE_PAGE_URL,
