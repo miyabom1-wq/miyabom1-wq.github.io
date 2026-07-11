@@ -1,1 +1,45 @@
+    name: Update KumaMap data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-kumamap-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Fetch and convert Sendai bear data
+        run: python kumamap/update_data.py
+
+      - name: Commit updated JSON
+        run: |
+          if git diff --quiet -- kumamap/incidents.json kumamap/status.json; then
+            echo "No data changes."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add kumamap/incidents.json kumamap/status.json
+          git commit -m "Update KumaMap incident data"
+          git push
+
+    
 
