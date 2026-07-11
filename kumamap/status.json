@@ -1,5 +1,7 @@
 {
-  "updatedAt": null,
-  "count": 0,
-  "sourceName": "仙台市"
+  "updatedAt": "2026-07-11T03:29:02Z",
+  "count": 181,
+  "sourceName": "仙台市",
+  "sourceCsvUrl": "https://www2.wagmap.jp/sendaicity/sendaicity/opendatafile/map_331/CSV/opendata_20129.csv",
+  "sourcePageUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html"
 }
