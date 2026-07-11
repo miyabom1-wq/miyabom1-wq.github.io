@@ -47,7 +47,7 @@ DIAGNOSTICS_JSON = (
     ROOT / "kumamap" / "miyagi_diagnostics.json"
 )
 
-USER_AGENT = "KumaMapDataUpdater/2.1-diagnostic"
+USER_AGENT = "KumaMapDataUpdater/3.0-miyagi-join"
 DEFAULT_YEAR = 2026
 SENDAI_WARDS = (
     "青葉区",
@@ -829,14 +829,93 @@ def row_to_dict(
     }
 
 
-def parse_miyagi_xlsx_diagnostics(
+def normalize_serial_number(value: str) -> str:
+    text = normalize_header(value)
+
+    if not text:
+        return ""
+
+    match = re.search(r"\d+(?:\.0+)?", text)
+
+    if not match:
+        return ""
+
+    try:
+        return str(int(float(match.group(0))))
+    except ValueError:
+        return ""
+
+
+def parse_integer_cell(value: str) -> int | None:
+    text = normalize_header(value)
+
+    if not text:
+        return None
+
+    try:
+        number = int(float(text))
+    except ValueError:
+        match = re.search(r"\d+", text)
+        if not match:
+            return None
+        number = int(match.group(0))
+
+    return number
+
+
+def excel_time_to_text(value: str) -> str:
+    text = normalize_header(value)
+
+    if not text:
+        return ""
+
+    clock_match = re.search(
+        r"(?<!\d)(\d{1,2})\s*[:：]\s*(\d{1,2})(?!\d)",
+        text,
+    )
+
+    if clock_match:
+        hour, minute = map(int, clock_match.groups())
+        if 0 <= hour <= 23 and 0 <= minute <= 59:
+            return f"{hour:02d}:{minute:02d}"
+
+    try:
+        fraction = float(text)
+    except ValueError:
+        return text
+
+    fraction = fraction % 1.0
+    total_minutes = int(round(fraction * 24 * 60)) % (24 * 60)
+    hour, minute = divmod(total_minutes, 60)
+    return f"{hour:02d}:{minute:02d}"
+
+
+def find_header_position(
+    headers: list[str],
+    keywords: tuple[str, ...],
+) -> int | None:
+    for index, header in enumerate(headers):
+        normalized = normalize_header(header)
+        if any(keyword in normalized for keyword in keywords):
+            return index
+
+    return None
+
+
+def cell_at(row: list[str], index: int | None) -> str:
+    if index is None or index < 0 or index >= len(row):
+        return ""
+
+    return normalize_header(row[index])
+
+
+def parse_miyagi_xlsx(
     raw: bytes,
-) -> dict[str, object]:
+) -> tuple[list[dict[str, str]], dict[str, object]]:
     with zipfile.ZipFile(io.BytesIO(raw)) as archive:
         shared_strings = read_xlsx_shared_strings(archive)
         sheet_paths = read_xlsx_sheet_paths(archive)
-        sheet_results: list[dict[str, object]] = []
-        all_sendai_rows: list[dict[str, str]] = []
+        candidates: list[dict[str, object]] = []
 
         for sheet_name, sheet_path in sheet_paths:
             rows = read_xlsx_rows(
@@ -846,12 +925,6 @@ def parse_miyagi_xlsx_diagnostics(
             )
 
             if not rows:
-                sheet_results.append(
-                    {
-                        "sheetName": sheet_name,
-                        "rowCount": 0,
-                    }
-                )
                 continue
 
             scored_rows = [
@@ -862,43 +935,142 @@ def parse_miyagi_xlsx_diagnostics(
                 scored_rows,
                 default=(0, 0),
             )
-            headers = unique_headers(rows[header_index])
-            data_rows = rows[header_index + 1 :]
-            dictionaries = [
-                row_to_dict(headers, row)
-                for row in data_rows
-                if any(row)
-            ]
-            sendai_rows = [
-                row
-                for row in dictionaries
-                if is_sendai_text(" | ".join(row.values()))
-            ]
-            all_sendai_rows.extend(sendai_rows)
+            headers = rows[header_index]
 
-            sheet_results.append(
+            number_index = find_header_position(
+                headers,
+                ("番号",),
+            )
+            month_index = find_header_position(
+                headers,
+                ("発見日時", "目撃日時", "出没日時", "日時"),
+            )
+            municipality_index = find_header_position(
+                headers,
+                ("市区町村", "市町村", "自治体"),
+            )
+            district_index = find_header_position(
+                headers,
+                ("地区", "場所", "所在地"),
+            )
+            count_index = find_header_position(
+                headers,
+                ("頭数",),
+            )
+            category_index = find_header_position(
+                headers,
+                ("痕跡", "種別", "区分", "分類"),
+            )
+            office_index = find_header_position(
+                headers,
+                ("事務所",),
+            )
+
+            if (
+                number_index is None
+                or month_index is None
+                or municipality_index is None
+            ):
+                continue
+
+            day_index = month_index + 1
+            time_index = month_index + 2
+            parsed_rows: list[dict[str, str]] = []
+
+            for row in rows[header_index + 1 :]:
+                serial = normalize_serial_number(
+                    cell_at(row, number_index)
+                )
+
+                if not serial:
+                    continue
+
+                municipality = cell_at(
+                    row,
+                    municipality_index,
+                )
+
+                if "仙台市" not in municipality:
+                    continue
+
+                month = parse_integer_cell(
+                    cell_at(row, month_index)
+                )
+                day = parse_integer_cell(
+                    cell_at(row, day_index)
+                )
+
+                if (
+                    month is None
+                    or day is None
+                    or not (1 <= month <= 12)
+                    or not (1 <= day <= 31)
+                ):
+                    continue
+
+                parsed_rows.append(
+                    {
+                        "serial": serial,
+                        "date": (
+                            f"{DEFAULT_YEAR:04d}-"
+                            f"{month:02d}-{day:02d}"
+                        ),
+                        "time": excel_time_to_text(
+                            cell_at(row, time_index)
+                        ),
+                        "office": cell_at(row, office_index),
+                        "municipality": municipality,
+                        "district": cell_at(row, district_index),
+                        "count": cell_at(row, count_index),
+                        "category": cell_at(row, category_index),
+                    }
+                )
+
+            candidates.append(
                 {
                     "sheetName": sheet_name,
                     "sheetPath": sheet_path,
-                    "rowCount": len(rows),
                     "headerRowIndex": header_index + 1,
                     "headerScore": best_score,
-                    "headers": headers,
-                    "sampleRows": dictionaries[:5],
-                    "sendaiRowCount": len(sendai_rows),
-                    "sendaiSampleRows": sendai_rows[:20],
+                    "headers": unique_headers(headers),
+                    "rows": parsed_rows,
                 }
             )
 
-        return {
+        if not candidates:
+            raise RuntimeError(
+                "宮城県Excelから対象シートを検出できませんでした。"
+            )
+
+        selected = max(
+            candidates,
+            key=lambda candidate: len(candidate["rows"]),
+        )
+        selected_rows = selected["rows"]
+
+        if not isinstance(selected_rows, list):
+            raise RuntimeError(
+                "宮城県Excelの解析結果が不正です。"
+            )
+
+        diagnostics = {
             "xlsxByteCount": len(raw),
-            "sharedStringCount": len(shared_strings),
             "sheetCount": len(sheet_paths),
-            "sheets": sheet_results,
-            "sendaiRowCountTotal": len(all_sendai_rows),
-            "sendaiSampleRows": all_sendai_rows[:30],
+            "selectedSheetName": selected["sheetName"],
+            "selectedHeaderRowIndex": selected["headerRowIndex"],
+            "selectedHeaders": selected["headers"],
+            "sendaiRowCount": len(selected_rows),
+            "sendaiSampleRows": selected_rows[:20],
+            "candidateSheets": [
+                {
+                    "sheetName": candidate["sheetName"],
+                    "sendaiRowCount": len(candidate["rows"]),
+                }
+                for candidate in candidates
+            ],
         }
 
+        return selected_rows, diagnostics
 
 def discover_miyagi_sources(
     page_html: str,
@@ -1262,24 +1434,35 @@ def clean_description(
     return result[:280]
 
 
-def parse_miyagi_kml(
+def extract_kml_serial_number(
+    combined_text: str,
+) -> str:
+    match = re.search(
+        r"通し番号\s*[：:]\s*(\d+(?:\.0+)?)",
+        combined_text,
+    )
+
+    if not match:
+        return ""
+
+    return normalize_serial_number(match.group(1))
+
+
+def parse_miyagi_kml_points(
     kml_text: str,
 ) -> tuple[
-    list[dict[str, object]],
+    dict[str, list[dict[str, object]]],
     dict[str, object],
 ]:
     root = ET.fromstring(kml_text)
     placemark_entries = collect_placemarks(root)
-
-    incidents: list[dict[str, object]] = []
-    diagnostics: dict[str, object] = {
-        "placemarkCount": len(placemark_entries),
-        "pointPlacemarkCount": 0,
-        "sendaiTextMatchCount": 0,
-        "sendaiWithDateCount": 0,
-        "sendaiAcceptedCount": 0,
-        "placemarkSamples": [],
-    }
+    points_by_serial: dict[
+        str,
+        list[dict[str, object]],
+    ] = {}
+    sample_points: list[dict[str, object]] = []
+    point_count = 0
+    serial_point_count = 0
 
     for placemark, folder_names in placemark_entries:
         coordinates = parse_coordinates(placemark)
@@ -1287,33 +1470,23 @@ def parse_miyagi_kml(
         if coordinates is None:
             continue
 
-        diagnostics["pointPlacemarkCount"] += 1
-
+        point_count += 1
         name = html_to_text(
-            direct_child_text(
-                placemark,
-                "name",
-            )
+            direct_child_text(placemark, "name")
         )
         description_text = html_to_text(
-            direct_child_text(
-                placemark,
-                "description",
-            )
+            direct_child_text(placemark, "description")
         )
         extended_values = [
             html_to_text(value)
-            for value in all_extended_values(
-                placemark
-            )
+            for value in all_extended_values(placemark)
             if value
         ]
         folder_text = " / ".join(
-            name
-            for name in folder_names
-            if name
+            folder_name
+            for folder_name in folder_names
+            if folder_name
         )
-
         combined_text = " | ".join(
             part
             for part in (
@@ -1324,94 +1497,192 @@ def parse_miyagi_kml(
             )
             if part
         )
-
-        samples = diagnostics["placemarkSamples"]
-        if isinstance(samples, list) and len(samples) < 30:
-            latitude, longitude = coordinates
-            samples.append(
-                {
-                    "name": name,
-                    "folderText": folder_text,
-                    "description": description_text[:300],
-                    "extendedValues": extended_values[:10],
-                    "combinedText": combined_text[:500],
-                    "latitude": latitude,
-                    "longitude": longitude,
-                    "normalizedDate": normalize_date(
-                        combined_text,
-                        default_year=DEFAULT_YEAR,
-                    ),
-                }
-            )
-
-        if not is_sendai_text(combined_text):
-            continue
-
-        diagnostics["sendaiTextMatchCount"] += 1
-
-        date_text = normalize_date(
-            combined_text,
-            default_year=DEFAULT_YEAR,
+        serial = extract_kml_serial_number(
+            combined_text
         )
 
-        if not date_text:
+        if not serial:
             continue
 
-        diagnostics["sendaiWithDateCount"] += 1
-
+        serial_point_count += 1
         latitude, longitude = coordinates
-        raw_category = (
-            folder_text
-            or name
+        point = {
+            "serial": serial,
+            "date": normalize_date(
+                combined_text,
+                default_year=DEFAULT_YEAR,
+            ),
+            "name": name,
+            "folderText": folder_text,
+            "description": description_text,
+            "latitude": latitude,
+            "longitude": longitude,
+        }
+        points_by_serial.setdefault(serial, []).append(point)
+
+        if len(sample_points) < 20:
+            sample_points.append(point)
+
+    diagnostics = {
+        "placemarkCount": len(placemark_entries),
+        "pointPlacemarkCount": point_count,
+        "serialPointCount": serial_point_count,
+        "uniqueSerialCount": len(points_by_serial),
+        "duplicateSerialCount": sum(
+            1
+            for points in points_by_serial.values()
+            if len(points) > 1
+        ),
+        "pointSamples": sample_points,
+    }
+
+    return points_by_serial, diagnostics
+
+
+def choose_kml_point(
+    row: dict[str, str],
+    points: list[dict[str, object]],
+) -> dict[str, object] | None:
+    if not points:
+        return None
+
+    row_date = row.get("date", "")
+    matching_date = [
+        point
+        for point in points
+        if str(point.get("date", "")) == row_date
+    ]
+
+    if matching_date:
+        return matching_date[0]
+
+    return points[0]
+
+
+def compose_miyagi_location(
+    municipality: str,
+    district: str,
+) -> str:
+    municipality = normalize_header(municipality)
+    district = normalize_header(district)
+
+    if not district:
+        return municipality or "仙台市内"
+
+    if district.startswith("仙台市"):
+        return district
+
+    for ward in SENDAI_WARDS:
+        if district.startswith(ward):
+            return f"仙台市{district}"
+
+    return f"{municipality} {district}".strip()
+
+
+def build_miyagi_incidents(
+    xlsx_rows: list[dict[str, str]],
+    points_by_serial: dict[
+        str,
+        list[dict[str, object]],
+    ],
+) -> tuple[
+    list[dict[str, object]],
+    dict[str, object],
+]:
+    incidents: list[dict[str, object]] = []
+    unmatched_rows: list[dict[str, str]] = []
+    date_mismatch_count = 0
+
+    for row in xlsx_rows:
+        serial = row.get("serial", "")
+        points = points_by_serial.get(serial, [])
+        point = choose_kml_point(row, points)
+
+        if point is None:
+            if len(unmatched_rows) < 30:
+                unmatched_rows.append(row)
+            continue
+
+        row_date = row.get("date", "")
+        point_date = str(point.get("date", ""))
+
+        if row_date and point_date and row_date != point_date:
+            date_mismatch_count += 1
+
+        date_text = row_date or point_date
+        latitude = float(point["latitude"])
+        longitude = float(point["longitude"])
+        municipality = row.get("municipality", "仙台市")
+        district = row.get("district", "")
+        location = compose_miyagi_location(
+            municipality,
+            district,
         )
         category = normalize_category(
-            raw_category,
-            combined_text,
+            row.get("category", ""),
+            " ".join(row.values()),
         )
-        location = extract_location_text(
-            combined_text,
-            name,
-        )
-        description = clean_description(
-            name,
-            description_text,
-            folder_text,
-        )
-        municipality = infer_municipality(
-            f"{location} {combined_text}"
-        )
+        description_parts = [
+            part
+            for part in (
+                (
+                    f"時刻：{row.get('time', '')}"
+                    if row.get("time")
+                    else ""
+                ),
+                (
+                    f"頭数：{row.get('count', '')}"
+                    if row.get("count")
+                    else ""
+                ),
+                f"宮城県一覧番号：{serial}",
+            )
+            if part
+        ]
+        description = " / ".join(description_parts)
         risk_level = infer_risk_level(
             category,
             location,
             description,
         )
 
-        incident = {
-            "id": stable_id(
-                "MIYAGI",
-                date_text,
-                round(latitude, 5),
-                round(longitude, 5),
-                category,
-            ),
-            "date": date_text,
-            "prefecture": "宮城県",
-            "municipality": municipality,
-            "locationText": location,
-            "category": category,
-            "description": description,
-            "riskLevel": risk_level,
-            "sourceName": "宮城県",
-            "sourceUrl": MIYAGI_SOURCE_PAGE_URL,
-            "latitude": latitude,
-            "longitude": longitude,
-        }
+        incidents.append(
+            {
+                "id": stable_id(
+                    "MIYAGI",
+                    serial,
+                    date_text,
+                    round(latitude, 6),
+                    round(longitude, 6),
+                    category,
+                ),
+                "date": date_text,
+                "prefecture": "宮城県",
+                "municipality": (
+                    municipality or infer_municipality(location)
+                ),
+                "locationText": location,
+                "category": category,
+                "description": description,
+                "riskLevel": risk_level,
+                "sourceName": "宮城県",
+                "sourceUrl": MIYAGI_SOURCE_PAGE_URL,
+                "latitude": latitude,
+                "longitude": longitude,
+            }
+        )
 
-        incidents.append(incident)
-        diagnostics["sendaiAcceptedCount"] += 1
+    diagnostics = {
+        "xlsxSendaiCount": len(xlsx_rows),
+        "matchedPointCount": len(incidents),
+        "unmatchedPointCount": (
+            len(xlsx_rows) - len(incidents)
+        ),
+        "dateMismatchCount": date_mismatch_count,
+        "unmatchedSamples": unmatched_rows,
+    }
 
     return incidents, diagnostics
-
 
 def distance_km(
     first: dict[str, object],
@@ -1472,7 +1743,7 @@ def is_probable_duplicate(
     ):
         return False
 
-    if distance_km(candidate, existing) <= 0.25:
+    if distance_km(candidate, existing) <= 0.35:
         return True
 
     candidate_location = normalize_location_key(
@@ -1554,9 +1825,7 @@ def main() -> int:
     sendai_csv_url = discover_sendai_csv_url()
     print(f"仙台市CSV取得先: {sendai_csv_url}")
 
-    sendai_raw = fetch_bytes(
-        sendai_csv_url
-    )
+    sendai_raw = fetch_bytes(sendai_csv_url)
     sendai_rows = parse_sendai_rows(
         decode_text(sendai_raw)
     )
@@ -1570,12 +1839,13 @@ def main() -> int:
             "既存JSONを更新しません。"
         )
 
+    updated_at = (
+        datetime.now(timezone.utc)
+        .isoformat(timespec="seconds")
+        .replace("+00:00", "Z")
+    )
     diagnostics: dict[str, object] = {
-        "updatedAt": (
-            datetime.now(timezone.utc)
-            .isoformat(timespec="seconds")
-            .replace("+00:00", "Z")
-        ),
+        "updatedAt": updated_at,
         "sendaiCount": len(sendai_incidents),
         "miyagiPageUrl": MIYAGI_SOURCE_PAGE_URL,
         "miyagiStatus": "未取得",
@@ -1584,55 +1854,59 @@ def main() -> int:
         "miyagiExcelUrl": "",
         "miyagiErrors": [],
     }
-
-    miyagi_incidents: list[
-        dict[str, object]
-    ] = []
-    miyagi_added_count = 0
+    miyagi_incidents: list[dict[str, object]] = []
 
     try:
         miyagi_page_html = decode_text(
-            fetch_bytes(
-                MIYAGI_SOURCE_PAGE_URL
-            )
+            fetch_bytes(MIYAGI_SOURCE_PAGE_URL)
         )
-        xlsx_url, map_id = (
-            discover_miyagi_sources(
-                miyagi_page_html
-            )
+        xlsx_url, map_id = discover_miyagi_sources(
+            miyagi_page_html
         )
+
+        if not xlsx_url:
+            raise RuntimeError(
+                "宮城県公式ページからExcel URLを検出できません。"
+            )
 
         diagnostics["miyagiMapId"] = map_id
         diagnostics["miyagiExcelUrl"] = xlsx_url
 
-        if xlsx_url:
-            try:
-                xlsx_raw = fetch_bytes(xlsx_url)
-                diagnostics["xlsxDiagnostics"] = (
-                    parse_miyagi_xlsx_diagnostics(
-                        xlsx_raw
-                    )
-                )
-            except Exception as xlsx_error:
-                diagnostics["xlsxDiagnostics"] = {
-                    "status": "解析失敗",
-                    "error": str(xlsx_error),
-                }
+        xlsx_raw = fetch_bytes(xlsx_url)
+        xlsx_rows, xlsx_diagnostics = parse_miyagi_xlsx(
+            xlsx_raw
+        )
+        diagnostics["xlsxDiagnostics"] = xlsx_diagnostics
 
-        kml_text, kml_url, kml_errors = (
-            fetch_miyagi_kml(map_id)
+        kml_text, kml_url, kml_errors = fetch_miyagi_kml(
+            map_id
         )
         diagnostics["miyagiKmlUrl"] = kml_url
         diagnostics["miyagiErrors"] = kml_errors
 
-        (
-            miyagi_incidents,
-            kml_diagnostics,
-        ) = parse_miyagi_kml(kml_text)
+        points_by_serial, kml_diagnostics = (
+            parse_miyagi_kml_points(kml_text)
+        )
+        diagnostics["kmlDiagnostics"] = kml_diagnostics
 
-        diagnostics.update(kml_diagnostics)
+        miyagi_incidents, join_diagnostics = (
+            build_miyagi_incidents(
+                xlsx_rows,
+                points_by_serial,
+            )
+        )
+        diagnostics["joinDiagnostics"] = join_diagnostics
+
+        if xlsx_rows and not miyagi_incidents:
+            raise RuntimeError(
+                "宮城県ExcelとGoogleマップの照合結果が0件です。"
+            )
+
         diagnostics["miyagiStatus"] = "取得成功"
-        diagnostics["miyagiSendaiCount"] = len(
+        diagnostics["miyagiExcelSendaiCount"] = len(
+            xlsx_rows
+        )
+        diagnostics["miyagiMatchedPointCount"] = len(
             miyagi_incidents
         )
     except Exception as error:
@@ -1642,45 +1916,49 @@ def main() -> int:
         )
         errors.append(str(error))
         diagnostics["miyagiErrors"] = errors
+        miyagi_incidents = []
         print(
             "宮城県データ取得に失敗したため、"
             f"仙台市データのみ使用します: {error}"
         )
 
-    incidents, miyagi_added_count = (
-        merge_incidents(
-            sendai_incidents,
-            miyagi_incidents,
-        )
+    incidents, miyagi_added_count = merge_incidents(
+        sendai_incidents,
+        miyagi_incidents,
     )
 
-    diagnostics["miyagiAddedCount"] = (
-        miyagi_added_count
+    diagnostics["miyagiJoinedCount"] = len(
+        miyagi_incidents
+    )
+    diagnostics["miyagiAddedCount"] = miyagi_added_count
+    diagnostics["miyagiDuplicateCount"] = (
+        len(miyagi_incidents) - miyagi_added_count
     )
     diagnostics["finalCount"] = len(incidents)
 
-    write_json(
-        OUTPUT_JSON,
-        incidents,
-    )
+    write_json(OUTPUT_JSON, incidents)
 
     status = {
-        "updatedAt": diagnostics["updatedAt"],
+        "updatedAt": updated_at,
         "count": len(incidents),
         "sourceName": "仙台市・宮城県",
         "sendaiCount": len(sendai_incidents),
-        "miyagiMapSendaiCount": len(
-            miyagi_incidents
+        "miyagiExcelSendaiCount": diagnostics.get(
+            "miyagiExcelSendaiCount",
+            0,
+        ),
+        "miyagiMatchedPointCount": diagnostics.get(
+            "miyagiMatchedPointCount",
+            0,
         ),
         "miyagiAddedCount": miyagi_added_count,
-        "miyagiStatus": diagnostics[
-            "miyagiStatus"
-        ],
+        "miyagiDuplicateCount": (
+            len(miyagi_incidents) - miyagi_added_count
+        ),
+        "miyagiStatus": diagnostics["miyagiStatus"],
         "sourceCsvUrl": sendai_csv_url,
         "sourcePageUrl": SENDAI_SOURCE_PAGE_URL,
-        "miyagiSourcePageUrl": (
-            MIYAGI_SOURCE_PAGE_URL
-        ),
+        "miyagiSourcePageUrl": MIYAGI_SOURCE_PAGE_URL,
         "miyagiKmlUrl": diagnostics.get(
             "miyagiKmlUrl",
             "",
@@ -1691,23 +1969,15 @@ def main() -> int:
         ),
     }
 
-    write_json(
-        STATUS_JSON,
-        status,
-    )
-    write_json(
-        DIAGNOSTICS_JSON,
-        diagnostics,
-    )
+    write_json(STATUS_JSON, status)
+    write_json(DIAGNOSTICS_JSON, diagnostics)
 
     print(
-        "生成完了: "
+        "更新完了: "
         f"仙台市 {len(sendai_incidents)}件 / "
-        f"宮城県マップ仙台市分 "
-        f"{len(miyagi_incidents)}件 / "
-        f"重複除外後の県追加 "
-        f"{miyagi_added_count}件 / "
-        f"合計 {len(incidents)}件"
+        f"宮城県照合 {len(miyagi_incidents)}件 / "
+        f"宮城県追加 {miyagi_added_count}件 / "
+        f"最終 {len(incidents)}件"
     )
 
     return 0
@@ -1717,8 +1987,5 @@ if __name__ == "__main__":
     try:
         raise SystemExit(main())
     except Exception as error:
-        print(
-            f"ERROR: {error}",
-            file=sys.stderr,
-        )
+        print(f"更新失敗: {error}", file=sys.stderr)
         raise
