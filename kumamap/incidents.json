@@ -1,6 +1,6 @@
 [
   {
-    "id": "SENDAI-fd315ce2b800089f",
+    "id": "SENDAI-9d913dd9e5d21d9c",
     "date": "2026-07-10",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -14,7 +14,7 @@
     "longitude": 140.852561961836
   },
   {
-    "id": "SENDAI-13dab1d216d65de4",
+    "id": "SENDAI-285bbd7fd758b941",
     "date": "2026-07-09",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -28,63 +28,7 @@
     "longitude": 140.86717582839
   },
   {
-    "id": "SENDAI-b7f522d5ca8b534a",
-    "date": "2026-07-08",
-    "prefecture": "宮城県",
-    "municipality": "仙台市泉区",
-    "locationText": "泉区館7丁目",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長100cm以上",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.3084791984601,
-    "longitude": 140.798924184282
-  },
-  {
-    "id": "SENDAI-4b7a70c0442e1be0",
-    "date": "2026-07-08",
-    "prefecture": "宮城県",
-    "municipality": "仙台市宮城野区",
-    "locationText": "宮城野区原町3丁目",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長100cm以上",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2676407811048,
-    "longitude": 140.906300437631
-  },
-  {
-    "id": "SENDAI-41cb595939efeae6",
-    "date": "2026-07-08",
-    "prefecture": "宮城県",
-    "municipality": "仙台市宮城野区",
-    "locationText": "宮城野区原町4丁目",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長100cm以上",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2696896099267,
-    "longitude": 140.903622531009
-  },
-  {
-    "id": "SENDAI-33a3b0208e99c89e",
-    "date": "2026-07-08",
-    "prefecture": "宮城県",
-    "municipality": "仙台市泉区",
-    "locationText": "泉区福岡字上鳥居原",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長100cm以上",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.3580808709949,
-    "longitude": 140.784529714728
-  },
-  {
-    "id": "SENDAI-23952781cab6ba2d",
+    "id": "SENDAI-e4e269be19617802",
     "date": "2026-07-08",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -98,7 +42,63 @@
     "longitude": 140.855891921289
   },
   {
-    "id": "SENDAI-58aa90e8c86f937b",
+    "id": "SENDAI-b93fe98770e06408",
+    "date": "2026-07-08",
+    "prefecture": "宮城県",
+    "municipality": "仙台市宮城野区",
+    "locationText": "宮城野区原町4丁目",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2696896099267,
+    "longitude": 140.903622531009
+  },
+  {
+    "id": "SENDAI-b3025737e447b963",
+    "date": "2026-07-08",
+    "prefecture": "宮城県",
+    "municipality": "仙台市泉区",
+    "locationText": "泉区館7丁目",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3084791984601,
+    "longitude": 140.798924184282
+  },
+  {
+    "id": "SENDAI-9974063c76b38793",
+    "date": "2026-07-08",
+    "prefecture": "宮城県",
+    "municipality": "仙台市宮城野区",
+    "locationText": "宮城野区原町3丁目",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2676407811048,
+    "longitude": 140.906300437631
+  },
+  {
+    "id": "SENDAI-3f0451fa86628f34",
+    "date": "2026-07-08",
+    "prefecture": "宮城県",
+    "municipality": "仙台市泉区",
+    "locationText": "泉区福岡字上鳥居原",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3580808709949,
+    "longitude": 140.784529714728
+  },
+  {
+    "id": "SENDAI-536b50bc10fd21ce",
     "date": "2026-07-05",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -112,7 +112,7 @@
     "longitude": 140.818835894583
   },
   {
-    "id": "SENDAI-efc1ef68f20cc507",
+    "id": "SENDAI-e458015e5e988234",
     "date": "2026-07-04",
     "prefecture": "宮城県",
     "municipality": "仙台市宮城野区",
@@ -126,7 +126,7 @@
     "longitude": 140.912743013526
   },
   {
-    "id": "SENDAI-97f765668531ade6",
+    "id": "SENDAI-7c5753d8bd64e116",
     "date": "2026-07-04",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -140,7 +140,7 @@
     "longitude": 140.759808539373
   },
   {
-    "id": "SENDAI-ef61db394febe33d",
+    "id": "SENDAI-f28c2dd04083d816",
     "date": "2026-07-03",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -154,35 +154,7 @@
     "longitude": 140.766371187733
   },
   {
-    "id": "SENDAI-edd35683b8b06e0e",
-    "date": "2026-07-03",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "青葉区芋沢字花坂下",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長100cm以上",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2798627352683,
-    "longitude": 140.76202844588
-  },
-  {
-    "id": "SENDAI-58fdd5c82d0f22ba",
-    "date": "2026-07-03",
-    "prefecture": "宮城県",
-    "municipality": "仙台市宮城野区",
-    "locationText": "宮城野区幸町2丁目",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長70cm前後 / 現地調査の結果、他の動物の可能性有",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.273429689263,
-    "longitude": 140.896450506404
-  },
-  {
-    "id": "SENDAI-5404db2e0748f67c",
+    "id": "SENDAI-f27b7fd4c2c603cb",
     "date": "2026-07-03",
     "prefecture": "宮城県",
     "municipality": "仙台市太白区",
@@ -196,7 +168,35 @@
     "longitude": 140.805895477145
   },
   {
-    "id": "SENDAI-90b8c4c3d1f05858",
+    "id": "SENDAI-a2f6d09def196d0a",
+    "date": "2026-07-03",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区芋沢字花坂下",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2798627352683,
+    "longitude": 140.76202844588
+  },
+  {
+    "id": "SENDAI-2d966269a4e4613c",
+    "date": "2026-07-03",
+    "prefecture": "宮城県",
+    "municipality": "仙台市宮城野区",
+    "locationText": "宮城野区幸町2丁目",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長70cm前後 / 現地調査の結果、他の動物の可能性有",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.273429689263,
+    "longitude": 140.896450506404
+  },
+  {
+    "id": "SENDAI-da723e7222181dff",
     "date": "2026-07-02",
     "prefecture": "宮城県",
     "municipality": "仙台市宮城野区",
@@ -210,7 +210,7 @@
     "longitude": 140.91449976407
   },
   {
-    "id": "SENDAI-26d539448b12e905",
+    "id": "SENDAI-52625954bb07ab65",
     "date": "2026-07-02",
     "prefecture": "宮城県",
     "municipality": "仙台市太白区",
@@ -224,7 +224,7 @@
     "longitude": 140.710401392741
   },
   {
-    "id": "SENDAI-04208ce6c0a50dbf",
+    "id": "SENDAI-3e8e0065d8855930",
     "date": "2026-07-02",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -238,21 +238,7 @@
     "longitude": 140.765154747209
   },
   {
-    "id": "SENDAI-92bc742083607130",
-    "date": "2026-07-01",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "青葉区折立3丁目",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長不明 / 現地調査・目撃情報精査の結果、他の動物の可能性有",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2649197793878,
-    "longitude": 140.803569631248
-  },
-  {
-    "id": "SENDAI-10ee7d9eaafe4921",
+    "id": "SENDAI-b5f796a908b98ca3",
     "date": "2026-07-01",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -266,21 +252,21 @@
     "longitude": 140.6914652613
   },
   {
-    "id": "SENDAI-fd8c2a75af601cf0",
-    "date": "2026-06-30",
+    "id": "SENDAI-5a66cc1c658eca87",
+    "date": "2026-07-01",
     "prefecture": "宮城県",
-    "municipality": "仙台市泉区",
-    "locationText": "泉区福岡字岳山",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区折立3丁目",
     "category": "目撃",
-    "description": "頭数・体長：2頭・ともに体長不明",
+    "description": "頭数・体長：1頭・体長不明 / 現地調査・目撃情報精査の結果、他の動物の可能性有",
     "riskLevel": "中",
     "sourceName": "仙台市",
     "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.3883930338956,
-    "longitude": 140.726372447771
+    "latitude": 38.2649197793878,
+    "longitude": 140.803569631248
   },
   {
-    "id": "SENDAI-cfbf0fb665996851",
+    "id": "SENDAI-fb0507f6337f1646",
     "date": "2026-06-30",
     "prefecture": "宮城県",
     "municipality": "仙台市太白区",
@@ -294,35 +280,7 @@
     "longitude": 140.725514931802
   },
   {
-    "id": "SENDAI-b4653201fae7e2ef",
-    "date": "2026-06-30",
-    "prefecture": "宮城県",
-    "municipality": "仙台市宮城野区",
-    "locationText": "宮城野区扇町6丁目",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長100cm以上 / 現地調査の結果、他の動物の可能性有",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2704654844136,
-    "longitude": 140.954721355384
-  },
-  {
-    "id": "SENDAI-0994ad3e20c6ad9d",
-    "date": "2026-06-30",
-    "prefecture": "宮城県",
-    "municipality": "仙台市泉区",
-    "locationText": "泉区紫山1丁目",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長不明",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.3465772976722,
-    "longitude": 140.840609410477
-  },
-  {
-    "id": "SENDAI-01bd820a6022e004",
+    "id": "SENDAI-daab439e2a7ef2f4",
     "date": "2026-06-30",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -336,21 +294,49 @@
     "longitude": 140.803198972603
   },
   {
-    "id": "SENDAI-ab19930464f4e27f",
-    "date": "2026-06-29",
+    "id": "SENDAI-57e653e00dc39d7c",
+    "date": "2026-06-30",
     "prefecture": "宮城県",
-    "municipality": "仙台市太白区",
-    "locationText": "太白区秋保町湯向",
+    "municipality": "仙台市宮城野区",
+    "locationText": "宮城野区扇町6丁目",
     "category": "目撃",
-    "description": "頭数・体長：1頭・体長50cm前後",
+    "description": "頭数・体長：1頭・体長100cm以上 / 現地調査の結果、他の動物の可能性有",
     "riskLevel": "中",
     "sourceName": "仙台市",
     "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2273954335815,
-    "longitude": 140.726992433591
+    "latitude": 38.2704654844136,
+    "longitude": 140.954721355384
   },
   {
-    "id": "SENDAI-627613657f2b2573",
+    "id": "SENDAI-238bb6fecf4a60e5",
+    "date": "2026-06-30",
+    "prefecture": "宮城県",
+    "municipality": "仙台市泉区",
+    "locationText": "泉区福岡字岳山",
+    "category": "目撃",
+    "description": "頭数・体長：2頭・ともに体長不明",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3883930338956,
+    "longitude": 140.726372447771
+  },
+  {
+    "id": "SENDAI-1affb7a345f4b252",
+    "date": "2026-06-30",
+    "prefecture": "宮城県",
+    "municipality": "仙台市泉区",
+    "locationText": "泉区紫山1丁目",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長不明",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3465772976722,
+    "longitude": 140.840609410477
+  },
+  {
+    "id": "SENDAI-c6aa9bcd4732f5d4",
     "date": "2026-06-29",
     "prefecture": "宮城県",
     "municipality": "仙台市太白区",
@@ -364,7 +350,21 @@
     "longitude": 140.755945120892
   },
   {
-    "id": "SENDAI-10a1b85dc914b5fa",
+    "id": "SENDAI-13ca20f2650f9f24",
+    "date": "2026-06-29",
+    "prefecture": "宮城県",
+    "municipality": "仙台市太白区",
+    "locationText": "太白区秋保町湯向",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長50cm前後",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2273954335815,
+    "longitude": 140.726992433591
+  },
+  {
+    "id": "SENDAI-0f5802746fef7f83",
     "date": "2026-06-29",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -378,7 +378,7 @@
     "longitude": 140.818835894583
   },
   {
-    "id": "SENDAI-49654693d346b0ff",
+    "id": "SENDAI-b040e76592e1f068",
     "date": "2026-06-28",
     "prefecture": "宮城県",
     "municipality": "仙台市宮城野区",
@@ -392,7 +392,7 @@
     "longitude": 141.002276212499
   },
   {
-    "id": "SENDAI-bb9c926ed7a85946",
+    "id": "SENDAI-51502fce076da3cc",
     "date": "2026-06-27",
     "prefecture": "宮城県",
     "municipality": "仙台市宮城野区",
@@ -406,49 +406,7 @@
     "longitude": 140.993579985044
   },
   {
-    "id": "SENDAI-cd37a492f427bd74",
-    "date": "2026-06-23",
-    "prefecture": "宮城県",
-    "municipality": "仙台市太白区",
-    "locationText": "太白区秋保町長袋字山根",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長100cm以上",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2580917957998,
-    "longitude": 140.68195460384
-  },
-  {
-    "id": "SENDAI-86c1310db8eaa100",
-    "date": "2026-06-23",
-    "prefecture": "宮城県",
-    "municipality": "仙台市泉区",
-    "locationText": "泉区実沢字広瀬",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長100cm以上",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.3212715221359,
-    "longitude": 140.814546513781
-  },
-  {
-    "id": "SENDAI-6921b3a1dd34e037",
-    "date": "2026-06-23",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "青葉区国見４丁目",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・100cm以上",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2764220467285,
-    "longitude": 140.843118105145
-  },
-  {
-    "id": "SENDAI-07c18ef92ced03e5",
+    "id": "SENDAI-986f4efacea52ee4",
     "date": "2026-06-23",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -462,7 +420,49 @@
     "longitude": 140.803030030846
   },
   {
-    "id": "SENDAI-9999e3a79f2b4d7e",
+    "id": "SENDAI-3d9632c14fd3864c",
+    "date": "2026-06-23",
+    "prefecture": "宮城県",
+    "municipality": "仙台市太白区",
+    "locationText": "太白区秋保町長袋字山根",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2580917957998,
+    "longitude": 140.68195460384
+  },
+  {
+    "id": "SENDAI-3353da6e3ce9fe44",
+    "date": "2026-06-23",
+    "prefecture": "宮城県",
+    "municipality": "仙台市泉区",
+    "locationText": "泉区実沢字広瀬",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3212715221359,
+    "longitude": 140.814546513781
+  },
+  {
+    "id": "SENDAI-0647af9a0e7aa000",
+    "date": "2026-06-23",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区国見４丁目",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2764220467285,
+    "longitude": 140.843118105145
+  },
+  {
+    "id": "SENDAI-ebc6a0b6e1de6a77",
     "date": "2026-06-21",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -476,7 +476,7 @@
     "longitude": 140.802270983241
   },
   {
-    "id": "SENDAI-d252422dd06b4ca4",
+    "id": "SENDAI-aa8486a2609d3b2a",
     "date": "2026-06-20",
     "prefecture": "宮城県",
     "municipality": "仙台市太白区",
@@ -490,7 +490,7 @@
     "longitude": 140.817542095866
   },
   {
-    "id": "SENDAI-c60426ab0878a3e2",
+    "id": "SENDAI-5a10f863565b6f80",
     "date": "2026-06-20",
     "prefecture": "宮城県",
     "municipality": "仙台市太白区",
@@ -504,35 +504,7 @@
     "longitude": 140.817277955758
   },
   {
-    "id": "SENDAI-f874f61d9524ddcc",
-    "date": "2026-06-19",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "青葉区郷六字葛岡",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長不明",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2750765005673,
-    "longitude": 140.814188243496
-  },
-  {
-    "id": "SENDAI-e2b89ad368c510bd",
-    "date": "2026-06-19",
-    "prefecture": "宮城県",
-    "municipality": "仙台市太白区",
-    "locationText": "太白区八木山東1丁目",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長100cm以上",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2351355454147,
-    "longitude": 140.846789607354
-  },
-  {
-    "id": "SENDAI-6c1c81ea5bed14f2",
+    "id": "SENDAI-ad9adb9cd405c9b3",
     "date": "2026-06-19",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -546,7 +518,21 @@
     "longitude": 140.843217661867
   },
   {
-    "id": "SENDAI-2eafbf16dc0379a8",
+    "id": "SENDAI-8fd8522354a94606",
+    "date": "2026-06-19",
+    "prefecture": "宮城県",
+    "municipality": "仙台市太白区",
+    "locationText": "太白区八木山東1丁目",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2351355454147,
+    "longitude": 140.846789607354
+  },
+  {
+    "id": "SENDAI-8bc6d00fd78d232a",
     "date": "2026-06-19",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -560,21 +546,7 @@
     "longitude": 140.810945401116
   },
   {
-    "id": "SENDAI-2695c5583493c72c",
-    "date": "2026-06-19",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "青葉区郷六字葛岡下",
-    "category": "目撃",
-    "description": "頭数・体長：頭数・体長ともに不明",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2677848515739,
-    "longitude": 140.817518658146
-  },
-  {
-    "id": "SENDAI-0fcddc1c0f520f93",
+    "id": "SENDAI-5cd12297485e4a8a",
     "date": "2026-06-19",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -588,7 +560,35 @@
     "longitude": 140.875745119614
   },
   {
-    "id": "SENDAI-94bfc50e2dde0a31",
+    "id": "SENDAI-24ceafb14850a487",
+    "date": "2026-06-19",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区郷六字葛岡下",
+    "category": "目撃",
+    "description": "頭数・体長：頭数・体長ともに不明",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2677848515739,
+    "longitude": 140.817518658146
+  },
+  {
+    "id": "SENDAI-1e3d628df2aa3305",
+    "date": "2026-06-19",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区郷六字葛岡",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長不明",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2750765005673,
+    "longitude": 140.814188243496
+  },
+  {
+    "id": "SENDAI-284f05d595154bc6",
     "date": "2026-06-17",
     "prefecture": "宮城県",
     "municipality": "仙台市宮城野区",
@@ -602,7 +602,7 @@
     "longitude": 140.962326709238
   },
   {
-    "id": "SENDAI-9b40ef114d07aeff",
+    "id": "SENDAI-7802d6b0e2246565",
     "date": "2026-06-15",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -616,7 +616,7 @@
     "longitude": 140.807499333301
   },
   {
-    "id": "SENDAI-59b496a7784d6aa9",
+    "id": "SENDAI-6f7700d5baa05ce8",
     "date": "2026-06-14",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -630,7 +630,7 @@
     "longitude": 140.862117496049
   },
   {
-    "id": "SENDAI-560fb4c550bda9c6",
+    "id": "SENDAI-29c76a88a3d8a817",
     "date": "2026-06-14",
     "prefecture": "宮城県",
     "municipality": "仙台市太白区",
@@ -644,7 +644,7 @@
     "longitude": 140.829077949692
   },
   {
-    "id": "SENDAI-3bedfbf45230bad9",
+    "id": "SENDAI-083ecbeb3a76b543",
     "date": "2026-06-14",
     "prefecture": "宮城県",
     "municipality": "仙台市太白区",
@@ -658,7 +658,7 @@
     "longitude": 140.828164219839
   },
   {
-    "id": "SENDAI-29efc124eba27541",
+    "id": "SENDAI-ed2d33ed0b4fce42",
     "date": "2026-06-13",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -672,7 +672,7 @@
     "longitude": 140.795971856912
   },
   {
-    "id": "SENDAI-0f643dc0665da526",
+    "id": "SENDAI-d7cb3b33b84ba619",
     "date": "2026-06-13",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -686,21 +686,7 @@
     "longitude": 140.72372277101
   },
   {
-    "id": "SENDAI-79a194e6d12632d9",
-    "date": "2026-06-12",
-    "prefecture": "宮城県",
-    "municipality": "仙台市泉区",
-    "locationText": "泉区北中山3丁目",
-    "category": "目撃",
-    "description": "頭数・体長：4頭・体長100cm以上1頭、体長50cm前後3頭 / 現地調査の結果、他の動物の可能性有",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.3161720789845,
-    "longitude": 140.809825542818
-  },
-  {
-    "id": "SENDAI-4ecd57bd9b54bac6",
+    "id": "SENDAI-f910f059672d68b2",
     "date": "2026-06-12",
     "prefecture": "宮城県",
     "municipality": "仙台市太白区",
@@ -714,7 +700,21 @@
     "longitude": 140.679933081515
   },
   {
-    "id": "SENDAI-aa74235e728cda6b",
+    "id": "SENDAI-4ce64677663027d5",
+    "date": "2026-06-12",
+    "prefecture": "宮城県",
+    "municipality": "仙台市泉区",
+    "locationText": "泉区北中山3丁目",
+    "category": "目撃",
+    "description": "頭数・体長：4頭・体長100cm以上1頭、体長50cm前後3頭 / 現地調査の結果、他の動物の可能性有",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3161720789845,
+    "longitude": 140.809825542818
+  },
+  {
+    "id": "SENDAI-b42081c2ebe3be4a",
     "date": "2026-06-11",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -728,7 +728,7 @@
     "longitude": 140.728259157683
   },
   {
-    "id": "SENDAI-8e18504d007bfb0d",
+    "id": "SENDAI-87301e87a0bd6136",
     "date": "2026-06-11",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -742,7 +742,7 @@
     "longitude": 140.748129010595
   },
   {
-    "id": "SENDAI-66cb6988a156e165",
+    "id": "SENDAI-457f861d7463a8cc",
     "date": "2026-06-11",
     "prefecture": "宮城県",
     "municipality": "仙台市太白区",
@@ -756,7 +756,7 @@
     "longitude": 140.837534094714
   },
   {
-    "id": "SENDAI-dda97aa5b145028f",
+    "id": "SENDAI-37657cf23c8a0290",
     "date": "2026-06-10",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -770,7 +770,7 @@
     "longitude": 140.727944873912
   },
   {
-    "id": "SENDAI-9c17655da940f813",
+    "id": "SENDAI-652059aafa2b4693",
     "date": "2026-06-09",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -784,7 +784,7 @@
     "longitude": 140.704276808719
   },
   {
-    "id": "SENDAI-53062a8c7db73d02",
+    "id": "SENDAI-5b41339729700210",
     "date": "2026-06-09",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -798,7 +798,7 @@
     "longitude": 140.882796509441
   },
   {
-    "id": "SENDAI-33354b29d68e4339",
+    "id": "SENDAI-47fd916a32b31629",
     "date": "2026-06-09",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -812,7 +812,7 @@
     "longitude": 140.855344233014
   },
   {
-    "id": "SENDAI-6f40f47f90cebb64",
+    "id": "SENDAI-a0fc0c1cf84e6133",
     "date": "2026-06-08",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -826,21 +826,7 @@
     "longitude": 140.76538592584
   },
   {
-    "id": "SENDAI-b19b2448b6deef75",
-    "date": "2026-06-07",
-    "prefecture": "宮城県",
-    "municipality": "仙台市太白区",
-    "locationText": "太白区茂庭字中谷地山",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・100cm以上",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2219382797312,
-    "longitude": 140.73806706571
-  },
-  {
-    "id": "SENDAI-a696d34710688939",
+    "id": "SENDAI-e30a6463a1f6d86d",
     "date": "2026-06-07",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -854,35 +840,21 @@
     "longitude": 140.783645589213
   },
   {
-    "id": "SENDAI-f1672e5deea51599",
-    "date": "2026-06-05",
+    "id": "SENDAI-1700ab7b5cd92fd0",
+    "date": "2026-06-07",
     "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "青葉区上愛子字道上",
+    "municipality": "仙台市太白区",
+    "locationText": "太白区茂庭字中谷地山",
     "category": "目撃",
-    "description": "頭数・体長：1頭・体長100cm以上",
+    "description": "頭数・体長：1頭・100cm以上",
     "riskLevel": "中",
     "sourceName": "仙台市",
     "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2725935215633,
-    "longitude": 140.703643781505
+    "latitude": 38.2219382797312,
+    "longitude": 140.73806706571
   },
   {
-    "id": "SENDAI-b97de195e43b842d",
-    "date": "2026-06-05",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "青葉区荒巻中央",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・70cm",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2924477004148,
-    "longitude": 140.857082655786
-  },
-  {
-    "id": "SENDAI-6eefdda14744a3e4",
+    "id": "SENDAI-f60fb907a969eba1",
     "date": "2026-06-05",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -896,21 +868,35 @@
     "longitude": 140.865608139887
   },
   {
-    "id": "SENDAI-a83a821eb40ecddd",
-    "date": "2026-06-04",
+    "id": "SENDAI-d1af3393977507ad",
+    "date": "2026-06-05",
     "prefecture": "宮城県",
-    "municipality": "仙台市太白区",
-    "locationText": "太白区富田字上野中",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区上愛子字道上",
     "category": "目撃",
-    "description": "頭数・体長：頭数・体長ともに不明",
+    "description": "頭数・体長：1頭・体長100cm以上",
     "riskLevel": "中",
     "sourceName": "仙台市",
     "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2125022109477,
-    "longitude": 140.847453749568
+    "latitude": 38.2725935215633,
+    "longitude": 140.703643781505
   },
   {
-    "id": "SENDAI-82832b0d9a9303ab",
+    "id": "SENDAI-a9836b68995b8145",
+    "date": "2026-06-05",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区荒巻中央",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・70cm",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2924477004148,
+    "longitude": 140.857082655786
+  },
+  {
+    "id": "SENDAI-cda416d409b342d5",
     "date": "2026-06-04",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -924,7 +910,21 @@
     "longitude": 140.810772465096
   },
   {
-    "id": "SENDAI-183505c14f0a5bdd",
+    "id": "SENDAI-59cf90bc3a228e6e",
+    "date": "2026-06-04",
+    "prefecture": "宮城県",
+    "municipality": "仙台市太白区",
+    "locationText": "太白区富田字上野中",
+    "category": "目撃",
+    "description": "頭数・体長：頭数・体長ともに不明",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2125022109477,
+    "longitude": 140.847453749568
+  },
+  {
+    "id": "SENDAI-2bde8382a59ca206",
     "date": "2026-06-04",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -938,21 +938,7 @@
     "longitude": 140.745626216378
   },
   {
-    "id": "SENDAI-d72f08980a1a232b",
-    "date": "2026-06-03",
-    "prefecture": "宮城県",
-    "municipality": "仙台市泉区",
-    "locationText": "泉区西中山2丁目",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長100cm以上",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.3073892557195,
-    "longitude": 140.805091984263
-  },
-  {
-    "id": "SENDAI-52ec69b895c9a6fb",
+    "id": "SENDAI-dcca226d20cf4309",
     "date": "2026-06-03",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -966,7 +952,21 @@
     "longitude": 140.744034357201
   },
   {
-    "id": "SENDAI-07296a21b18c3844",
+    "id": "SENDAI-6a947b099365587e",
+    "date": "2026-06-03",
+    "prefecture": "宮城県",
+    "municipality": "仙台市泉区",
+    "locationText": "泉区西中山2丁目",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3073892557195,
+    "longitude": 140.805091984263
+  },
+  {
+    "id": "SENDAI-117d76494c72f393",
     "date": "2026-06-03",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -980,21 +980,7 @@
     "longitude": 140.785125877952
   },
   {
-    "id": "SENDAI-abe70f517bccde05",
-    "date": "2026-06-02",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "青葉区川内亀岡町",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長70cm前後",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2610577471006,
-    "longitude": 140.843884488442
-  },
-  {
-    "id": "SENDAI-6f157a751df0a9f1",
+    "id": "SENDAI-fe1b7ecd1807c1a1",
     "date": "2026-06-02",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -1008,35 +994,21 @@
     "longitude": 140.860351271158
   },
   {
-    "id": "SENDAI-cbf338a4f0c5bb06",
-    "date": "2026-06-01",
+    "id": "SENDAI-5615348e8133c870",
+    "date": "2026-06-02",
     "prefecture": "宮城県",
-    "municipality": "仙台市泉区",
-    "locationText": "泉区実沢字細椚向芦沢",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区川内亀岡町",
     "category": "目撃",
-    "description": "頭数・体長：1頭・体長100cm以上",
+    "description": "頭数・体長：1頭・体長70cm前後",
     "riskLevel": "中",
     "sourceName": "仙台市",
     "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.3255736913186,
-    "longitude": 140.800972998702
+    "latitude": 38.2610577471006,
+    "longitude": 140.843884488442
   },
   {
-    "id": "SENDAI-b4ca472ad4da8771",
-    "date": "2026-06-01",
-    "prefecture": "宮城県",
-    "municipality": "仙台市泉区",
-    "locationText": "泉区紫山1丁目",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長50cm前後",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.3529940109748,
-    "longitude": 140.827089384203
-  },
-  {
-    "id": "SENDAI-6751086b06d018fd",
+    "id": "SENDAI-9c46693484e9def1",
     "date": "2026-06-01",
     "prefecture": "宮城県",
     "municipality": "仙台市宮城野区",
@@ -1050,7 +1022,35 @@
     "longitude": 140.948584905118
   },
   {
-    "id": "SENDAI-0785b6eaf1ff199c",
+    "id": "SENDAI-390326d61a76e747",
+    "date": "2026-06-01",
+    "prefecture": "宮城県",
+    "municipality": "仙台市泉区",
+    "locationText": "泉区紫山1丁目",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長50cm前後",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3529940109748,
+    "longitude": 140.827089384203
+  },
+  {
+    "id": "SENDAI-0af1f5763b811267",
+    "date": "2026-06-01",
+    "prefecture": "宮城県",
+    "municipality": "仙台市泉区",
+    "locationText": "泉区実沢字細椚向芦沢",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3255736913186,
+    "longitude": 140.800972998702
+  },
+  {
+    "id": "SENDAI-29764f8476a652a6",
     "date": "2026-05-31",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -1064,21 +1064,7 @@
     "longitude": 140.811242865501
   },
   {
-    "id": "SENDAI-b73e43b8b8b8cff0",
-    "date": "2026-05-30",
-    "prefecture": "宮城県",
-    "municipality": "仙台市泉区",
-    "locationText": "泉区長命ケ丘2丁目",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長100cm以上",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.3159616141795,
-    "longitude": 140.840877222078
-  },
-  {
-    "id": "SENDAI-6e45e1fd1b8b8016",
+    "id": "SENDAI-fb057e6030ece9c1",
     "date": "2026-05-30",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -1092,7 +1078,21 @@
     "longitude": 140.698859350654
   },
   {
-    "id": "SENDAI-64d88d64036f1110",
+    "id": "SENDAI-4573994a368ba9a2",
+    "date": "2026-05-30",
+    "prefecture": "宮城県",
+    "municipality": "仙台市泉区",
+    "locationText": "泉区長命ケ丘2丁目",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3159616141795,
+    "longitude": 140.840877222078
+  },
+  {
+    "id": "SENDAI-b518d1ac03f5d7dd",
     "date": "2026-05-29",
     "prefecture": "宮城県",
     "municipality": "仙台市太白区",
@@ -1106,77 +1106,7 @@
     "longitude": 140.83895622838
   },
   {
-    "id": "SENDAI-e77289fb10c1ecb8",
-    "date": "2026-05-28",
-    "prefecture": "宮城県",
-    "municipality": "仙台市泉区",
-    "locationText": "泉区朝日1丁目",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長100cm以上",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.33839375807,
-    "longitude": 140.8199218248
-  },
-  {
-    "id": "SENDAI-d63bf77153401f63",
-    "date": "2026-05-28",
-    "prefecture": "宮城県",
-    "municipality": "仙台市泉区",
-    "locationText": "泉区福岡字岳山",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・100㎝以上",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.3923662615952,
-    "longitude": 140.723700209294
-  },
-  {
-    "id": "SENDAI-9a0e0a8550e506e0",
-    "date": "2026-05-28",
-    "prefecture": "宮城県",
-    "municipality": "仙台市宮城野区",
-    "locationText": "宮城野区幸町3丁目",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長70cm前後",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2748141433667,
-    "longitude": 140.899226371795
-  },
-  {
-    "id": "SENDAI-97c08154d0cfbf3d",
-    "date": "2026-05-28",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "仙台市青葉区川内元支倉",
-    "category": "目撃",
-    "description": "頭数・体長：2頭・70㎝前後",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2617556934155,
-    "longitude": 140.848027250992
-  },
-  {
-    "id": "SENDAI-915fa564fe6dfa90",
-    "date": "2026-05-28",
-    "prefecture": "宮城県",
-    "municipality": "仙台市太白区",
-    "locationText": "宮城県仙台市太白区二ツ沢",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・100cm以上",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2339333653038,
-    "longitude": 140.871687931175
-  },
-  {
-    "id": "SENDAI-860205bdeb74baea",
+    "id": "SENDAI-e93d5536bb7ec2ef",
     "date": "2026-05-28",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -1190,7 +1120,63 @@
     "longitude": 140.809243316412
   },
   {
-    "id": "SENDAI-160f93ef05c163cd",
+    "id": "SENDAI-db1459928c19483f",
+    "date": "2026-05-28",
+    "prefecture": "宮城県",
+    "municipality": "仙台市太白区",
+    "locationText": "宮城県仙台市太白区二ツ沢",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2339333653038,
+    "longitude": 140.871687931175
+  },
+  {
+    "id": "SENDAI-c879f6d87f218b74",
+    "date": "2026-05-28",
+    "prefecture": "宮城県",
+    "municipality": "仙台市宮城野区",
+    "locationText": "宮城野区幸町3丁目",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長70cm前後",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2748141433667,
+    "longitude": 140.899226371795
+  },
+  {
+    "id": "SENDAI-a3125ef1b247ee1f",
+    "date": "2026-05-28",
+    "prefecture": "宮城県",
+    "municipality": "仙台市泉区",
+    "locationText": "泉区福岡字岳山",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・100㎝以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3923662615952,
+    "longitude": 140.723700209294
+  },
+  {
+    "id": "SENDAI-96d4f9cebe47ee89",
+    "date": "2026-05-28",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "仙台市青葉区川内元支倉",
+    "category": "目撃",
+    "description": "頭数・体長：2頭・70㎝前後",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2617556934155,
+    "longitude": 140.848027250992
+  },
+  {
+    "id": "SENDAI-5773dade019b7b93",
     "date": "2026-05-28",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -1204,35 +1190,21 @@
     "longitude": 140.846160561206
   },
   {
-    "id": "SENDAI-730117d50bb59444",
-    "date": "2026-05-26",
+    "id": "SENDAI-1098b3c9316559ed",
+    "date": "2026-05-28",
     "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "青葉区川内",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長100cm以上 / （現地調査・目撃情報精査の結果、他の動物の可能性有）",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2519680731784,
-    "longitude": 140.847453843852
-  },
-  {
-    "id": "SENDAI-53d16705d731ee56",
-    "date": "2026-05-26",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "青葉区川内",
+    "municipality": "仙台市泉区",
+    "locationText": "泉区朝日1丁目",
     "category": "目撃",
     "description": "頭数・体長：1頭・体長100cm以上",
     "riskLevel": "中",
     "sourceName": "仙台市",
     "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2517696170254,
-    "longitude": 140.855494407387
+    "latitude": 38.33839375807,
+    "longitude": 140.8199218248
   },
   {
-    "id": "SENDAI-5203579303284e7f",
+    "id": "SENDAI-bf5fad10160d2d6c",
     "date": "2026-05-26",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -1246,7 +1218,35 @@
     "longitude": 140.837909139638
   },
   {
-    "id": "SENDAI-0e930a5d24eb58ac",
+    "id": "SENDAI-a34331ece3597125",
+    "date": "2026-05-26",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区川内",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2517696170254,
+    "longitude": 140.855494407387
+  },
+  {
+    "id": "SENDAI-6fc2933686502956",
+    "date": "2026-05-26",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区川内",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上 / （現地調査・目撃情報精査の結果、他の動物の可能性有）",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2519680731784,
+    "longitude": 140.847453843852
+  },
+  {
+    "id": "SENDAI-6b8bfd4aba80ea3a",
     "date": "2026-05-26",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -1260,7 +1260,7 @@
     "longitude": 140.770782548511
   },
   {
-    "id": "SENDAI-2819f2e8afcf3c54",
+    "id": "SENDAI-97765f6ff381b6d2",
     "date": "2026-05-25",
     "prefecture": "宮城県",
     "municipality": "仙台市太白区",
@@ -1274,21 +1274,7 @@
     "longitude": 140.683524254717
   },
   {
-    "id": "SENDAI-659c46a10dbf21cf",
-    "date": "2026-05-24",
-    "prefecture": "宮城県",
-    "municipality": "仙台市泉区",
-    "locationText": "泉区上谷刈2丁目",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長70cm前後",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.3174997533128,
-    "longitude": 140.870942635801
-  },
-  {
-    "id": "SENDAI-5a4eb8f629a8ae3a",
+    "id": "SENDAI-584f85271d57d5c4",
     "date": "2026-05-24",
     "prefecture": "宮城県",
     "municipality": "仙台市太白区",
@@ -1302,7 +1288,21 @@
     "longitude": 140.728838994837
   },
   {
-    "id": "SENDAI-b676811591caf869",
+    "id": "SENDAI-444b703b64d498eb",
+    "date": "2026-05-24",
+    "prefecture": "宮城県",
+    "municipality": "仙台市泉区",
+    "locationText": "泉区上谷刈2丁目",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長70cm前後",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3174997533128,
+    "longitude": 140.870942635801
+  },
+  {
+    "id": "SENDAI-bb73397bda8520d0",
     "date": "2026-05-23",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -1316,49 +1316,7 @@
     "longitude": 140.813286111952
   },
   {
-    "id": "SENDAI-c436eef7ab6b23b6",
-    "date": "2026-05-22",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "青葉区上愛子字樋田",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長100cm以上",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2690823022258,
-    "longitude": 140.754084329875
-  },
-  {
-    "id": "SENDAI-aeb8fe23eeb04bc2",
-    "date": "2026-05-22",
-    "prefecture": "宮城県",
-    "municipality": "仙台市泉区",
-    "locationText": "泉区上谷刈字橋元",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長不明",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.3095359738107,
-    "longitude": 140.871744435375
-  },
-  {
-    "id": "SENDAI-95b86c2afa1d12a3",
-    "date": "2026-05-22",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "青葉区芋沢字大竹原",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長100cm以上",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2825233251619,
-    "longitude": 140.767173813103
-  },
-  {
-    "id": "SENDAI-3d678940bc843061",
+    "id": "SENDAI-ddd1f77912239a6b",
     "date": "2026-05-22",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -1372,7 +1330,21 @@
     "longitude": 140.776787291919
   },
   {
-    "id": "SENDAI-30d8c777491e0b8d",
+    "id": "SENDAI-99e4121640246781",
+    "date": "2026-05-22",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区上愛子字樋田",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2690823022258,
+    "longitude": 140.754084329875
+  },
+  {
+    "id": "SENDAI-6d685c188ac71f55",
     "date": "2026-05-22",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -1386,21 +1358,35 @@
     "longitude": 140.809512585346
   },
   {
-    "id": "SENDAI-1bc373a904fa17c4",
+    "id": "SENDAI-685f4908ff9a3554",
     "date": "2026-05-22",
     "prefecture": "宮城県",
-    "municipality": "仙台市泉区",
-    "locationText": "泉区鶴が丘1丁目",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区芋沢字大竹原",
     "category": "目撃",
     "description": "頭数・体長：1頭・体長100cm以上",
     "riskLevel": "中",
     "sourceName": "仙台市",
     "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.3214344232487,
-    "longitude": 140.925036370805
+    "latitude": 38.2825233251619,
+    "longitude": 140.767173813103
   },
   {
-    "id": "SENDAI-1a59c040d75bc6c1",
+    "id": "SENDAI-63a012ff726f567b",
+    "date": "2026-05-22",
+    "prefecture": "宮城県",
+    "municipality": "仙台市泉区",
+    "locationText": "泉区上谷刈字橋元",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長不明",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3095359738107,
+    "longitude": 140.871744435375
+  },
+  {
+    "id": "SENDAI-3c50de8bea7a1310",
     "date": "2026-05-22",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -1414,7 +1400,21 @@
     "longitude": 140.873977924075
   },
   {
-    "id": "SENDAI-997540767574f375",
+    "id": "SENDAI-1e5a47b6e8161d6f",
+    "date": "2026-05-22",
+    "prefecture": "宮城県",
+    "municipality": "仙台市泉区",
+    "locationText": "泉区鶴が丘1丁目",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3214344232487,
+    "longitude": 140.925036370805
+  },
+  {
+    "id": "SENDAI-52da39cc6a04e608",
     "date": "2026-05-21",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -1428,77 +1428,7 @@
     "longitude": 140.820106134415
   },
   {
-    "id": "SENDAI-ef1fa2eb6be03631",
-    "date": "2026-05-20",
-    "prefecture": "宮城県",
-    "municipality": "仙台市泉区",
-    "locationText": "泉区福岡字西上野原",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長100cm以上",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.3675162351468,
-    "longitude": 140.762816765364
-  },
-  {
-    "id": "SENDAI-cbbeaf4ee352ffc9",
-    "date": "2026-05-20",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "青葉区台原森林公園",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長70cm前後",
-    "riskLevel": "高",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.3001311800139,
-    "longitude": 140.882707979732
-  },
-  {
-    "id": "SENDAI-8b59e90b1c4c5524",
-    "date": "2026-05-20",
-    "prefecture": "宮城県",
-    "municipality": "仙台市太白区",
-    "locationText": "太白区秋保町馬場字向山",
-    "category": "目撃",
-    "description": "頭数・体長：頭数・体長ともに不明",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2577731194016,
-    "longitude": 140.636485884379
-  },
-  {
-    "id": "SENDAI-3c94769301e393fa",
-    "date": "2026-05-20",
-    "prefecture": "宮城県",
-    "municipality": "仙台市太白区",
-    "locationText": "太白区秋保町境野字中原",
-    "category": "目撃",
-    "description": "頭数・体長：3頭・いずれも体長不明",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2473913840066,
-    "longitude": 140.689237955226
-  },
-  {
-    "id": "SENDAI-313b1ccf6a471901",
-    "date": "2026-05-20",
-    "prefecture": "宮城県",
-    "municipality": "仙台市宮城野区",
-    "locationText": "宮城野区岩切字土手外西",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長不明",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.3047312371887,
-    "longitude": 140.942916879175
-  },
-  {
-    "id": "SENDAI-2b1addef13d4179c",
+    "id": "SENDAI-fab2563930bc2046",
     "date": "2026-05-20",
     "prefecture": "宮城県",
     "municipality": "仙台市宮城野区",
@@ -1512,7 +1442,77 @@
     "longitude": 140.9457604948
   },
   {
-    "id": "SENDAI-9698a08b2ba090e1",
+    "id": "SENDAI-d6c53e41bbbf9f6a",
+    "date": "2026-05-20",
+    "prefecture": "宮城県",
+    "municipality": "仙台市泉区",
+    "locationText": "泉区福岡字西上野原",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3675162351468,
+    "longitude": 140.762816765364
+  },
+  {
+    "id": "SENDAI-4ddf9686e1acd31b",
+    "date": "2026-05-20",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区台原森林公園",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長70cm前後",
+    "riskLevel": "高",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3001311800139,
+    "longitude": 140.882707979732
+  },
+  {
+    "id": "SENDAI-208a2730cf5e4b81",
+    "date": "2026-05-20",
+    "prefecture": "宮城県",
+    "municipality": "仙台市太白区",
+    "locationText": "太白区秋保町馬場字向山",
+    "category": "目撃",
+    "description": "頭数・体長：頭数・体長ともに不明",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2577731194016,
+    "longitude": 140.636485884379
+  },
+  {
+    "id": "SENDAI-20350278f6bd5f67",
+    "date": "2026-05-20",
+    "prefecture": "宮城県",
+    "municipality": "仙台市太白区",
+    "locationText": "太白区秋保町境野字中原",
+    "category": "目撃",
+    "description": "頭数・体長：3頭・いずれも体長不明",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2473913840066,
+    "longitude": 140.689237955226
+  },
+  {
+    "id": "SENDAI-0cb9fba5c77f7ff3",
+    "date": "2026-05-20",
+    "prefecture": "宮城県",
+    "municipality": "仙台市宮城野区",
+    "locationText": "宮城野区岩切字土手外西",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長不明",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3047312371887,
+    "longitude": 140.942916879175
+  },
+  {
+    "id": "SENDAI-709111f0c40dcf71",
     "date": "2026-05-19",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -1526,7 +1526,7 @@
     "longitude": 140.758081568541
   },
   {
-    "id": "SENDAI-cb477a81d72048bd",
+    "id": "SENDAI-f6e1a91ef47d5a61",
     "date": "2026-05-18",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -1540,7 +1540,7 @@
     "longitude": 140.81302203231
   },
   {
-    "id": "SENDAI-20cb3c9658787e74",
+    "id": "SENDAI-6df4a89bc041b986",
     "date": "2026-05-18",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -1554,7 +1554,7 @@
     "longitude": 140.844366016855
   },
   {
-    "id": "SENDAI-03d8191b59d7f76a",
+    "id": "SENDAI-063de133f3e16359",
     "date": "2026-05-18",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -1568,21 +1568,7 @@
     "longitude": 140.722357972122
   },
   {
-    "id": "SENDAI-a5a241bfccba6e71",
-    "date": "2026-05-17",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "青葉区八幡5丁目",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長50cm前後",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2716545668796,
-    "longitude": 140.84101601935
-  },
-  {
-    "id": "SENDAI-15cf9411fdb767e2",
+    "id": "SENDAI-eca8c0e305b2bcce",
     "date": "2026-05-17",
     "prefecture": "宮城県",
     "municipality": "仙台市太白区",
@@ -1596,7 +1582,21 @@
     "longitude": 140.788805979327
   },
   {
-    "id": "SENDAI-b8310ca887669fe3",
+    "id": "SENDAI-93cf191d20fbb95c",
+    "date": "2026-05-17",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区八幡5丁目",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長50cm前後",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2716545668796,
+    "longitude": 140.84101601935
+  },
+  {
+    "id": "SENDAI-b315cbf16fdad990",
     "date": "2026-05-16",
     "prefecture": "宮城県",
     "municipality": "仙台市太白区",
@@ -1610,7 +1610,7 @@
     "longitude": 140.666966774329
   },
   {
-    "id": "SENDAI-e2386542d6d8840b",
+    "id": "SENDAI-956be761526ea5e8",
     "date": "2026-05-15",
     "prefecture": "宮城県",
     "municipality": "仙台市太白区",
@@ -1624,7 +1624,7 @@
     "longitude": 140.802439572271
   },
   {
-    "id": "SENDAI-9d168c5e2ec3efd7",
+    "id": "SENDAI-85e29d799806d33f",
     "date": "2026-05-15",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -1638,7 +1638,7 @@
     "longitude": 140.824558223678
   },
   {
-    "id": "SENDAI-f3e95168dafcdf62",
+    "id": "SENDAI-f853d968fbf661fb",
     "date": "2026-05-14",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -1652,7 +1652,7 @@
     "longitude": 140.848751550087
   },
   {
-    "id": "SENDAI-bd62bd8bc1884390",
+    "id": "SENDAI-ab44ae0c0ead5621",
     "date": "2026-05-14",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -1666,49 +1666,7 @@
     "longitude": 140.858288926274
   },
   {
-    "id": "SENDAI-a9d0f8288dba81b2",
-    "date": "2026-05-14",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "青葉区小松島4丁目",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長不明",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2864061853631,
-    "longitude": 140.887534602286
-  },
-  {
-    "id": "SENDAI-774d23109911564a",
-    "date": "2026-05-14",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "青葉区芋沢字下野下",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長70cm前後",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2831204287109,
-    "longitude": 140.738447941741
-  },
-  {
-    "id": "SENDAI-59866ce78665d95a",
-    "date": "2026-05-14",
-    "prefecture": "宮城県",
-    "municipality": "仙台市宮城野区",
-    "locationText": "宮城野区蟹沢",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長100cm以上",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2814281406697,
-    "longitude": 140.903674490322
-  },
-  {
-    "id": "SENDAI-2cbcda72ef4f8c11",
+    "id": "SENDAI-98c29c6b518941cf",
     "date": "2026-05-14",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -1722,7 +1680,49 @@
     "longitude": 140.854010432269
   },
   {
-    "id": "SENDAI-5d943281c5f2fbef",
+    "id": "SENDAI-808930f00185caaf",
+    "date": "2026-05-14",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区芋沢字下野下",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長70cm前後",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2831204287109,
+    "longitude": 140.738447941741
+  },
+  {
+    "id": "SENDAI-61f861842499b809",
+    "date": "2026-05-14",
+    "prefecture": "宮城県",
+    "municipality": "仙台市宮城野区",
+    "locationText": "宮城野区蟹沢",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2814281406697,
+    "longitude": 140.903674490322
+  },
+  {
+    "id": "SENDAI-2ebffe8cf6a93789",
+    "date": "2026-05-14",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区小松島4丁目",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長不明",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2864061853631,
+    "longitude": 140.887534602286
+  },
+  {
+    "id": "SENDAI-4ae47a3e86649464",
     "date": "2026-05-13",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -1736,7 +1736,7 @@
     "longitude": 140.759265179764
   },
   {
-    "id": "SENDAI-410fb64eb4c84df2",
+    "id": "SENDAI-441dd705d9319d78",
     "date": "2026-05-13",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -1750,7 +1750,7 @@
     "longitude": 140.83847999783
   },
   {
-    "id": "SENDAI-5e1cb9d82d55ee43",
+    "id": "SENDAI-c1762145e38819f1",
     "date": "2026-05-12",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -1764,7 +1764,7 @@
     "longitude": 140.824881520459
   },
   {
-    "id": "SENDAI-23c4d825a2e0ff62",
+    "id": "SENDAI-4c8a2dd0e7732df5",
     "date": "2026-05-12",
     "prefecture": "宮城県",
     "municipality": "仙台市太白区",
@@ -1778,35 +1778,7 @@
     "longitude": 140.818466068393
   },
   {
-    "id": "SENDAI-a7934244b3c2b41a",
-    "date": "2026-05-11",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "青葉区桜ケ岡公園",
-    "category": "目撃",
-    "description": "頭数・体長：2頭・体長100cm以上1頭、体長70cm前後1頭",
-    "riskLevel": "高",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2597513736677,
-    "longitude": 140.859989740979
-  },
-  {
-    "id": "SENDAI-9ec6fba182836b69",
-    "date": "2026-05-11",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "青葉区作並字日影",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長不明",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.313999755056,
-    "longitude": 140.643009119972
-  },
-  {
-    "id": "SENDAI-14bc210740b7006b",
+    "id": "SENDAI-e2ff111856caf42d",
     "date": "2026-05-11",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -1820,7 +1792,21 @@
     "longitude": 140.887483564333
   },
   {
-    "id": "SENDAI-0ab905f652d56b98",
+    "id": "SENDAI-dcef0fee63d69261",
+    "date": "2026-05-11",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区桜ケ岡公園",
+    "category": "目撃",
+    "description": "頭数・体長：2頭・体長100cm以上1頭、体長70cm前後1頭",
+    "riskLevel": "高",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2597513736677,
+    "longitude": 140.859989740979
+  },
+  {
+    "id": "SENDAI-9e475e9b9f964152",
     "date": "2026-05-11",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -1834,7 +1820,21 @@
     "longitude": 140.646906746853
   },
   {
-    "id": "SENDAI-b45ac51322dc2cd4",
+    "id": "SENDAI-29613d60d074e005",
+    "date": "2026-05-11",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区作並字日影",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長不明",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.313999755056,
+    "longitude": 140.643009119972
+  },
+  {
+    "id": "SENDAI-7a86b2f4b85d5090",
     "date": "2026-05-10",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -1848,21 +1848,7 @@
     "longitude": 140.760263993664
   },
   {
-    "id": "SENDAI-25d23801d09aa7d6",
-    "date": "2026-05-09",
-    "prefecture": "宮城県",
-    "municipality": "仙台市泉区",
-    "locationText": "泉区上谷刈字大平東",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長100cm以上",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.3112051422672,
-    "longitude": 140.850460662098
-  },
-  {
-    "id": "SENDAI-0597166f77058d06",
+    "id": "SENDAI-fbe29dd4c9fd1c24",
     "date": "2026-05-09",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -1876,7 +1862,21 @@
     "longitude": 140.860456094152
   },
   {
-    "id": "SENDAI-bae818dadc20a53a",
+    "id": "SENDAI-4e7c6b5263373363",
+    "date": "2026-05-09",
+    "prefecture": "宮城県",
+    "municipality": "仙台市泉区",
+    "locationText": "泉区上谷刈字大平東",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3112051422672,
+    "longitude": 140.850460662098
+  },
+  {
+    "id": "SENDAI-b87882c649e599d3",
     "date": "2026-05-08",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -1890,7 +1890,7 @@
     "longitude": 140.767420653141
   },
   {
-    "id": "SENDAI-b1113bcd9a4bb105",
+    "id": "SENDAI-b48a2226115fddec",
     "date": "2026-05-08",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -1904,7 +1904,7 @@
     "longitude": 140.775627374873
   },
   {
-    "id": "SENDAI-ea3961fc7105e3d0",
+    "id": "SENDAI-2d2cc7361cc1a137",
     "date": "2026-05-07",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -1918,7 +1918,7 @@
     "longitude": 140.775899579971
   },
   {
-    "id": "SENDAI-b45b6b75bc8c54fd",
+    "id": "SENDAI-04272a17ab6d6a04",
     "date": "2026-05-07",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -1932,21 +1932,7 @@
     "longitude": 140.715699428908
   },
   {
-    "id": "SENDAI-7a63a6e2addb7968",
-    "date": "2026-05-06",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "青葉区折立3丁目",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長100cm以上",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2668583281093,
-    "longitude": 140.806728148548
-  },
-  {
-    "id": "SENDAI-4dc83ad5cce4cba3",
+    "id": "SENDAI-84016b82af5e6f29",
     "date": "2026-05-06",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -1960,77 +1946,21 @@
     "longitude": 140.848163450832
   },
   {
-    "id": "SENDAI-c7ff084b5f5422a4",
-    "date": "2026-05-05",
+    "id": "SENDAI-76c507dd4aa99b3e",
+    "date": "2026-05-06",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
-    "locationText": "青葉区錦ケ丘5丁目",
+    "locationText": "青葉区折立3丁目",
     "category": "目撃",
     "description": "頭数・体長：1頭・体長100cm以上",
     "riskLevel": "中",
     "sourceName": "仙台市",
     "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2554044076209,
-    "longitude": 140.755367027525
+    "latitude": 38.2668583281093,
+    "longitude": 140.806728148548
   },
   {
-    "id": "SENDAI-a818e8f82373b375",
-    "date": "2026-05-05",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "青葉区錦ケ丘9丁目",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長100cm以上",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2621576620472,
-    "longitude": 140.759245035386
-  },
-  {
-    "id": "SENDAI-9a005d79d48fa48c",
-    "date": "2026-05-05",
-    "prefecture": "宮城県",
-    "municipality": "仙台市太白区",
-    "locationText": "太白区茂庭字松場",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長100cm以上",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2211459032699,
-    "longitude": 140.73973385682
-  },
-  {
-    "id": "SENDAI-86d70b6c73b18414",
-    "date": "2026-05-05",
-    "prefecture": "宮城県",
-    "municipality": "仙台市太白区",
-    "locationText": "太白区日本平",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長100cm以上",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2229121728286,
-    "longitude": 140.812741409498
-  },
-  {
-    "id": "SENDAI-830b1a77e955c7f3",
-    "date": "2026-05-05",
-    "prefecture": "宮城県",
-    "municipality": "仙台市太白区",
-    "locationText": "太白区太白3丁目",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長100cm以上",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2293152416903,
-    "longitude": 140.816691220739
-  },
-  {
-    "id": "SENDAI-72fb3290c5dff5a4",
+    "id": "SENDAI-fef30a6570ba974d",
     "date": "2026-05-05",
     "prefecture": "宮城県",
     "municipality": "仙台市太白区",
@@ -2044,21 +1974,77 @@
     "longitude": 140.811572328737
   },
   {
-    "id": "SENDAI-667eb40e92c2e292",
-    "date": "2026-05-04",
+    "id": "SENDAI-f6099517d62148ed",
+    "date": "2026-05-05",
     "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "青葉区山手町",
+    "municipality": "仙台市太白区",
+    "locationText": "太白区太白3丁目",
     "category": "目撃",
-    "description": "頭数・体長：1頭・100cm以上",
+    "description": "頭数・体長：1頭・体長100cm以上",
     "riskLevel": "中",
     "sourceName": "仙台市",
     "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2854809332502,
-    "longitude": 140.852483296014
+    "latitude": 38.2293152416903,
+    "longitude": 140.816691220739
   },
   {
-    "id": "SENDAI-43880f696a6c0519",
+    "id": "SENDAI-a75400e8fd8aa3ae",
+    "date": "2026-05-05",
+    "prefecture": "宮城県",
+    "municipality": "仙台市太白区",
+    "locationText": "太白区茂庭字松場",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2211459032699,
+    "longitude": 140.73973385682
+  },
+  {
+    "id": "SENDAI-80636349c934e5d1",
+    "date": "2026-05-05",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区錦ケ丘9丁目",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2621576620472,
+    "longitude": 140.759245035386
+  },
+  {
+    "id": "SENDAI-2caeeba05e1406ff",
+    "date": "2026-05-05",
+    "prefecture": "宮城県",
+    "municipality": "仙台市太白区",
+    "locationText": "太白区日本平",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2229121728286,
+    "longitude": 140.812741409498
+  },
+  {
+    "id": "SENDAI-088bbe20cfb97959",
+    "date": "2026-05-05",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区錦ケ丘5丁目",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2554044076209,
+    "longitude": 140.755367027525
+  },
+  {
+    "id": "SENDAI-9e59270da0b9cbd0",
     "date": "2026-05-04",
     "prefecture": "宮城県",
     "municipality": "仙台市太白区",
@@ -2072,7 +2058,21 @@
     "longitude": 140.783228918626
   },
   {
-    "id": "SENDAI-992a2c98800cc34d",
+    "id": "SENDAI-0d5b0ac31faf48ea",
+    "date": "2026-05-04",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区山手町",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2854809332502,
+    "longitude": 140.852483296014
+  },
+  {
+    "id": "SENDAI-43529037ca8a8497",
     "date": "2026-05-02",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -2086,7 +2086,7 @@
     "longitude": 140.815566440643
   },
   {
-    "id": "SENDAI-6260a06175e0d0e8",
+    "id": "SENDAI-3362b8aa675e4b44",
     "date": "2026-05-02",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -2100,7 +2100,7 @@
     "longitude": 140.802492805681
   },
   {
-    "id": "SENDAI-cd67e46cf7491646",
+    "id": "SENDAI-84aaaf0658670879",
     "date": "2026-05-01",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -2114,7 +2114,7 @@
     "longitude": 140.831969890797
   },
   {
-    "id": "SENDAI-99178b52ec3f703b",
+    "id": "SENDAI-2d89cfa342f8ae63",
     "date": "2026-05-01",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -2128,7 +2128,7 @@
     "longitude": 140.776258284042
   },
   {
-    "id": "SENDAI-52b2cd5bd6307f19",
+    "id": "SENDAI-05c6479a4141b17f",
     "date": "2026-05-01",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -2142,7 +2142,7 @@
     "longitude": 140.81504682436
   },
   {
-    "id": "SENDAI-f988074f6d9ff853",
+    "id": "SENDAI-d321d0a043e389c9",
     "date": "2026-04-30",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -2156,7 +2156,7 @@
     "longitude": 140.79925369252
   },
   {
-    "id": "SENDAI-e923846fe0562800",
+    "id": "SENDAI-3184020587177670",
     "date": "2026-04-30",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -2170,7 +2170,7 @@
     "longitude": 140.846970699756
   },
   {
-    "id": "SENDAI-d4a346e3e827780e",
+    "id": "SENDAI-291237ac841b9abd",
     "date": "2026-04-30",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -2184,7 +2184,7 @@
     "longitude": 140.797648585003
   },
   {
-    "id": "SENDAI-8389bd993e4ec74f",
+    "id": "SENDAI-af2083d2a260e772",
     "date": "2026-04-29",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -2198,7 +2198,7 @@
     "longitude": 140.813914208956
   },
   {
-    "id": "SENDAI-943b9b134cdcd65c",
+    "id": "SENDAI-3b7050997edfa6e3",
     "date": "2026-04-28",
     "prefecture": "宮城県",
     "municipality": "仙台市太白区",
@@ -2212,7 +2212,7 @@
     "longitude": 140.819361104406
   },
   {
-    "id": "SENDAI-fe15fb7ab243e864",
+    "id": "SENDAI-aba490533902d00a",
     "date": "2026-04-25",
     "prefecture": "宮城県",
     "municipality": "仙台市宮城野区",
@@ -2226,7 +2226,7 @@
     "longitude": 140.916823703003
   },
   {
-    "id": "SENDAI-f93b9fc3ddc1a66f",
+    "id": "SENDAI-208b49672add3953",
     "date": "2026-04-25",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -2240,21 +2240,7 @@
     "longitude": 140.762114757836
   },
   {
-    "id": "SENDAI-8146cd356a59845f",
-    "date": "2026-04-24",
-    "prefecture": "宮城県",
-    "municipality": "仙台市泉区",
-    "locationText": "泉区紫山5丁目",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長100cm以上",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.3538912542554,
-    "longitude": 140.82079142452
-  },
-  {
-    "id": "SENDAI-0a7a4dc85942cf84",
+    "id": "SENDAI-9180ed747d91e1fd",
     "date": "2026-04-24",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -2268,7 +2254,21 @@
     "longitude": 140.651543920996
   },
   {
-    "id": "SENDAI-7d965e04a382a422",
+    "id": "SENDAI-37c06fa60a9652e7",
+    "date": "2026-04-24",
+    "prefecture": "宮城県",
+    "municipality": "仙台市泉区",
+    "locationText": "泉区紫山5丁目",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3538912542554,
+    "longitude": 140.82079142452
+  },
+  {
+    "id": "SENDAI-87d1562e3b801f29",
     "date": "2026-04-23",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -2282,21 +2282,7 @@
     "longitude": 140.799502952657
   },
   {
-    "id": "SENDAI-fa81550eb3461661",
-    "date": "2026-04-22",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "青葉区郷六字舘",
-    "category": "目撃",
-    "description": "頭数・体長：頭数・体長ともに不明",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2668652514453,
-    "longitude": 140.814447168566
-  },
-  {
-    "id": "SENDAI-b5ee42d7da5d3a95",
+    "id": "SENDAI-ed6665f26bd6f6a5",
     "date": "2026-04-22",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -2310,7 +2296,7 @@
     "longitude": 140.749283968399
   },
   {
-    "id": "SENDAI-6dfe466452d9d9d1",
+    "id": "SENDAI-74e94208bb3a93c9",
     "date": "2026-04-22",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -2324,7 +2310,21 @@
     "longitude": 140.816473840265
   },
   {
-    "id": "SENDAI-c33cc4d43b0028aa",
+    "id": "SENDAI-295ca8e823ee0695",
+    "date": "2026-04-22",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区郷六字舘",
+    "category": "目撃",
+    "description": "頭数・体長：頭数・体長ともに不明",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2668652514453,
+    "longitude": 140.814447168566
+  },
+  {
+    "id": "SENDAI-79d79f036c211714",
     "date": "2026-04-21",
     "prefecture": "宮城県",
     "municipality": "仙台市宮城野区",
@@ -2338,7 +2338,7 @@
     "longitude": 140.917728652406
   },
   {
-    "id": "SENDAI-a05523af5dcfb5e9",
+    "id": "SENDAI-40692112bd312eb6",
     "date": "2026-04-19",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -2352,49 +2352,7 @@
     "longitude": 140.775238973256
   },
   {
-    "id": "SENDAI-ba0edd1b50e6dac4",
-    "date": "2026-04-18",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "青葉区千代田町",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長100cm以上",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2808843587399,
-    "longitude": 140.849177159657
-  },
-  {
-    "id": "SENDAI-5a33646043f97be7",
-    "date": "2026-04-18",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "青葉区三条町",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長100cm以上",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2798570188645,
-    "longitude": 140.851368827093
-  },
-  {
-    "id": "SENDAI-437293c57b796676",
-    "date": "2026-04-18",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "青葉区青葉町",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長100cm以上",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2813039261311,
-    "longitude": 140.864389052282
-  },
-  {
-    "id": "SENDAI-14c394587ac5e746",
+    "id": "SENDAI-ff2dcbcb414827d0",
     "date": "2026-04-18",
     "prefecture": "宮城県",
     "municipality": "仙台市宮城野区",
@@ -2408,7 +2366,49 @@
     "longitude": 140.909054949742
   },
   {
-    "id": "SENDAI-bc9420c7ea6a1b67",
+    "id": "SENDAI-e9901df3a3db959a",
+    "date": "2026-04-18",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区三条町",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2798570188645,
+    "longitude": 140.851368827093
+  },
+  {
+    "id": "SENDAI-93e7d39e4d6dddc8",
+    "date": "2026-04-18",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区青葉町",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2813039261311,
+    "longitude": 140.864389052282
+  },
+  {
+    "id": "SENDAI-860f80b24a2f847a",
+    "date": "2026-04-18",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区千代田町",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2808843587399,
+    "longitude": 140.849177159657
+  },
+  {
+    "id": "SENDAI-d897457fca6d38ef",
     "date": "2026-04-17",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -2422,21 +2422,7 @@
     "longitude": 140.846833636078
   },
   {
-    "id": "SENDAI-9fe82f0e5f12e3ca",
-    "date": "2026-04-14",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "青葉区南吉成5丁目",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長100cm以上",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.2926501281609,
-    "longitude": 140.811141139052
-  },
-  {
-    "id": "SENDAI-21367af015e9ef93",
+    "id": "SENDAI-99e78d5bb6e6c440",
     "date": "2026-04-14",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -2450,7 +2436,21 @@
     "longitude": 140.867111863156
   },
   {
-    "id": "SENDAI-48e6566d4b4bc15e",
+    "id": "SENDAI-3dd46571cfba2abf",
+    "date": "2026-04-14",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区南吉成5丁目",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2926501281609,
+    "longitude": 140.811141139052
+  },
+  {
+    "id": "SENDAI-96b415e5323b3d05",
     "date": "2026-04-13",
     "prefecture": "宮城県",
     "municipality": "仙台市太白区",
@@ -2464,21 +2464,7 @@
     "longitude": 140.739630209327
   },
   {
-    "id": "SENDAI-574d286903a3429d",
-    "date": "2026-04-11",
-    "prefecture": "宮城県",
-    "municipality": "仙台市泉区",
-    "locationText": "泉区虹の丘4丁目",
-    "category": "目撃",
-    "description": "頭数・体長：1頭・体長不明",
-    "riskLevel": "中",
-    "sourceName": "仙台市",
-    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
-    "latitude": 38.3013642156857,
-    "longitude": 140.864884999842
-  },
-  {
-    "id": "SENDAI-1d6eacadf7f392c0",
+    "id": "SENDAI-f7e27e17a87a4195",
     "date": "2026-04-11",
     "prefecture": "宮城県",
     "municipality": "仙台市宮城野区",
@@ -2492,7 +2478,21 @@
     "longitude": 140.911433290383
   },
   {
-    "id": "SENDAI-78818cff85ba5ad8",
+    "id": "SENDAI-ebafa1014ca7b9c1",
+    "date": "2026-04-11",
+    "prefecture": "宮城県",
+    "municipality": "仙台市泉区",
+    "locationText": "泉区虹の丘4丁目",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長不明",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3013642156857,
+    "longitude": 140.864884999842
+  },
+  {
+    "id": "SENDAI-c76e9717ca8139c8",
     "date": "2026-04-10",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
@@ -2506,7 +2506,7 @@
     "longitude": 140.758693824711
   },
   {
-    "id": "SENDAI-180b5af7ad57d42a",
+    "id": "SENDAI-33c6b4068cb6d71f",
     "date": "2026-04-03",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
@@ -2520,7 +2520,7 @@
     "longitude": 140.857434574787
   },
   {
-    "id": "SENDAI-4b6d1bfb1b48ad72",
+    "id": "SENDAI-82fac5da1fabe978",
     "date": "2026-04-01",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
