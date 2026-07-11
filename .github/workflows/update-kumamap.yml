@@ -1,4 +1,4 @@
-    name: Update KumaMap data
+name: Update KumaMap data
 
 on:
   workflow_dispatch:
