@@ -1,0 +1,1422 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import csv
+import hashlib
+import html as html_module
+import io
+import json
+import math
+import re
+import sys
+import urllib.parse
+import urllib.request
+import xml.etree.ElementTree as ET
+import zipfile
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Iterable
+
+SENDAI_DETAIL_PAGE_URL = (
+    "https://www2.wagmap.jp/sendaicity/"
+    "OpenDataDetail?lid=20129&mids=331"
+)
+SENDAI_FALLBACK_CSV_URL = (
+    "https://www2.wagmap.jp/sendaicity/"
+    "sendaicity/opendatafile/map_331/CSV/"
+    "opendata_20129.csv"
+)
+SENDAI_SOURCE_PAGE_URL = (
+    "https://www.city.sendai.jp/joho-kikaku/"
+    "shise/security/kokai/"
+    "opendeta_r08kumashutubotu.html"
+)
+
+MIYAGI_SOURCE_PAGE_URL = (
+    "https://www.pref.miyagi.jp/soshiki/"
+    "sizenhogo/r8kumamokugeki.html"
+)
+MIYAGI_FALLBACK_MAP_ID = (
+    "12_b92SRipXWwvkUfNCsDdEUWhEOmzUc"
+)
+
+ROOT = Path(__file__).resolve().parents[1]
+OUTPUT_JSON = ROOT / "kumamap" / "incidents.json"
+STATUS_JSON = ROOT / "kumamap" / "status.json"
+DIAGNOSTICS_JSON = (
+    ROOT / "kumamap" / "miyagi_diagnostics.json"
+)
+
+USER_AGENT = "KumaMapDataUpdater/2.0"
+DEFAULT_YEAR = 2026
+SENDAI_WARDS = (
+    "青葉区",
+    "宮城野区",
+    "若林区",
+    "太白区",
+    "泉区",
+)
+
+
+def fetch_bytes(url: str) -> bytes:
+    request = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": USER_AGENT,
+            "Accept": "*/*",
+            "Cache-Control": "no-cache",
+        },
+    )
+
+    with urllib.request.urlopen(
+        request,
+        timeout=60,
+    ) as response:
+        return response.read()
+
+
+def decode_text(raw: bytes) -> str:
+    for encoding in (
+        "utf-8-sig",
+        "utf-8",
+        "cp932",
+        "shift_jis",
+        "utf-16",
+    ):
+        try:
+            return raw.decode(encoding)
+        except UnicodeDecodeError:
+            continue
+
+    raise RuntimeError(
+        "テキストの文字コードを判定できませんでした。"
+    )
+
+
+def normalize_header(value: str) -> str:
+    return (
+        str(value or "")
+        .replace("\ufeff", "")
+        .replace("　", " ")
+        .strip()
+    )
+
+
+def find_column(
+    headers: Iterable[str],
+    names: Iterable[str],
+) -> str | None:
+    normalized = {
+        normalize_header(header).lower(): header
+        for header in headers
+    }
+
+    for name in names:
+        key = normalize_header(name).lower()
+
+        if key in normalized:
+            return normalized[key]
+
+    return None
+
+
+def discover_sendai_csv_url() -> str:
+    try:
+        page_html = decode_text(
+            fetch_bytes(SENDAI_DETAIL_PAGE_URL)
+        )
+    except Exception as error:
+        print(
+            "仙台市詳細ページの確認に失敗。"
+            f"固定URLを使用します: {error}"
+        )
+        return SENDAI_FALLBACK_CSV_URL
+
+    patterns = (
+        r'https?://[^"\']+?/CSV/[^"\']+?\.csv',
+        (
+            r'/(?:[^"\']*/)?opendatafile/'
+            r'[^"\']+?/CSV/[^"\']+?\.csv'
+        ),
+    )
+
+    for pattern in patterns:
+        match = re.search(
+            pattern,
+            page_html,
+            flags=re.IGNORECASE,
+        )
+
+        if match:
+            found = html_module.unescape(
+                match.group(0)
+            )
+
+            if found.startswith("http"):
+                return found
+
+            return urllib.parse.urljoin(
+                SENDAI_DETAIL_PAGE_URL,
+                found,
+            )
+
+    print(
+        "仙台市CSV URLをページから検出できないため、"
+        "固定URLを使用します。"
+    )
+    return SENDAI_FALLBACK_CSV_URL
+
+
+def parse_sendai_rows(
+    text: str,
+) -> list[dict[str, str]]:
+    sample = text[:4096]
+
+    try:
+        dialect = csv.Sniffer().sniff(
+            sample,
+            delimiters=",\t;",
+        )
+    except csv.Error:
+        dialect = csv.excel
+
+    reader = csv.DictReader(
+        io.StringIO(text),
+        dialect=dialect,
+    )
+
+    if not reader.fieldnames:
+        raise RuntimeError(
+            "仙台市CSVのヘッダーを検出できませんでした。"
+        )
+
+    headers = [
+        normalize_header(header)
+        for header in reader.fieldnames
+        if header is not None
+    ]
+
+    detected = {
+        "date": find_column(
+            headers,
+            ("出没日時", "発見日時", "日時", "日付"),
+        ),
+        "location": find_column(
+            headers,
+            ("出没場所", "発見場所", "場所", "所在地"),
+        ),
+        "longitude": find_column(
+            headers,
+            ("経度", "longitude", "lng", "x"),
+        ),
+        "latitude": find_column(
+            headers,
+            ("緯度", "latitude", "lat", "y"),
+        ),
+        "category": find_column(
+            headers,
+            ("分類", "区分", "種別"),
+        ),
+        "size": find_column(
+            headers,
+            (
+                "頭数及び体長",
+                "頭数・体長",
+                "頭数",
+                "体長",
+            ),
+        ),
+        "other": find_column(
+            headers,
+            ("その他", "備考", "詳細", "概要"),
+        ),
+    }
+
+    missing = [
+        key
+        for key in (
+            "date",
+            "location",
+            "longitude",
+            "latitude",
+        )
+        if not detected[key]
+    ]
+
+    if missing:
+        raise RuntimeError(
+            "仙台市CSVで必要な列を検出できません: "
+            + ", ".join(missing)
+            + f" / ヘッダー: {headers}"
+        )
+
+    rows: list[dict[str, str]] = []
+
+    for raw_row in reader:
+        row = {
+            normalize_header(key): (
+                str(value).strip()
+                if value is not None
+                else ""
+            )
+            for key, value in raw_row.items()
+            if key is not None
+        }
+
+        if not any(row.values()):
+            continue
+
+        for key, column in detected.items():
+            row[f"_{key}_col"] = column or ""
+
+        rows.append(row)
+
+    return rows
+
+
+def get_row_value(
+    row: dict[str, str],
+    marker: str,
+) -> str:
+    column = row.get(marker, "")
+
+    if not column:
+        return ""
+
+    return row.get(column, "").strip()
+
+
+def normalize_date(
+    value: str,
+    default_year: int = DEFAULT_YEAR,
+) -> str:
+    text = value.strip()
+
+    if not text:
+        return ""
+
+    gregorian = re.search(
+        (
+            r"(20\d{2})\s*[年/.\-]\s*"
+            r"(\d{1,2})\s*[月/.\-]\s*"
+            r"(\d{1,2})"
+        ),
+        text,
+    )
+
+    if gregorian:
+        year, month, day = map(
+            int,
+            gregorian.groups(),
+        )
+        return f"{year:04d}-{month:02d}-{day:02d}"
+
+    reiwa = re.search(
+        (
+            r"令和\s*(\d+|元)\s*年\s*"
+            r"(\d{1,2})\s*月\s*"
+            r"(\d{1,2})"
+        ),
+        text,
+    )
+
+    if reiwa:
+        era_year_text, month_text, day_text = (
+            reiwa.groups()
+        )
+        era_year = (
+            1
+            if era_year_text == "元"
+            else int(era_year_text)
+        )
+        return (
+            f"{2018 + era_year:04d}-"
+            f"{int(month_text):02d}-"
+            f"{int(day_text):02d}"
+        )
+
+    abbreviated = re.search(
+        (
+            r"R\s*(\d+)\s*[./\-]\s*"
+            r"(\d{1,2})\s*[./\-]\s*"
+            r"(\d{1,2})"
+        ),
+        text,
+        flags=re.IGNORECASE,
+    )
+
+    if abbreviated:
+        era_year, month, day = map(
+            int,
+            abbreviated.groups(),
+        )
+        return (
+            f"{2018 + era_year:04d}-"
+            f"{month:02d}-{day:02d}"
+        )
+
+    month_day_japanese = re.search(
+        r"(?<!\d)(\d{1,2})\s*月\s*(\d{1,2})\s*日",
+        text,
+    )
+
+    if month_day_japanese:
+        month, day = map(
+            int,
+            month_day_japanese.groups(),
+        )
+        return (
+            f"{default_year:04d}-"
+            f"{month:02d}-{day:02d}"
+        )
+
+    month_day_slash = re.search(
+        (
+            r"(?<![\d/])(\d{1,2})\s*[./\-]\s*"
+            r"(\d{1,2})(?!\s*[./\-]\s*\d)"
+        ),
+        text,
+    )
+
+    if month_day_slash:
+        month, day = map(
+            int,
+            month_day_slash.groups(),
+        )
+
+        if 1 <= month <= 12 and 1 <= day <= 31:
+            return (
+                f"{default_year:04d}-"
+                f"{month:02d}-{day:02d}"
+            )
+
+    return ""
+
+
+def parse_float(value: str) -> float | None:
+    cleaned = value.replace(",", "").strip()
+    match = re.search(
+        r"-?\d+(?:\.\d+)?",
+        cleaned,
+    )
+
+    if not match:
+        return None
+
+    try:
+        return float(match.group(0))
+    except ValueError:
+        return None
+
+
+def normalize_category(
+    value: str,
+    combined_text: str,
+) -> str:
+    raw_category = value.strip()
+
+    generic_category = (
+        not raw_category
+        or "クマ出没情報" in raw_category
+        or "熊出没情報" in raw_category
+    )
+
+    text = (
+        combined_text
+        if generic_category
+        else f"{raw_category} {combined_text}"
+    )
+
+    if any(
+        word in text
+        for word in (
+            "人身",
+            "負傷",
+            "けが",
+            "ケガ",
+            "襲撃",
+            "襲われ",
+        )
+    ):
+        return "被害"
+
+    if any(
+        word in text
+        for word in ("捕獲", "駆除")
+    ):
+        return "捕獲"
+
+    if any(
+        word in text
+        for word in (
+            "痕跡",
+            "足跡",
+            "ふん",
+            "フン",
+            "糞",
+            "食痕",
+        )
+    ):
+        return "痕跡"
+
+    if any(
+        word in text
+        for word in (
+            "目撃",
+            "出没",
+            "発見",
+        )
+    ):
+        return "目撃"
+
+    if not generic_category:
+        return raw_category
+
+    return "目撃"
+
+
+def infer_municipality(location: str) -> str:
+    for ward in SENDAI_WARDS:
+        if ward in location:
+            return f"仙台市{ward}"
+
+    return "仙台市"
+
+
+def infer_risk_level(
+    category: str,
+    location: str,
+    description: str,
+) -> str:
+    text = f"{category} {location} {description}"
+
+    if category == "被害":
+        return "高"
+
+    high_words = (
+        "住宅",
+        "民家",
+        "学校",
+        "小学校",
+        "中学校",
+        "高校",
+        "幼稚園",
+        "保育園",
+        "市街地",
+        "駅",
+        "公園",
+        "通学路",
+        "道路",
+        "敷地",
+        "店舗",
+    )
+
+    if any(word in text for word in high_words):
+        return "高"
+
+    if category in ("目撃", "痕跡"):
+        return "中"
+
+    return "低"
+
+
+def stable_id(
+    prefix: str,
+    *parts: object,
+) -> str:
+    raw = "|".join(str(part) for part in parts)
+    digest = hashlib.sha1(
+        raw.encode("utf-8")
+    ).hexdigest()[:16]
+
+    return f"{prefix}-{digest}"
+
+
+def build_sendai_incidents(
+    rows: list[dict[str, str]],
+) -> list[dict[str, object]]:
+    incidents: list[dict[str, object]] = []
+
+    for row in rows:
+        date_text = normalize_date(
+            get_row_value(row, "_date_col")
+        )
+        location = get_row_value(
+            row,
+            "_location_col",
+        )
+        longitude = parse_float(
+            get_row_value(row, "_longitude_col")
+        )
+        latitude = parse_float(
+            get_row_value(row, "_latitude_col")
+        )
+        raw_category = get_row_value(
+            row,
+            "_category_col",
+        )
+        size_text = get_row_value(
+            row,
+            "_size_col",
+        )
+        other_text = get_row_value(
+            row,
+            "_other_col",
+        )
+
+        if latitude is None or longitude is None:
+            continue
+
+        if not (
+            20.0 <= latitude <= 50.0
+            and 120.0 <= longitude <= 155.0
+        ):
+            continue
+
+        description_parts = [
+            part
+            for part in (
+                (
+                    f"頭数・体長：{size_text}"
+                    if size_text
+                    else ""
+                ),
+                other_text,
+            )
+            if part
+        ]
+
+        description = (
+            " / ".join(description_parts)
+            or "詳細情報なし"
+        )
+
+        category = normalize_category(
+            raw_category,
+            f"{location} {size_text} {other_text}",
+        )
+        municipality = infer_municipality(location)
+        risk_level = infer_risk_level(
+            category,
+            location,
+            description,
+        )
+
+        incidents.append(
+            {
+                "id": stable_id(
+                    "SENDAI",
+                    date_text,
+                    location,
+                    round(latitude, 6),
+                    round(longitude, 6),
+                    category,
+                ),
+                "date": date_text,
+                "prefecture": "宮城県",
+                "municipality": municipality,
+                "locationText": (
+                    location
+                    or f"{municipality} 位置情報あり"
+                ),
+                "category": category,
+                "description": description,
+                "riskLevel": risk_level,
+                "sourceName": "仙台市",
+                "sourceUrl": SENDAI_SOURCE_PAGE_URL,
+                "latitude": latitude,
+                "longitude": longitude,
+            }
+        )
+
+    return incidents
+
+
+def discover_miyagi_sources(
+    page_html: str,
+) -> tuple[str, str]:
+    xlsx_url = ""
+    map_id = ""
+
+    xlsx_match = re.search(
+        r'href=["\']([^"\']+?\.xlsx(?:\?[^"\']*)?)["\']',
+        page_html,
+        flags=re.IGNORECASE,
+    )
+
+    if xlsx_match:
+        xlsx_url = urllib.parse.urljoin(
+            MIYAGI_SOURCE_PAGE_URL,
+            html_module.unescape(
+                xlsx_match.group(1)
+            ),
+        )
+
+    map_patterns = (
+        r'[?&]mid=([A-Za-z0-9_-]+)',
+        (
+            r'google\.com/maps/d/(?:u/\d+/)?'
+            r'(?:edit|viewer)\?[^"\']*?'
+            r'mid=([A-Za-z0-9_-]+)'
+        ),
+    )
+
+    for pattern in map_patterns:
+        match = re.search(
+            pattern,
+            page_html,
+            flags=re.IGNORECASE,
+        )
+
+        if match:
+            map_id = html_module.unescape(
+                match.group(1)
+            )
+            break
+
+    return (
+        xlsx_url,
+        map_id or MIYAGI_FALLBACK_MAP_ID,
+    )
+
+
+def kml_candidate_urls(
+    map_id: str,
+) -> list[str]:
+    quoted_map_id = urllib.parse.quote(
+        map_id,
+        safe="_-",
+    )
+
+    return [
+        (
+            "https://www.google.com/maps/d/kml"
+            f"?mid={quoted_map_id}&forcekml=1"
+        ),
+        (
+            "https://www.google.com/maps/d/u/0/kml"
+            f"?mid={quoted_map_id}&forcekml=1"
+        ),
+        (
+            "https://www.google.com/maps/d/u/1/kml"
+            f"?mid={quoted_map_id}&forcekml=1"
+        ),
+    ]
+
+
+def decode_kml_payload(raw: bytes) -> str:
+    if raw[:2] == b"PK":
+        with zipfile.ZipFile(
+            io.BytesIO(raw)
+        ) as archive:
+            kml_names = [
+                name
+                for name in archive.namelist()
+                if name.lower().endswith(".kml")
+            ]
+
+            if not kml_names:
+                raise RuntimeError(
+                    "KMZ内にKMLファイルがありません。"
+                )
+
+            return decode_text(
+                archive.read(kml_names[0])
+            )
+
+    return decode_text(raw)
+
+
+def fetch_miyagi_kml(
+    map_id: str,
+) -> tuple[str, str, list[str]]:
+    errors: list[str] = []
+
+    for url in kml_candidate_urls(map_id):
+        try:
+            raw = fetch_bytes(url)
+            kml_text = decode_kml_payload(raw)
+
+            if (
+                "<kml" not in kml_text.lower()
+                or "<placemark" not in kml_text.lower()
+            ):
+                raise RuntimeError(
+                    "取得内容がKMLではありません。"
+                )
+
+            return kml_text, url, errors
+        except Exception as error:
+            errors.append(f"{url}: {error}")
+
+    raise RuntimeError(
+        " / ".join(errors)
+        or "宮城県Googleマップを取得できません。"
+    )
+
+
+def local_tag_name(tag: str) -> str:
+    return tag.rsplit("}", 1)[-1]
+
+
+def direct_child_text(
+    element: ET.Element,
+    child_name: str,
+) -> str:
+    for child in list(element):
+        if local_tag_name(child.tag) == child_name:
+            return (child.text or "").strip()
+
+    return ""
+
+
+def all_extended_values(
+    placemark: ET.Element,
+) -> list[str]:
+    values: list[str] = []
+
+    for element in placemark.iter():
+        tag_name = local_tag_name(element.tag)
+
+        if tag_name not in (
+            "value",
+            "SimpleData",
+        ):
+            continue
+
+        text = (element.text or "").strip()
+
+        if text:
+            values.append(text)
+
+    return values
+
+
+def html_to_text(value: str) -> str:
+    text = html_module.unescape(value or "")
+    text = re.sub(
+        r"(?i)<\s*br\s*/?\s*>",
+        " | ",
+        text,
+    )
+    text = re.sub(
+        r"(?i)</\s*(?:p|div|tr|li|h\d)\s*>",
+        " | ",
+        text,
+    )
+    text = re.sub(
+        r"(?i)</\s*(?:td|th)\s*>",
+        "：",
+        text,
+    )
+    text = re.sub(
+        r"<[^>]+>",
+        " ",
+        text,
+    )
+    text = text.replace("\xa0", " ")
+    text = re.sub(r"\s+", " ", text)
+    text = re.sub(
+        r"(?:\s*\|\s*)+",
+        " | ",
+        text,
+    )
+
+    return text.strip(" |")
+
+
+def collect_placemarks(
+    container: ET.Element,
+    folder_names: tuple[str, ...] = (),
+) -> list[tuple[ET.Element, tuple[str, ...]]]:
+    collected: list[
+        tuple[ET.Element, tuple[str, ...]]
+    ] = []
+
+    for child in list(container):
+        tag_name = local_tag_name(child.tag)
+
+        if tag_name == "Folder":
+            folder_name = direct_child_text(
+                child,
+                "name",
+            )
+            next_names = (
+                folder_names
+                + ((folder_name,) if folder_name else ())
+            )
+            collected.extend(
+                collect_placemarks(
+                    child,
+                    next_names,
+                )
+            )
+        elif tag_name == "Placemark":
+            collected.append(
+                (child, folder_names)
+            )
+        else:
+            collected.extend(
+                collect_placemarks(
+                    child,
+                    folder_names,
+                )
+            )
+
+    return collected
+
+
+def parse_coordinates(
+    placemark: ET.Element,
+) -> tuple[float, float] | None:
+    for element in placemark.iter():
+        if local_tag_name(element.tag) != "coordinates":
+            continue
+
+        text = (element.text or "").strip()
+
+        if not text:
+            continue
+
+        first_coordinate = text.split()[0]
+        parts = first_coordinate.split(",")
+
+        if len(parts) < 2:
+            continue
+
+        try:
+            longitude = float(parts[0])
+            latitude = float(parts[1])
+        except ValueError:
+            continue
+
+        if (
+            20.0 <= latitude <= 50.0
+            and 120.0 <= longitude <= 155.0
+        ):
+            return latitude, longitude
+
+    return None
+
+
+def is_sendai_text(text: str) -> bool:
+    if "仙台市" in text:
+        return True
+
+    return any(
+        ward in text
+        for ward in SENDAI_WARDS
+    )
+
+
+def extract_location_text(
+    combined_text: str,
+    placemark_name: str,
+) -> str:
+    label_match = re.search(
+        (
+            r"(?:場所|所在地|出没場所|目撃場所)"
+            r"\s*[：:]\s*"
+            r"([^|]{2,100})"
+        ),
+        combined_text,
+    )
+
+    if label_match:
+        location = label_match.group(1).strip(
+            " ：:、,。"
+        )
+    else:
+        sendai_match = re.search(
+            (
+                r"仙台市"
+                r"(?:青葉区|宮城野区|若林区|太白区|泉区)?"
+                r"[^|]{0,90}"
+            ),
+            combined_text,
+        )
+
+        if sendai_match:
+            location = sendai_match.group(0)
+        else:
+            location = placemark_name
+
+    location = re.sub(
+        (
+            r"(?:目撃|痕跡|その他|出没|発見)"
+            r"\s*[：:]?\s*$"
+        ),
+        "",
+        location,
+    )
+    location = re.sub(
+        (
+            r"(?:20\d{2}[年/.\-]\d{1,2}[月/.\-]\d{1,2}日?"
+            r"|\d{1,2}月\d{1,2}日"
+            r"|\d{1,2}[./\-]\d{1,2})"
+        ),
+        "",
+        location,
+    )
+    location = re.sub(r"\s+", " ", location)
+    location = location.strip(
+        " ：:、,。|-"
+    )
+
+    return location or "仙台市内（宮城県速報地点）"
+
+
+def clean_description(
+    name: str,
+    description_text: str,
+    folder_text: str,
+) -> str:
+    parts = []
+
+    for part in (
+        description_text,
+        f"区分：{folder_text}" if folder_text else "",
+    ):
+        cleaned = re.sub(r"\s+", " ", part).strip()
+
+        if (
+            cleaned
+            and cleaned != name
+            and cleaned not in parts
+        ):
+            parts.append(cleaned)
+
+    result = " / ".join(parts)
+
+    if not result:
+        return "宮城県クマ目撃等情報マップ掲載地点"
+
+    return result[:280]
+
+
+def parse_miyagi_kml(
+    kml_text: str,
+) -> tuple[
+    list[dict[str, object]],
+    dict[str, int],
+]:
+    root = ET.fromstring(kml_text)
+    placemark_entries = collect_placemarks(root)
+
+    incidents: list[dict[str, object]] = []
+    diagnostics = {
+        "placemarkCount": len(placemark_entries),
+        "pointPlacemarkCount": 0,
+        "sendaiTextMatchCount": 0,
+        "sendaiWithDateCount": 0,
+        "sendaiAcceptedCount": 0,
+    }
+
+    for placemark, folder_names in placemark_entries:
+        coordinates = parse_coordinates(placemark)
+
+        if coordinates is None:
+            continue
+
+        diagnostics["pointPlacemarkCount"] += 1
+
+        name = html_to_text(
+            direct_child_text(
+                placemark,
+                "name",
+            )
+        )
+        description_text = html_to_text(
+            direct_child_text(
+                placemark,
+                "description",
+            )
+        )
+        extended_values = [
+            html_to_text(value)
+            for value in all_extended_values(
+                placemark
+            )
+            if value
+        ]
+        folder_text = " / ".join(
+            name
+            for name in folder_names
+            if name
+        )
+
+        combined_text = " | ".join(
+            part
+            for part in (
+                folder_text,
+                name,
+                description_text,
+                *extended_values,
+            )
+            if part
+        )
+
+        if not is_sendai_text(combined_text):
+            continue
+
+        diagnostics["sendaiTextMatchCount"] += 1
+
+        date_text = normalize_date(
+            combined_text,
+            default_year=DEFAULT_YEAR,
+        )
+
+        if not date_text:
+            continue
+
+        diagnostics["sendaiWithDateCount"] += 1
+
+        latitude, longitude = coordinates
+        raw_category = (
+            folder_text
+            or name
+        )
+        category = normalize_category(
+            raw_category,
+            combined_text,
+        )
+        location = extract_location_text(
+            combined_text,
+            name,
+        )
+        description = clean_description(
+            name,
+            description_text,
+            folder_text,
+        )
+        municipality = infer_municipality(
+            f"{location} {combined_text}"
+        )
+        risk_level = infer_risk_level(
+            category,
+            location,
+            description,
+        )
+
+        incident = {
+            "id": stable_id(
+                "MIYAGI",
+                date_text,
+                round(latitude, 5),
+                round(longitude, 5),
+                category,
+            ),
+            "date": date_text,
+            "prefecture": "宮城県",
+            "municipality": municipality,
+            "locationText": location,
+            "category": category,
+            "description": description,
+            "riskLevel": risk_level,
+            "sourceName": "宮城県",
+            "sourceUrl": MIYAGI_SOURCE_PAGE_URL,
+            "latitude": latitude,
+            "longitude": longitude,
+        }
+
+        incidents.append(incident)
+        diagnostics["sendaiAcceptedCount"] += 1
+
+    return incidents, diagnostics
+
+
+def distance_km(
+    first: dict[str, object],
+    second: dict[str, object],
+) -> float:
+    lat1 = math.radians(
+        float(first["latitude"])
+    )
+    lon1 = math.radians(
+        float(first["longitude"])
+    )
+    lat2 = math.radians(
+        float(second["latitude"])
+    )
+    lon2 = math.radians(
+        float(second["longitude"])
+    )
+
+    delta_latitude = lat2 - lat1
+    delta_longitude = lon2 - lon1
+
+    value = (
+        math.sin(delta_latitude / 2) ** 2
+        + math.cos(lat1)
+        * math.cos(lat2)
+        * math.sin(delta_longitude / 2) ** 2
+    )
+
+    return 6371.0 * 2.0 * math.atan2(
+        math.sqrt(value),
+        math.sqrt(1.0 - value),
+    )
+
+
+def normalize_location_key(value: str) -> str:
+    return re.sub(
+        r"[\s　、,。・\-ー（）()\[\]【】]",
+        "",
+        value or "",
+    )
+
+
+def is_probable_duplicate(
+    candidate: dict[str, object],
+    existing: dict[str, object],
+) -> bool:
+    candidate_date = str(
+        candidate.get("date", "")
+    )
+    existing_date = str(
+        existing.get("date", "")
+    )
+
+    if (
+        candidate_date
+        and existing_date
+        and candidate_date != existing_date
+    ):
+        return False
+
+    if distance_km(candidate, existing) <= 0.25:
+        return True
+
+    candidate_location = normalize_location_key(
+        str(candidate.get("locationText", ""))
+    )
+    existing_location = normalize_location_key(
+        str(existing.get("locationText", ""))
+    )
+
+    if (
+        len(candidate_location) >= 6
+        and len(existing_location) >= 6
+        and (
+            candidate_location in existing_location
+            or existing_location in candidate_location
+        )
+    ):
+        return True
+
+    return False
+
+
+def merge_incidents(
+    sendai_incidents: list[dict[str, object]],
+    miyagi_incidents: list[dict[str, object]],
+) -> tuple[
+    list[dict[str, object]],
+    int,
+]:
+    merged = list(sendai_incidents)
+    added_count = 0
+
+    for candidate in miyagi_incidents:
+        duplicate = any(
+            is_probable_duplicate(
+                candidate,
+                existing,
+            )
+            for existing in merged
+        )
+
+        if duplicate:
+            continue
+
+        merged.append(candidate)
+        added_count += 1
+
+    merged.sort(
+        key=lambda item: (
+            str(item.get("date", "")),
+            str(item.get("id", "")),
+        ),
+        reverse=True,
+    )
+
+    return merged, added_count
+
+
+def write_json(
+    path: Path,
+    value: object,
+) -> None:
+    path.parent.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+    path.write_text(
+        json.dumps(
+            value,
+            ensure_ascii=False,
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+
+
+def main() -> int:
+    sendai_csv_url = discover_sendai_csv_url()
+    print(f"仙台市CSV取得先: {sendai_csv_url}")
+
+    sendai_raw = fetch_bytes(
+        sendai_csv_url
+    )
+    sendai_rows = parse_sendai_rows(
+        decode_text(sendai_raw)
+    )
+    sendai_incidents = build_sendai_incidents(
+        sendai_rows
+    )
+
+    if not sendai_incidents:
+        raise RuntimeError(
+            "仙台市データが0件のため、"
+            "既存JSONを更新しません。"
+        )
+
+    diagnostics: dict[str, object] = {
+        "updatedAt": (
+            datetime.now(timezone.utc)
+            .isoformat(timespec="seconds")
+            .replace("+00:00", "Z")
+        ),
+        "sendaiCount": len(sendai_incidents),
+        "miyagiPageUrl": MIYAGI_SOURCE_PAGE_URL,
+        "miyagiStatus": "未取得",
+        "miyagiMapId": "",
+        "miyagiKmlUrl": "",
+        "miyagiExcelUrl": "",
+        "miyagiErrors": [],
+    }
+
+    miyagi_incidents: list[
+        dict[str, object]
+    ] = []
+    miyagi_added_count = 0
+
+    try:
+        miyagi_page_html = decode_text(
+            fetch_bytes(
+                MIYAGI_SOURCE_PAGE_URL
+            )
+        )
+        xlsx_url, map_id = (
+            discover_miyagi_sources(
+                miyagi_page_html
+            )
+        )
+
+        diagnostics["miyagiMapId"] = map_id
+        diagnostics["miyagiExcelUrl"] = xlsx_url
+
+        kml_text, kml_url, kml_errors = (
+            fetch_miyagi_kml(map_id)
+        )
+        diagnostics["miyagiKmlUrl"] = kml_url
+        diagnostics["miyagiErrors"] = kml_errors
+
+        (
+            miyagi_incidents,
+            kml_diagnostics,
+        ) = parse_miyagi_kml(kml_text)
+
+        diagnostics.update(kml_diagnostics)
+        diagnostics["miyagiStatus"] = "取得成功"
+        diagnostics["miyagiSendaiCount"] = len(
+            miyagi_incidents
+        )
+    except Exception as error:
+        diagnostics["miyagiStatus"] = "取得失敗"
+        errors = list(
+            diagnostics.get("miyagiErrors", [])
+        )
+        errors.append(str(error))
+        diagnostics["miyagiErrors"] = errors
+        print(
+            "宮城県データ取得に失敗したため、"
+            f"仙台市データのみ使用します: {error}"
+        )
+
+    incidents, miyagi_added_count = (
+        merge_incidents(
+            sendai_incidents,
+            miyagi_incidents,
+        )
+    )
+
+    diagnostics["miyagiAddedCount"] = (
+        miyagi_added_count
+    )
+    diagnostics["finalCount"] = len(incidents)
+
+    write_json(
+        OUTPUT_JSON,
+        incidents,
+    )
+
+    status = {
+        "updatedAt": diagnostics["updatedAt"],
+        "count": len(incidents),
+        "sourceName": "仙台市・宮城県",
+        "sendaiCount": len(sendai_incidents),
+        "miyagiMapSendaiCount": len(
+            miyagi_incidents
+        ),
+        "miyagiAddedCount": miyagi_added_count,
+        "miyagiStatus": diagnostics[
+            "miyagiStatus"
+        ],
+        "sourceCsvUrl": sendai_csv_url,
+        "sourcePageUrl": SENDAI_SOURCE_PAGE_URL,
+        "miyagiSourcePageUrl": (
+            MIYAGI_SOURCE_PAGE_URL
+        ),
+        "miyagiKmlUrl": diagnostics.get(
+            "miyagiKmlUrl",
+            "",
+        ),
+        "miyagiExcelUrl": diagnostics.get(
+            "miyagiExcelUrl",
+            "",
+        ),
+    }
+
+    write_json(
+        STATUS_JSON,
+        status,
+    )
+    write_json(
+        DIAGNOSTICS_JSON,
+        diagnostics,
+    )
+
+    print(
+        "生成完了: "
+        f"仙台市 {len(sendai_incidents)}件 / "
+        f"宮城県マップ仙台市分 "
+        f"{len(miyagi_incidents)}件 / "
+        f"重複除外後の県追加 "
+        f"{miyagi_added_count}件 / "
+        f"合計 {len(incidents)}件"
+    )
+
+    return 0
+
+
+if __name__ == "__main__":
+    try:
+        raise SystemExit(main())
+    except Exception as error:
+        print(
+            f"ERROR: {error}",
+            file=sys.stderr,
+        )
+        raise
