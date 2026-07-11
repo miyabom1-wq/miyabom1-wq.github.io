@@ -47,7 +47,7 @@ DIAGNOSTICS_JSON = (
     ROOT / "kumamap" / "miyagi_diagnostics.json"
 )
 
-USER_AGENT = "KumaMapDataUpdater/3.0-miyagi-join"
+USER_AGENT = "KumaMapDataUpdater/4.0-miyagi-prefecture"
 DEFAULT_YEAR = 2026
 SENDAI_WARDS = (
     "青葉区",
@@ -990,7 +990,7 @@ def parse_miyagi_xlsx(
                     municipality_index,
                 )
 
-                if "仙台市" not in municipality:
+                if not municipality:
                     continue
 
                 month = parse_integer_cell(
@@ -1059,12 +1059,12 @@ def parse_miyagi_xlsx(
             "selectedSheetName": selected["sheetName"],
             "selectedHeaderRowIndex": selected["headerRowIndex"],
             "selectedHeaders": selected["headers"],
-            "sendaiRowCount": len(selected_rows),
-            "sendaiSampleRows": selected_rows[:20],
+            "miyagiRowCount": len(selected_rows),
+            "miyagiSampleRows": selected_rows[:20],
             "candidateSheets": [
                 {
                     "sheetName": candidate["sheetName"],
-                    "sendaiRowCount": len(candidate["rows"]),
+                    "miyagiRowCount": len(candidate["rows"]),
                 }
                 for candidate in candidates
             ],
@@ -1567,7 +1567,10 @@ def compose_miyagi_location(
     district = normalize_header(district)
 
     if not district:
-        return municipality or "仙台市内"
+        return municipality or "宮城県内"
+
+    if district.startswith(municipality):
+        return district
 
     if district.startswith("仙台市"):
         return district
@@ -1612,7 +1615,7 @@ def build_miyagi_incidents(
         date_text = row_date or point_date
         latitude = float(point["latitude"])
         longitude = float(point["longitude"])
-        municipality = row.get("municipality", "仙台市")
+        municipality = row.get("municipality", "宮城県")
         district = row.get("district", "")
         location = compose_miyagi_location(
             municipality,
@@ -1673,7 +1676,7 @@ def build_miyagi_incidents(
         )
 
     diagnostics = {
-        "xlsxSendaiCount": len(xlsx_rows),
+        "xlsxMiyagiCount": len(xlsx_rows),
         "matchedPointCount": len(incidents),
         "unmatchedPointCount": (
             len(xlsx_rows) - len(incidents)
@@ -1766,26 +1769,46 @@ def is_probable_duplicate(
     return False
 
 
+def is_sendai_municipality(
+    municipality: object,
+) -> bool:
+    return str(municipality or "").startswith(
+        "仙台市"
+    )
+
+
 def merge_incidents(
     sendai_incidents: list[dict[str, object]],
     miyagi_incidents: list[dict[str, object]],
 ) -> tuple[
     list[dict[str, object]],
     int,
+    int,
 ]:
     merged = list(sendai_incidents)
     added_count = 0
+    sendai_duplicate_count = 0
 
     for candidate in miyagi_incidents:
-        duplicate = any(
-            is_probable_duplicate(
-                candidate,
-                existing,
+        candidate_is_sendai = (
+            is_sendai_municipality(
+                candidate.get("municipality", "")
             )
-            for existing in merged
         )
 
+        duplicate = False
+
+        if candidate_is_sendai:
+            duplicate = any(
+                is_probable_duplicate(
+                    candidate,
+                    existing,
+                )
+                for existing in sendai_incidents
+            )
+
         if duplicate:
+            sendai_duplicate_count += 1
             continue
 
         merged.append(candidate)
@@ -1799,7 +1822,11 @@ def merge_incidents(
         reverse=True,
     )
 
-    return merged, added_count
+    return (
+        merged,
+        added_count,
+        sendai_duplicate_count,
+    )
 
 
 def write_json(
@@ -1895,7 +1922,7 @@ def main() -> int:
 
     diagnostics: dict[str, object] = {
         "updatedAt": updated_at,
-        "sendaiCount": len(sendai_incidents),
+        "sendaiCitySourceCount": len(sendai_incidents),
         "miyagiPageUrl": MIYAGI_SOURCE_PAGE_URL,
         "miyagiStatus": "未取得",
         "miyagiMapId": "",
@@ -1946,14 +1973,38 @@ def main() -> int:
         )
         diagnostics["joinDiagnostics"] = join_diagnostics
 
-        if xlsx_rows and not miyagi_incidents:
+        if len(xlsx_rows) < 100:
             raise RuntimeError(
-                "宮城県ExcelとGoogleマップの照合結果が0件です。"
+                "宮城県Excelの件数が異常に少ないため、"
+                "既存データを保持します。"
+            )
+
+        if len(miyagi_incidents) < 100:
+            raise RuntimeError(
+                "宮城県ExcelとGoogleマップの照合件数が"
+                "異常に少ないため、既存データを保持します。"
+            )
+
+        if (
+            len(previous_miyagi_incidents) >= 300
+            and len(miyagi_incidents)
+            < len(previous_miyagi_incidents) * 0.65
+        ):
+            raise RuntimeError(
+                "宮城県データが前回から大幅に減少したため、"
+                "既存データを保持します。"
             )
 
         diagnostics["miyagiStatus"] = "取得成功"
-        diagnostics["miyagiExcelSendaiCount"] = len(
+        diagnostics["miyagiExcelCount"] = len(
             xlsx_rows
+        )
+        diagnostics["miyagiMunicipalityCount"] = len(
+            {
+                row.get("municipality", "")
+                for row in xlsx_rows
+                if row.get("municipality", "")
+            }
         )
         diagnostics["miyagiMatchedPointCount"] = len(
             miyagi_incidents
@@ -1993,7 +2044,11 @@ def main() -> int:
                 f"{error}"
             )
 
-    incidents, miyagi_added_count = merge_incidents(
+    (
+        incidents,
+        miyagi_added_count,
+        sendai_duplicate_count,
+    ) = merge_incidents(
         sendai_incidents,
         miyagi_incidents,
     )
@@ -2002,20 +2057,53 @@ def main() -> int:
         miyagi_incidents
     )
     diagnostics["miyagiAddedCount"] = miyagi_added_count
-    diagnostics["miyagiDuplicateCount"] = (
-        len(miyagi_incidents) - miyagi_added_count
+    diagnostics["sendaiDuplicateCount"] = (
+        sendai_duplicate_count
     )
     diagnostics["finalCount"] = len(incidents)
+    diagnostics["municipalityCount"] = len(
+        {
+            str(item.get("municipality", ""))
+            for item in incidents
+            if str(item.get("municipality", ""))
+        }
+    )
+    diagnostics["sendaiAreaCount"] = sum(
+        1
+        for item in incidents
+        if is_sendai_municipality(
+            item.get("municipality", "")
+        )
+    )
+    diagnostics["otherAreaCount"] = (
+        len(incidents)
+        - int(diagnostics["sendaiAreaCount"])
+    )
 
     write_json(OUTPUT_JSON, incidents)
 
     status = {
         "updatedAt": updated_at,
         "count": len(incidents),
-        "sourceName": "仙台市・宮城県",
-        "sendaiCount": len(sendai_incidents),
-        "miyagiExcelSendaiCount": diagnostics.get(
-            "miyagiExcelSendaiCount",
+        "coverage": "宮城県全域",
+        "sourceName": "宮城県・仙台市",
+        "municipalityCount": diagnostics.get(
+            "municipalityCount",
+            0,
+        ),
+        "sendaiAreaCount": diagnostics.get(
+            "sendaiAreaCount",
+            0,
+        ),
+        "otherAreaCount": diagnostics.get(
+            "otherAreaCount",
+            0,
+        ),
+        "sendaiCitySourceCount": len(
+            sendai_incidents
+        ),
+        "miyagiExcelCount": diagnostics.get(
+            "miyagiExcelCount",
             0,
         ),
         "miyagiMatchedPointCount": diagnostics.get(
@@ -2023,8 +2111,8 @@ def main() -> int:
             0,
         ),
         "miyagiAddedCount": miyagi_added_count,
-        "miyagiDuplicateCount": (
-            len(miyagi_incidents) - miyagi_added_count
+        "sendaiDuplicateCount": (
+            sendai_duplicate_count
         ),
         "miyagiStatus": diagnostics["miyagiStatus"],
         "miyagiPreservedCount": diagnostics.get(
@@ -2049,10 +2137,12 @@ def main() -> int:
 
     print(
         "更新完了: "
-        f"仙台市 {len(sendai_incidents)}件 / "
+        f"仙台市公式 {len(sendai_incidents)}件 / "
         f"宮城県照合 {len(miyagi_incidents)}件 / "
-        f"宮城県追加 {miyagi_added_count}件 / "
-        f"最終 {len(incidents)}件"
+        f"仙台市重複除外 "
+        f"{sendai_duplicate_count}件 / "
+        f"宮城県全域 最終 "
+        f"{len(incidents)}件"
     )
 
     return 0
