@@ -13,7 +13,7 @@ import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 import zipfile
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Iterable
 
@@ -47,7 +47,7 @@ DIAGNOSTICS_JSON = (
     ROOT / "kumamap" / "miyagi_diagnostics.json"
 )
 
-USER_AGENT = "KumaMapDataUpdater/2.0"
+USER_AGENT = "KumaMapDataUpdater/2.1-diagnostic"
 DEFAULT_YEAR = 2026
 SENDAI_WARDS = (
     "青葉区",
@@ -390,6 +390,12 @@ def normalize_date(
                 f"{month:02d}-{day:02d}"
             )
 
+    if re.fullmatch(r"\d+(?:\.\d+)?", text):
+        serial = float(text)
+        if 40000 <= serial <= 70000:
+            converted = datetime(1899, 12, 30) + timedelta(days=serial)
+            return converted.strftime("%Y-%m-%d")
+
     return ""
 
 
@@ -630,6 +636,268 @@ def build_sendai_incidents(
         )
 
     return incidents
+
+
+
+def excel_column_index(cell_reference: str) -> int:
+    letters = re.match(r"[A-Z]+", cell_reference or "")
+    if not letters:
+        return 0
+
+    index = 0
+    for character in letters.group(0):
+        index = index * 26 + (ord(character) - ord("A") + 1)
+
+    return max(index - 1, 0)
+
+
+def read_xlsx_shared_strings(
+    archive: zipfile.ZipFile,
+) -> list[str]:
+    path = "xl/sharedStrings.xml"
+    if path not in archive.namelist():
+        return []
+
+    root = ET.fromstring(archive.read(path))
+    values: list[str] = []
+
+    for item in root.iter():
+        if local_tag_name(item.tag) != "si":
+            continue
+
+        parts = [
+            element.text or ""
+            for element in item.iter()
+            if local_tag_name(element.tag) == "t"
+        ]
+        values.append("".join(parts).strip())
+
+    return values
+
+
+def read_xlsx_sheet_paths(
+    archive: zipfile.ZipFile,
+) -> list[tuple[str, str]]:
+    workbook_root = ET.fromstring(
+        archive.read("xl/workbook.xml")
+    )
+    relationships_root = ET.fromstring(
+        archive.read("xl/_rels/workbook.xml.rels")
+    )
+
+    relationships: dict[str, str] = {}
+    for relationship in relationships_root:
+        relationship_id = relationship.attrib.get("Id", "")
+        target = relationship.attrib.get("Target", "")
+        if relationship_id and target:
+            if target.startswith("/"):
+                full_path = target.lstrip("/")
+            else:
+                full_path = "xl/" + target.lstrip("/")
+            relationships[relationship_id] = full_path
+
+    result: list[tuple[str, str]] = []
+    for sheet in workbook_root.iter():
+        if local_tag_name(sheet.tag) != "sheet":
+            continue
+
+        name = sheet.attrib.get("name", "")
+        relationship_id = ""
+        for key, value in sheet.attrib.items():
+            if key.endswith("}id") or key == "r:id":
+                relationship_id = value
+                break
+
+        path = relationships.get(relationship_id, "")
+        if name and path:
+            result.append((name, path))
+
+    return result
+
+
+def read_xlsx_rows(
+    archive: zipfile.ZipFile,
+    sheet_path: str,
+    shared_strings: list[str],
+) -> list[list[str]]:
+    root = ET.fromstring(archive.read(sheet_path))
+    rows: list[list[str]] = []
+
+    for row_element in root.iter():
+        if local_tag_name(row_element.tag) != "row":
+            continue
+
+        values_by_column: dict[int, str] = {}
+        max_column = -1
+
+        for cell in list(row_element):
+            if local_tag_name(cell.tag) != "c":
+                continue
+
+            reference = cell.attrib.get("r", "A1")
+            column_index = excel_column_index(reference)
+            max_column = max(max_column, column_index)
+            cell_type = cell.attrib.get("t", "")
+
+            raw_value = ""
+            inline_parts = [
+                element.text or ""
+                for element in cell.iter()
+                if local_tag_name(element.tag) == "t"
+            ]
+
+            value_element = next(
+                (
+                    element
+                    for element in cell
+                    if local_tag_name(element.tag) == "v"
+                ),
+                None,
+            )
+
+            if cell_type == "inlineStr":
+                raw_value = "".join(inline_parts)
+            elif value_element is not None:
+                raw_value = value_element.text or ""
+                if cell_type == "s":
+                    try:
+                        raw_value = shared_strings[int(raw_value)]
+                    except (ValueError, IndexError):
+                        pass
+            elif inline_parts:
+                raw_value = "".join(inline_parts)
+
+            values_by_column[column_index] = normalize_header(raw_value)
+
+        if max_column < 0:
+            continue
+
+        row = [
+            values_by_column.get(index, "")
+            for index in range(max_column + 1)
+        ]
+
+        if any(row):
+            rows.append(row)
+
+    return rows
+
+
+def header_score(row: list[str]) -> int:
+    combined = "|".join(normalize_header(value) for value in row)
+    keywords = (
+        "市町村",
+        "自治体",
+        "目撃日時",
+        "出没日時",
+        "日時",
+        "日付",
+        "場所",
+        "所在地",
+        "区分",
+        "種別",
+        "分類",
+        "頭数",
+        "体長",
+    )
+    return sum(1 for keyword in keywords if keyword in combined)
+
+
+def unique_headers(values: list[str]) -> list[str]:
+    result: list[str] = []
+    counts: dict[str, int] = {}
+
+    for index, value in enumerate(values):
+        base = normalize_header(value) or f"列{index + 1}"
+        counts[base] = counts.get(base, 0) + 1
+        if counts[base] == 1:
+            result.append(base)
+        else:
+            result.append(f"{base}_{counts[base]}")
+
+    return result
+
+
+def row_to_dict(
+    headers: list[str],
+    values: list[str],
+) -> dict[str, str]:
+    return {
+        header: (values[index] if index < len(values) else "")
+        for index, header in enumerate(headers)
+        if (values[index] if index < len(values) else "")
+    }
+
+
+def parse_miyagi_xlsx_diagnostics(
+    raw: bytes,
+) -> dict[str, object]:
+    with zipfile.ZipFile(io.BytesIO(raw)) as archive:
+        shared_strings = read_xlsx_shared_strings(archive)
+        sheet_paths = read_xlsx_sheet_paths(archive)
+        sheet_results: list[dict[str, object]] = []
+        all_sendai_rows: list[dict[str, str]] = []
+
+        for sheet_name, sheet_path in sheet_paths:
+            rows = read_xlsx_rows(
+                archive,
+                sheet_path,
+                shared_strings,
+            )
+
+            if not rows:
+                sheet_results.append(
+                    {
+                        "sheetName": sheet_name,
+                        "rowCount": 0,
+                    }
+                )
+                continue
+
+            scored_rows = [
+                (header_score(row), index)
+                for index, row in enumerate(rows[:30])
+            ]
+            best_score, header_index = max(
+                scored_rows,
+                default=(0, 0),
+            )
+            headers = unique_headers(rows[header_index])
+            data_rows = rows[header_index + 1 :]
+            dictionaries = [
+                row_to_dict(headers, row)
+                for row in data_rows
+                if any(row)
+            ]
+            sendai_rows = [
+                row
+                for row in dictionaries
+                if is_sendai_text(" | ".join(row.values()))
+            ]
+            all_sendai_rows.extend(sendai_rows)
+
+            sheet_results.append(
+                {
+                    "sheetName": sheet_name,
+                    "sheetPath": sheet_path,
+                    "rowCount": len(rows),
+                    "headerRowIndex": header_index + 1,
+                    "headerScore": best_score,
+                    "headers": headers,
+                    "sampleRows": dictionaries[:5],
+                    "sendaiRowCount": len(sendai_rows),
+                    "sendaiSampleRows": sendai_rows[:20],
+                }
+            )
+
+        return {
+            "xlsxByteCount": len(raw),
+            "sharedStringCount": len(shared_strings),
+            "sheetCount": len(sheet_paths),
+            "sheets": sheet_results,
+            "sendaiRowCountTotal": len(all_sendai_rows),
+            "sendaiSampleRows": all_sendai_rows[:30],
+        }
 
 
 def discover_miyagi_sources(
@@ -998,18 +1266,19 @@ def parse_miyagi_kml(
     kml_text: str,
 ) -> tuple[
     list[dict[str, object]],
-    dict[str, int],
+    dict[str, object],
 ]:
     root = ET.fromstring(kml_text)
     placemark_entries = collect_placemarks(root)
 
     incidents: list[dict[str, object]] = []
-    diagnostics = {
+    diagnostics: dict[str, object] = {
         "placemarkCount": len(placemark_entries),
         "pointPlacemarkCount": 0,
         "sendaiTextMatchCount": 0,
         "sendaiWithDateCount": 0,
         "sendaiAcceptedCount": 0,
+        "placemarkSamples": [],
     }
 
     for placemark, folder_names in placemark_entries:
@@ -1055,6 +1324,25 @@ def parse_miyagi_kml(
             )
             if part
         )
+
+        samples = diagnostics["placemarkSamples"]
+        if isinstance(samples, list) and len(samples) < 30:
+            latitude, longitude = coordinates
+            samples.append(
+                {
+                    "name": name,
+                    "folderText": folder_text,
+                    "description": description_text[:300],
+                    "extendedValues": extended_values[:10],
+                    "combinedText": combined_text[:500],
+                    "latitude": latitude,
+                    "longitude": longitude,
+                    "normalizedDate": normalize_date(
+                        combined_text,
+                        default_year=DEFAULT_YEAR,
+                    ),
+                }
+            )
 
         if not is_sendai_text(combined_text):
             continue
@@ -1316,6 +1604,20 @@ def main() -> int:
 
         diagnostics["miyagiMapId"] = map_id
         diagnostics["miyagiExcelUrl"] = xlsx_url
+
+        if xlsx_url:
+            try:
+                xlsx_raw = fetch_bytes(xlsx_url)
+                diagnostics["xlsxDiagnostics"] = (
+                    parse_miyagi_xlsx_diagnostics(
+                        xlsx_raw
+                    )
+                )
+            except Exception as xlsx_error:
+                diagnostics["xlsxDiagnostics"] = {
+                    "status": "解析失敗",
+                    "error": str(xlsx_error),
+                }
 
         kml_text, kml_url, kml_errors = (
             fetch_miyagi_kml(map_id)
