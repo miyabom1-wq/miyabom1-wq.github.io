@@ -17,13 +17,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-- name: Checkout
-  uses: actions/checkout@v6
+      - name: Checkout
+        uses: actions/checkout@v6
 
-- name: Set up Python
-  uses: actions/setup-python@v6
-  with:
-    python-version: "3.11"
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
 
       - name: Fetch and merge Sendai and Miyagi bear data
         run: python kumamap/update_data.py
@@ -40,5 +40,3 @@ jobs:
           git add kumamap/incidents.json kumamap/status.json kumamap/miyagi_diagnostics.json
           git commit -m "Update KumaMap incident data"
           git push
-
-    
