@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-07-13T03:58:00Z",
+  "updatedAt": "2026-07-13T09:46:54Z",
   "sendaiCitySourceCount": 181,
   "miyagiPageUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
   "miyagiStatus": "取得成功",
   "miyagiMapId": "12_b92SRipXWwvkUfNCsDdEUWhEOmzUc",
   "miyagiKmlUrl": "https://www.google.com/maps/d/kml?mid=12_b92SRipXWwvkUfNCsDdEUWhEOmzUc&forcekml=1",
-  "miyagiExcelUrl": "https://www.pref.miyagi.jp/documents/64667/koukaiyou_20260710.xlsx",
+  "miyagiExcelUrl": "https://www.pref.miyagi.jp/documents/64667/koukaiyou_20260713.xlsx",
   "miyagiErrors": [],
   "xlsxDiagnostics": {
-    "xlsxByteCount": 115978,
+    "xlsxByteCount": 117140,
     "sheetCount": 3,
     "selectedSheetName": "公表用シート（報告順）",
     "selectedHeaderRowIndex": 3,
@@ -23,7 +23,7 @@
       "発見頭数ハッケントウスウ",
       "痕跡コンセキ"
     ],
-    "miyagiRowCount": 860,
+    "miyagiRowCount": 870,
     "miyagiSampleRows": [
       {
         "serial": "1",
@@ -229,19 +229,19 @@
     "candidateSheets": [
       {
         "sheetName": "公表用シート（報告順）",
-        "miyagiRowCount": 860
+        "miyagiRowCount": 870
       },
       {
         "sheetName": "公表用シート（目撃順）",
-        "miyagiRowCount": 860
+        "miyagiRowCount": 870
       }
     ]
   },
   "kmlDiagnostics": {
-    "placemarkCount": 830,
-    "pointPlacemarkCount": 830,
-    "serialPointCount": 830,
-    "uniqueSerialCount": 830,
+    "placemarkCount": 856,
+    "pointPlacemarkCount": 856,
+    "serialPointCount": 856,
+    "uniqueSerialCount": 856,
     "duplicateSerialCount": 0,
     "pointSamples": [
       {
@@ -427,9 +427,9 @@
     ]
   },
   "joinDiagnostics": {
-    "xlsxMiyagiCount": 860,
-    "matchedPointCount": 829,
-    "unmatchedPointCount": 31,
+    "xlsxMiyagiCount": 870,
+    "matchedPointCount": 855,
+    "unmatchedPointCount": 15,
     "dateMismatchCount": 61,
     "unmatchedSamples": [
       {
@@ -581,167 +581,17 @@
         "district": "字峯山浦",
         "count": "１頭",
         "category": "目撃"
-      },
-      {
-        "serial": "849",
-        "date": "2026-07-07",
-        "time": "00:27",
-        "office": "仙台",
-        "municipality": "仙台市青葉区",
-        "district": "芋沢字下野下10-1",
-        "count": "１頭",
-        "category": "目撃"
-      },
-      {
-        "serial": "850",
-        "date": "2026-07-07",
-        "time": "11:10",
-        "office": "仙台",
-        "municipality": "松島町",
-        "district": "根廻字蒜沢",
-        "count": "１頭",
-        "category": "目撃"
-      },
-      {
-        "serial": "851",
-        "date": "2026-07-07",
-        "time": "18:00",
-        "office": "仙台",
-        "municipality": "仙台市青葉区",
-        "district": "作並字棒目木12-12",
-        "count": "１頭",
-        "category": "目撃"
-      },
-      {
-        "serial": "852",
-        "date": "2026-07-08",
-        "time": "11:50",
-        "office": "仙台",
-        "municipality": "富谷市",
-        "district": "穀田瀬ノ木 地内",
-        "count": "１頭",
-        "category": "目撃"
-      },
-      {
-        "serial": "853",
-        "date": "2026-07-08",
-        "time": "00:30",
-        "office": "東部",
-        "municipality": "石巻市",
-        "district": "成田字小姓前",
-        "count": "１頭",
-        "category": "目撃"
-      },
-      {
-        "serial": "854",
-        "date": "2026-07-08",
-        "time": "06:30",
-        "office": "仙台",
-        "municipality": "仙台市泉区",
-        "district": "泉区福岡字上鳥居原",
-        "count": "１頭",
-        "category": "目撃"
-      },
-      {
-        "serial": "855",
-        "date": "2026-07-08",
-        "time": "03:55",
-        "office": "仙台",
-        "municipality": "仙台市泉区",
-        "district": "泉区館7丁目 ポンプ場",
-        "count": "１頭",
-        "category": "目撃"
-      },
-      {
-        "serial": "856",
-        "date": "2026-07-07",
-        "time": "07:00",
-        "office": "北部",
-        "municipality": "大崎市",
-        "district": "岩出山字細峯",
-        "count": "１頭",
-        "category": "目撃"
-      },
-      {
-        "serial": "857",
-        "date": "2026-07-08",
-        "time": "17:55",
-        "office": "北部",
-        "municipality": "色麻町",
-        "district": "四竃字道命南",
-        "count": "１頭",
-        "category": "目撃"
-      },
-      {
-        "serial": "858",
-        "date": "2026-07-01",
-        "time": "14:00",
-        "office": "大河原",
-        "municipality": "七ヶ宿町",
-        "district": "滑津地区",
-        "count": "１頭",
-        "category": "目撃"
-      },
-      {
-        "serial": "859",
-        "date": "2026-07-01",
-        "time": "16:00",
-        "office": "大河原",
-        "municipality": "七ヶ宿町",
-        "district": "干蒲",
-        "count": "１頭",
-        "category": "目撃"
-      },
-      {
-        "serial": "860",
-        "date": "2026-07-06",
-        "time": "",
-        "office": "大河原",
-        "municipality": "七ヶ宿町",
-        "district": "干蒲地区",
-        "count": "１頭",
-        "category": "目撃"
-      },
-      {
-        "serial": "861",
-        "date": "2026-07-04",
-        "time": "04:00",
-        "office": "大河原",
-        "municipality": "七ヶ宿町",
-        "district": "湯原地区",
-        "count": "１頭",
-        "category": "目撃"
-      },
-      {
-        "serial": "862",
-        "date": "2026-07-07",
-        "time": "18:30",
-        "office": "大河原",
-        "municipality": "七ヶ宿町",
-        "district": "矢立地区",
-        "count": "複数頭",
-        "category": "目撃"
-      },
-      {
-        "serial": "863",
-        "date": "2026-07-08",
-        "time": "今朝方",
-        "office": "気仙沼",
-        "municipality": "気仙沼市",
-        "district": "本吉町長窪",
-        "count": "不明",
-        "category": "痕跡"
       }
     ]
   },
-  "miyagiExcelCount": 860,
+  "miyagiExcelCount": 870,
   "miyagiMunicipalityCount": 30,
-  "miyagiMatchedPointCount": 829,
-  "miyagiJoinedCount": 829,
-  "miyagiAddedCount": 682,
-  "sendaiDuplicateCount": 147,
-  "finalCount": 863,
+  "miyagiMatchedPointCount": 855,
+  "miyagiJoinedCount": 855,
+  "miyagiAddedCount": 702,
+  "sendaiDuplicateCount": 153,
+  "finalCount": 883,
   "municipalityCount": 30,
-  "sendaiAreaCount": 249,
-  "otherAreaCount": 614
+  "sendaiAreaCount": 252,
+  "otherAreaCount": 631
 }
