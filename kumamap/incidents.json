@@ -1,17 +1,31 @@
 [
   {
-    "id": "MIYAGI-6363ffe019606ae7",
+    "id": "SENDAI-b02cc314313b4826",
     "date": "2026-07-11",
     "prefecture": "宮城県",
     "municipality": "仙台市宮城野区",
-    "locationText": "仙台市宮城野区 原町三丁目4-27",
+    "locationText": "宮城野区原町3丁目",
     "category": "目撃",
-    "description": "時刻：22:25 / 頭数：１頭 / 宮城県一覧番号：874",
+    "description": "頭数・体長：1頭・体長100cm以上",
     "riskLevel": "中",
-    "sourceName": "宮城県",
-    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
-    "latitude": 38.26783842,
-    "longitude": 140.9092169
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2678468667922,
+    "longitude": 140.909179151378
+  },
+  {
+    "id": "SENDAI-bfc1a161480f2434",
+    "date": "2026-07-10",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区芋沢字赤坂",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2877193520555,
+    "longitude": 140.746803605271
   },
   {
     "id": "SENDAI-9d913dd9e5d21d9c",
