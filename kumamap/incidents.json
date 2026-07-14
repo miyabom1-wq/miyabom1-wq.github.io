@@ -1,5 +1,19 @@
 [
   {
+    "id": "SENDAI-d1a4553a43123abe",
+    "date": "2026-07-14",
+    "prefecture": "宮城県",
+    "municipality": "仙台市泉区",
+    "locationText": "泉区上谷刈字長命東",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長50cm前後",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3206316226015,
+    "longitude": 140.859492450996
+  },
+  {
     "id": "SENDAI-b02cc314313b4826",
     "date": "2026-07-11",
     "prefecture": "宮城県",
