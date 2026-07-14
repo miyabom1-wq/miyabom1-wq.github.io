@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-07-14T03:31:19Z",
+  "updatedAt": "2026-07-14T08:27:06Z",
   "sendaiCitySourceCount": 183,
   "miyagiPageUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
   "miyagiStatus": "取得成功",
   "miyagiMapId": "12_b92SRipXWwvkUfNCsDdEUWhEOmzUc",
   "miyagiKmlUrl": "https://www.google.com/maps/d/kml?mid=12_b92SRipXWwvkUfNCsDdEUWhEOmzUc&forcekml=1",
-  "miyagiExcelUrl": "https://www.pref.miyagi.jp/documents/64667/koukaiyou_20260713.xlsx",
+  "miyagiExcelUrl": "https://www.pref.miyagi.jp/documents/64667/koukaiyou_20260714.xlsx",
   "miyagiErrors": [],
   "xlsxDiagnostics": {
-    "xlsxByteCount": 117140,
+    "xlsxByteCount": 119476,
     "sheetCount": 3,
     "selectedSheetName": "公表用シート（報告順）",
     "selectedHeaderRowIndex": 3,
@@ -23,7 +23,7 @@
       "発見頭数ハッケントウスウ",
       "痕跡コンセキ"
     ],
-    "miyagiRowCount": 870,
+    "miyagiRowCount": 891,
     "miyagiSampleRows": [
       {
         "serial": "1",
@@ -229,11 +229,11 @@
     "candidateSheets": [
       {
         "sheetName": "公表用シート（報告順）",
-        "miyagiRowCount": 870
+        "miyagiRowCount": 891
       },
       {
         "sheetName": "公表用シート（目撃順）",
-        "miyagiRowCount": 870
+        "miyagiRowCount": 891
       }
     ]
   },
@@ -427,9 +427,9 @@
     ]
   },
   "joinDiagnostics": {
-    "xlsxMiyagiCount": 870,
+    "xlsxMiyagiCount": 891,
     "matchedPointCount": 855,
-    "unmatchedPointCount": 15,
+    "unmatchedPointCount": 36,
     "dateMismatchCount": 61,
     "unmatchedSamples": [
       {
@@ -581,10 +581,160 @@
         "district": "字峯山浦",
         "count": "１頭",
         "category": "目撃"
+      },
+      {
+        "serial": "875",
+        "date": "2026-07-08",
+        "time": "16:20",
+        "office": "仙台",
+        "municipality": "利府町",
+        "district": "沢乙字白石沢",
+        "count": "１頭",
+        "category": "目撃"
+      },
+      {
+        "serial": "876",
+        "date": "2026-07-10",
+        "time": "19:50",
+        "office": "気仙沼",
+        "municipality": "気仙沼市",
+        "district": "町裏",
+        "count": "１頭",
+        "category": "目撃"
+      },
+      {
+        "serial": "877",
+        "date": "2026-07-11",
+        "time": "09:20",
+        "office": "栗原",
+        "municipality": "栗原市",
+        "district": "栗駒文字山下 地内",
+        "count": "１頭",
+        "category": "目撃"
+      },
+      {
+        "serial": "878",
+        "date": "2026-07-11",
+        "time": "14:00",
+        "office": "栗原",
+        "municipality": "栗原市",
+        "district": "築館字太田山塚沢 地内",
+        "count": "１頭",
+        "category": "目撃"
+      },
+      {
+        "serial": "879",
+        "date": "2026-07-10",
+        "time": "16:20",
+        "office": "大河原",
+        "municipality": "白石市",
+        "district": "福岡蔵本字横向",
+        "count": "１頭",
+        "category": "目撃"
+      },
+      {
+        "serial": "880",
+        "date": "2026-07-12",
+        "time": "04:30",
+        "office": "大河原",
+        "municipality": "白石市",
+        "district": "福岡蔵本字岩ノ上 切通公園付近",
+        "count": "１頭",
+        "category": "目撃"
+      },
+      {
+        "serial": "881",
+        "date": "2026-07-11",
+        "time": "09:45",
+        "office": "仙台",
+        "municipality": "大和町",
+        "district": "吉田字新田地内",
+        "count": "不明",
+        "category": "目撃"
+      },
+      {
+        "serial": "882",
+        "date": "2026-07-13",
+        "time": "05:50",
+        "office": "仙台",
+        "municipality": "大和町",
+        "district": "宮床字下小路地内",
+        "count": "１頭",
+        "category": "目撃"
+      },
+      {
+        "serial": "883",
+        "date": "2026-07-08",
+        "time": "15:40",
+        "office": "仙台",
+        "municipality": "仙台市青葉区",
+        "district": "上愛子字道半35番地",
+        "count": "１頭",
+        "category": "目撃"
+      },
+      {
+        "serial": "884",
+        "date": "2026-07-08",
+        "time": "18:10",
+        "office": "仙台",
+        "municipality": "仙台市青葉区",
+        "district": "芋沢字滝の瀬15-1",
+        "count": "１頭",
+        "category": "目撃"
+      },
+      {
+        "serial": "885",
+        "date": "2026-07-10",
+        "time": "16:30",
+        "office": "仙台",
+        "municipality": "仙台市青葉区",
+        "district": "芋沢字赤坂（川前パレット保育園の西200m付近）",
+        "count": "１頭",
+        "category": "目撃"
+      },
+      {
+        "serial": "886",
+        "date": "2026-07-12",
+        "time": "10:00",
+        "office": "仙台",
+        "municipality": "仙台市青葉区",
+        "district": "上愛子字折葉47番地西側のR457付近",
+        "count": "１頭",
+        "category": "目撃"
+      },
+      {
+        "serial": "887",
+        "date": "2026-07-12",
+        "time": "10:20",
+        "office": "仙台",
+        "municipality": "仙台市青葉区",
+        "district": "大倉字齋野(定義山野外料理公園）東側道路付近",
+        "count": "１頭",
+        "category": "目撃"
+      },
+      {
+        "serial": "888",
+        "date": "2026-07-13",
+        "time": "06:40",
+        "office": "仙台",
+        "municipality": "仙台市青葉区",
+        "district": "上愛子字上志田16-2",
+        "count": "１頭",
+        "category": "目撃"
+      },
+      {
+        "serial": "889",
+        "date": "2026-07-06",
+        "time": "13:00",
+        "office": "登米",
+        "municipality": "登米市",
+        "district": "迫町新田字深間内地内",
+        "count": "１頭",
+        "category": "目撃"
       }
     ]
   },
-  "miyagiExcelCount": 870,
+  "miyagiExcelCount": 891,
   "miyagiMunicipalityCount": 30,
   "miyagiMatchedPointCount": 855,
   "miyagiJoinedCount": 855,
