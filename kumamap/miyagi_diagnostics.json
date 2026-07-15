@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-07-15T03:31:33Z",
+  "updatedAt": "2026-07-15T08:34:44Z",
   "sendaiCitySourceCount": 184,
   "miyagiPageUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
   "miyagiStatus": "取得成功",
   "miyagiMapId": "12_b92SRipXWwvkUfNCsDdEUWhEOmzUc",
   "miyagiKmlUrl": "https://www.google.com/maps/d/kml?mid=12_b92SRipXWwvkUfNCsDdEUWhEOmzUc&forcekml=1",
-  "miyagiExcelUrl": "https://www.pref.miyagi.jp/documents/64667/koukaiyou_20260714.xlsx",
+  "miyagiExcelUrl": "https://www.pref.miyagi.jp/documents/64667/koukaiyou_20260715.xlsx",
   "miyagiErrors": [],
   "xlsxDiagnostics": {
-    "xlsxByteCount": 119476,
+    "xlsxByteCount": 120945,
     "sheetCount": 3,
     "selectedSheetName": "公表用シート（報告順）",
     "selectedHeaderRowIndex": 3,
@@ -23,7 +23,7 @@
       "発見頭数ハッケントウスウ",
       "痕跡コンセキ"
     ],
-    "miyagiRowCount": 891,
+    "miyagiRowCount": 903,
     "miyagiSampleRows": [
       {
         "serial": "1",
@@ -229,11 +229,11 @@
     "candidateSheets": [
       {
         "sheetName": "公表用シート（報告順）",
-        "miyagiRowCount": 891
+        "miyagiRowCount": 903
       },
       {
         "sheetName": "公表用シート（目撃順）",
-        "miyagiRowCount": 891
+        "miyagiRowCount": 903
       }
     ]
   },
@@ -427,9 +427,9 @@
     ]
   },
   "joinDiagnostics": {
-    "xlsxMiyagiCount": 891,
+    "xlsxMiyagiCount": 903,
     "matchedPointCount": 855,
-    "unmatchedPointCount": 36,
+    "unmatchedPointCount": 48,
     "dateMismatchCount": 61,
     "unmatchedSamples": [
       {
@@ -734,7 +734,7 @@
       }
     ]
   },
-  "miyagiExcelCount": 891,
+  "miyagiExcelCount": 903,
   "miyagiMunicipalityCount": 30,
   "miyagiMatchedPointCount": 855,
   "miyagiJoinedCount": 855,
