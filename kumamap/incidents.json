@@ -1,5 +1,33 @@
 [
   {
+    "id": "SENDAI-e7737b9d705d2c19",
+    "date": "2026-07-15",
+    "prefecture": "宮城県",
+    "municipality": "仙台市宮城野区",
+    "locationText": "宮城野区原町5丁目",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長不明",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2682527736988,
+    "longitude": 140.908139422575
+  },
+  {
+    "id": "SENDAI-afc46d7b654a0b52",
+    "date": "2026-07-15",
+    "prefecture": "宮城県",
+    "municipality": "仙台市泉区",
+    "locationText": "泉区明通3丁目",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長50cm前後",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3589598123251,
+    "longitude": 140.853181014798
+  },
+  {
     "id": "SENDAI-d1a4553a43123abe",
     "date": "2026-07-14",
     "prefecture": "宮城県",
