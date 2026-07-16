@@ -1,5 +1,19 @@
 [
   {
+    "id": "SENDAI-c8780def74d97f5d",
+    "date": "2026-07-16",
+    "prefecture": "宮城県",
+    "municipality": "仙台市太白区",
+    "locationText": "太白区秋保町長袋字眞賀院山",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2807366992104,
+    "longitude": 140.680028655488
+  },
+  {
     "id": "SENDAI-e7737b9d705d2c19",
     "date": "2026-07-15",
     "prefecture": "宮城県",
