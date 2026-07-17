@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-16T19:33:29Z",
+  "updatedAt": "2026-07-17T03:35:10Z",
   "sendaiCitySourceCount": 187,
   "miyagiPageUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
   "miyagiStatus": "取得成功",
@@ -238,10 +238,10 @@
     ]
   },
   "kmlDiagnostics": {
-    "placemarkCount": 856,
-    "pointPlacemarkCount": 856,
-    "serialPointCount": 856,
-    "uniqueSerialCount": 856,
+    "placemarkCount": 904,
+    "pointPlacemarkCount": 904,
+    "serialPointCount": 904,
+    "uniqueSerialCount": 904,
     "duplicateSerialCount": 0,
     "pointSamples": [
       {
@@ -428,8 +428,8 @@
   },
   "joinDiagnostics": {
     "xlsxMiyagiCount": 906,
-    "matchedPointCount": 855,
-    "unmatchedPointCount": 51,
+    "matchedPointCount": 891,
+    "unmatchedPointCount": 15,
     "dateMismatchCount": 61,
     "unmatchedSamples": [
       {
@@ -581,167 +581,17 @@
         "district": "字峯山浦",
         "count": "１頭",
         "category": "目撃"
-      },
-      {
-        "serial": "875",
-        "date": "2026-07-08",
-        "time": "16:20",
-        "office": "仙台",
-        "municipality": "利府町",
-        "district": "沢乙字白石沢",
-        "count": "１頭",
-        "category": "目撃"
-      },
-      {
-        "serial": "876",
-        "date": "2026-07-10",
-        "time": "19:50",
-        "office": "気仙沼",
-        "municipality": "気仙沼市",
-        "district": "町裏",
-        "count": "１頭",
-        "category": "目撃"
-      },
-      {
-        "serial": "877",
-        "date": "2026-07-11",
-        "time": "09:20",
-        "office": "栗原",
-        "municipality": "栗原市",
-        "district": "栗駒文字山下 地内",
-        "count": "１頭",
-        "category": "目撃"
-      },
-      {
-        "serial": "878",
-        "date": "2026-07-11",
-        "time": "14:00",
-        "office": "栗原",
-        "municipality": "栗原市",
-        "district": "築館字太田山塚沢 地内",
-        "count": "１頭",
-        "category": "目撃"
-      },
-      {
-        "serial": "879",
-        "date": "2026-07-10",
-        "time": "16:20",
-        "office": "大河原",
-        "municipality": "白石市",
-        "district": "福岡蔵本字横向",
-        "count": "１頭",
-        "category": "目撃"
-      },
-      {
-        "serial": "880",
-        "date": "2026-07-12",
-        "time": "04:30",
-        "office": "大河原",
-        "municipality": "白石市",
-        "district": "福岡蔵本字岩ノ上 切通公園付近",
-        "count": "１頭",
-        "category": "目撃"
-      },
-      {
-        "serial": "881",
-        "date": "2026-07-11",
-        "time": "09:45",
-        "office": "仙台",
-        "municipality": "大和町",
-        "district": "吉田字新田地内",
-        "count": "不明",
-        "category": "目撃"
-      },
-      {
-        "serial": "882",
-        "date": "2026-07-13",
-        "time": "05:50",
-        "office": "仙台",
-        "municipality": "大和町",
-        "district": "宮床字下小路地内",
-        "count": "１頭",
-        "category": "目撃"
-      },
-      {
-        "serial": "883",
-        "date": "2026-07-08",
-        "time": "15:40",
-        "office": "仙台",
-        "municipality": "仙台市青葉区",
-        "district": "上愛子字道半35番地",
-        "count": "１頭",
-        "category": "目撃"
-      },
-      {
-        "serial": "884",
-        "date": "2026-07-08",
-        "time": "18:10",
-        "office": "仙台",
-        "municipality": "仙台市青葉区",
-        "district": "芋沢字滝の瀬15-1",
-        "count": "１頭",
-        "category": "目撃"
-      },
-      {
-        "serial": "885",
-        "date": "2026-07-10",
-        "time": "16:30",
-        "office": "仙台",
-        "municipality": "仙台市青葉区",
-        "district": "芋沢字赤坂（川前パレット保育園の西200m付近）",
-        "count": "１頭",
-        "category": "目撃"
-      },
-      {
-        "serial": "886",
-        "date": "2026-07-12",
-        "time": "10:00",
-        "office": "仙台",
-        "municipality": "仙台市青葉区",
-        "district": "上愛子字折葉47番地西側のR457付近",
-        "count": "１頭",
-        "category": "目撃"
-      },
-      {
-        "serial": "887",
-        "date": "2026-07-12",
-        "time": "10:20",
-        "office": "仙台",
-        "municipality": "仙台市青葉区",
-        "district": "大倉字齋野(定義山野外料理公園）東側道路付近",
-        "count": "１頭",
-        "category": "目撃"
-      },
-      {
-        "serial": "888",
-        "date": "2026-07-13",
-        "time": "06:40",
-        "office": "仙台",
-        "municipality": "仙台市青葉区",
-        "district": "上愛子字上志田16-2",
-        "count": "１頭",
-        "category": "目撃"
-      },
-      {
-        "serial": "889",
-        "date": "2026-07-06",
-        "time": "13:00",
-        "office": "登米",
-        "municipality": "登米市",
-        "district": "迫町新田字深間内地内",
-        "count": "１頭",
-        "category": "目撃"
       }
     ]
   },
   "miyagiExcelCount": 906,
   "miyagiMunicipalityCount": 30,
-  "miyagiMatchedPointCount": 855,
-  "miyagiJoinedCount": 855,
-  "miyagiAddedCount": 701,
-  "sendaiDuplicateCount": 154,
-  "finalCount": 888,
+  "miyagiMatchedPointCount": 891,
+  "miyagiJoinedCount": 891,
+  "miyagiAddedCount": 733,
+  "sendaiDuplicateCount": 158,
+  "finalCount": 920,
   "municipalityCount": 30,
-  "sendaiAreaCount": 257,
-  "otherAreaCount": 631
+  "sendaiAreaCount": 263,
+  "otherAreaCount": 657
 }
