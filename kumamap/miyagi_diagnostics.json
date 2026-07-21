@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-07-21T03:42:58Z",
+  "updatedAt": "2026-07-21T08:42:40Z",
   "sendaiCitySourceCount": 187,
   "miyagiPageUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
   "miyagiStatus": "取得成功",
   "miyagiMapId": "12_b92SRipXWwvkUfNCsDdEUWhEOmzUc",
   "miyagiKmlUrl": "https://www.google.com/maps/d/kml?mid=12_b92SRipXWwvkUfNCsDdEUWhEOmzUc&forcekml=1",
-  "miyagiExcelUrl": "https://www.pref.miyagi.jp/documents/64667/koukaiyou_20260717.xlsx",
+  "miyagiExcelUrl": "https://www.pref.miyagi.jp/documents/64667/koukaiyou_20260721.xlsx",
   "miyagiErrors": [],
   "xlsxDiagnostics": {
-    "xlsxByteCount": 122357,
+    "xlsxByteCount": 123385,
     "sheetCount": 3,
     "selectedSheetName": "公表用シート（報告順）",
     "selectedHeaderRowIndex": 3,
@@ -23,7 +23,7 @@
       "発見頭数ハッケントウスウ",
       "痕跡コンセキ"
     ],
-    "miyagiRowCount": 918,
+    "miyagiRowCount": 928,
     "miyagiSampleRows": [
       {
         "serial": "1",
@@ -229,11 +229,11 @@
     "candidateSheets": [
       {
         "sheetName": "公表用シート（報告順）",
-        "miyagiRowCount": 918
+        "miyagiRowCount": 928
       },
       {
         "sheetName": "公表用シート（目撃順）",
-        "miyagiRowCount": 918
+        "miyagiRowCount": 928
       }
     ]
   },
@@ -427,8 +427,8 @@
     ]
   },
   "joinDiagnostics": {
-    "xlsxMiyagiCount": 918,
-    "matchedPointCount": 903,
+    "xlsxMiyagiCount": 928,
+    "matchedPointCount": 913,
     "unmatchedPointCount": 15,
     "dateMismatchCount": 61,
     "unmatchedSamples": [
@@ -584,14 +584,14 @@
       }
     ]
   },
-  "miyagiExcelCount": 918,
+  "miyagiExcelCount": 928,
   "miyagiMunicipalityCount": 30,
-  "miyagiMatchedPointCount": 903,
-  "miyagiJoinedCount": 903,
-  "miyagiAddedCount": 744,
+  "miyagiMatchedPointCount": 913,
+  "miyagiJoinedCount": 913,
+  "miyagiAddedCount": 754,
   "sendaiDuplicateCount": 159,
-  "finalCount": 931,
+  "finalCount": 941,
   "municipalityCount": 30,
-  "sendaiAreaCount": 263,
-  "otherAreaCount": 668
+  "sendaiAreaCount": 264,
+  "otherAreaCount": 677
 }
