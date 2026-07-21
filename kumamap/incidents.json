@@ -1,17 +1,31 @@
 [
   {
-    "id": "MIYAGI-aa83fb63c3667475",
+    "id": "SENDAI-42f4beaa81a5f890",
+    "date": "2026-07-19",
+    "prefecture": "宮城県",
+    "municipality": "仙台市太白区",
+    "locationText": "太白区秋保町湯元字上原",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長不明",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2132443507581,
+    "longitude": 140.740721322923
+  },
+  {
+    "id": "SENDAI-860483db9d4061ce",
     "date": "2026-07-18",
     "prefecture": "宮城県",
     "municipality": "仙台市泉区",
-    "locationText": "仙台市泉区福岡字岳山８－１ ピークベース キャンプ場",
+    "locationText": "泉区福岡字岳山",
     "category": "目撃",
-    "description": "時刻：08:50 / 頭数：１頭 / 宮城県一覧番号：932",
+    "description": "頭数・体長：1頭・体長不明",
     "riskLevel": "中",
-    "sourceName": "宮城県",
-    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
-    "latitude": 38.39121251,
-    "longitude": 140.7255004
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3912201200757,
+    "longitude": 140.725469057982
   },
   {
     "id": "MIYAGI-27944b1027857468",
