@@ -1,5 +1,33 @@
 [
   {
+    "id": "SENDAI-f65a923b015f63d9",
+    "date": "2026-07-23",
+    "prefecture": "宮城県",
+    "municipality": "仙台市太白区",
+    "locationText": "太白区秋保町境野字辺田山",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2549046031567,
+    "longitude": 140.694045085616
+  },
+  {
+    "id": "SENDAI-a7e0073bb416a67f",
+    "date": "2026-07-22",
+    "prefecture": "宮城県",
+    "municipality": "仙台市泉区",
+    "locationText": "泉区福岡字二又",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3552286532624,
+    "longitude": 140.789823794652
+  },
+  {
     "id": "SENDAI-49ea6773e49947cb",
     "date": "2026-07-22",
     "prefecture": "宮城県",
