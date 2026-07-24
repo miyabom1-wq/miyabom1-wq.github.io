@@ -14,6 +14,20 @@
     "longitude": 140.694045085616
   },
   {
+    "id": "SENDAI-7232f314c0b4eea9",
+    "date": "2026-07-23",
+    "prefecture": "宮城県",
+    "municipality": "仙台市宮城野区",
+    "locationText": "宮城野区原町５丁目",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2682978703973,
+    "longitude": 140.910309363794
+  },
+  {
     "id": "MIYAGI-c87e5bcee6665443",
     "date": "2026-07-23",
     "prefecture": "宮城県",
