@@ -1,5 +1,47 @@
 [
   {
+    "id": "MIYAGI-e22c226aa29c0e1d",
+    "date": "2026-07-28",
+    "prefecture": "宮城県",
+    "municipality": "大衡村",
+    "locationText": "大衡村 衡下地区 竹ノ内地内",
+    "category": "目撃",
+    "description": "時刻：15:10 / 頭数：１頭 / 宮城県一覧番号：1009",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.4545772,
+    "longitude": 140.8914909
+  },
+  {
+    "id": "MIYAGI-c338a84ee9431871",
+    "date": "2026-07-28",
+    "prefecture": "宮城県",
+    "municipality": "大和町",
+    "locationText": "大和町 吉田字南五福院",
+    "category": "目撃",
+    "description": "時刻：08:10 / 頭数：１頭 / 宮城県一覧番号：1007",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.438308,
+    "longitude": 140.866099
+  },
+  {
+    "id": "MIYAGI-a7f34c5bd3b26c24",
+    "date": "2026-07-28",
+    "prefecture": "宮城県",
+    "municipality": "大和町",
+    "locationText": "大和町 吉田字高田",
+    "category": "目撃",
+    "description": "時刻：10:05 / 頭数：１頭 / 宮城県一覧番号：1008",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.432195,
+    "longitude": 140.881286
+  },
+  {
     "id": "SENDAI-8745b56daa7596ce",
     "date": "2026-07-27",
     "prefecture": "宮城県",
