@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-28T19:51:15Z",
+  "updatedAt": "2026-07-29T03:36:19Z",
   "sendaiCitySourceCount": 197,
   "miyagiPageUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
   "miyagiStatus": "取得成功",
@@ -238,10 +238,10 @@
     ]
   },
   "kmlDiagnostics": {
-    "placemarkCount": 988,
-    "pointPlacemarkCount": 988,
-    "serialPointCount": 988,
-    "uniqueSerialCount": 988,
+    "placemarkCount": 990,
+    "pointPlacemarkCount": 990,
+    "serialPointCount": 990,
+    "uniqueSerialCount": 990,
     "duplicateSerialCount": 0,
     "pointSamples": [
       {
@@ -428,8 +428,8 @@
   },
   "joinDiagnostics": {
     "xlsxMiyagiCount": 1002,
-    "matchedPointCount": 987,
-    "unmatchedPointCount": 15,
+    "matchedPointCount": 986,
+    "unmatchedPointCount": 16,
     "dateMismatchCount": 61,
     "unmatchedSamples": [
       {
@@ -581,15 +581,25 @@
         "district": "字峯山浦",
         "count": "１頭",
         "category": "目撃"
+      },
+      {
+        "serial": "999",
+        "date": "2026-07-27",
+        "time": "10:05",
+        "office": "仙台",
+        "municipality": "仙台市泉区",
+        "district": "泉区北中山1丁目",
+        "count": "１頭",
+        "category": "目撃"
       }
     ]
   },
   "miyagiExcelCount": 1002,
   "miyagiMunicipalityCount": 30,
-  "miyagiMatchedPointCount": 987,
-  "miyagiJoinedCount": 987,
+  "miyagiMatchedPointCount": 986,
+  "miyagiJoinedCount": 986,
   "miyagiAddedCount": 820,
-  "sendaiDuplicateCount": 167,
+  "sendaiDuplicateCount": 166,
   "finalCount": 1017,
   "municipalityCount": 30,
   "sendaiAreaCount": 287,
