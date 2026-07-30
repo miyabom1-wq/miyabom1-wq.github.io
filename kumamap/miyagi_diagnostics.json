@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-07-30T03:25:46Z",
+  "updatedAt": "2026-07-30T08:47:30Z",
   "sendaiCitySourceCount": 198,
   "miyagiPageUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
   "miyagiStatus": "取得成功",
   "miyagiMapId": "12_b92SRipXWwvkUfNCsDdEUWhEOmzUc",
   "miyagiKmlUrl": "https://www.google.com/maps/d/kml?mid=12_b92SRipXWwvkUfNCsDdEUWhEOmzUc&forcekml=1",
-  "miyagiExcelUrl": "https://www.pref.miyagi.jp/documents/64667/koukaiyou_20260729.xlsx",
+  "miyagiExcelUrl": "https://www.pref.miyagi.jp/documents/64667/koukaiyou_20260730.xlsx",
   "miyagiErrors": [],
   "xlsxDiagnostics": {
-    "xlsxByteCount": 131741,
+    "xlsxByteCount": 132311,
     "sheetCount": 3,
     "selectedSheetName": "公表用シート（報告順）",
     "selectedHeaderRowIndex": 3,
@@ -23,7 +23,7 @@
       "発見頭数ハッケントウスウ",
       "痕跡コンセキ"
     ],
-    "miyagiRowCount": 1004,
+    "miyagiRowCount": 1009,
     "miyagiSampleRows": [
       {
         "serial": "1",
@@ -229,11 +229,11 @@
     "candidateSheets": [
       {
         "sheetName": "公表用シート（報告順）",
-        "miyagiRowCount": 1004
+        "miyagiRowCount": 1009
       },
       {
         "sheetName": "公表用シート（目撃順）",
-        "miyagiRowCount": 1004
+        "miyagiRowCount": 1009
       }
     ]
   },
@@ -427,9 +427,9 @@
     ]
   },
   "joinDiagnostics": {
-    "xlsxMiyagiCount": 1004,
+    "xlsxMiyagiCount": 1009,
     "matchedPointCount": 989,
-    "unmatchedPointCount": 15,
+    "unmatchedPointCount": 20,
     "dateMismatchCount": 61,
     "unmatchedSamples": [
       {
@@ -581,10 +581,60 @@
         "district": "字峯山浦",
         "count": "１頭",
         "category": "目撃"
+      },
+      {
+        "serial": "1010",
+        "date": "2026-07-28",
+        "time": "08:15",
+        "office": "栗原",
+        "municipality": "栗原市",
+        "district": "築館字下宮野浦ノ沢 地内",
+        "count": "１頭",
+        "category": "目撃"
+      },
+      {
+        "serial": "1011",
+        "date": "2026-07-28",
+        "time": "17:30",
+        "office": "仙台",
+        "municipality": "仙台市太白区",
+        "district": "秋保町馬場字愛宕裏地内",
+        "count": "１頭",
+        "category": "目撃"
+      },
+      {
+        "serial": "1012",
+        "date": "2026-07-28",
+        "time": "18:30",
+        "office": "大河原",
+        "municipality": "七ヶ宿町",
+        "district": "茂ヶ沢",
+        "count": "複数頭",
+        "category": "目撃"
+      },
+      {
+        "serial": "1013",
+        "date": "2026-07-27",
+        "time": "14:00",
+        "office": "大河原",
+        "municipality": "七ヶ宿町",
+        "district": "侭ノ上",
+        "count": "１頭",
+        "category": "目撃"
+      },
+      {
+        "serial": "1014",
+        "date": "2026-07-26",
+        "time": "08:30",
+        "office": "大河原",
+        "municipality": "七ヶ宿町",
+        "district": "苗代端",
+        "count": "１頭",
+        "category": "目撃"
       }
     ]
   },
-  "miyagiExcelCount": 1004,
+  "miyagiExcelCount": 1009,
   "miyagiMunicipalityCount": 30,
   "miyagiMatchedPointCount": 989,
   "miyagiJoinedCount": 989,
