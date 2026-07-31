@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-07-31T03:48:03Z",
+  "updatedAt": "2026-07-31T09:15:33Z",
   "sendaiCitySourceCount": 198,
   "miyagiPageUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
   "miyagiStatus": "取得成功",
   "miyagiMapId": "12_b92SRipXWwvkUfNCsDdEUWhEOmzUc",
   "miyagiKmlUrl": "https://www.google.com/maps/d/kml?mid=12_b92SRipXWwvkUfNCsDdEUWhEOmzUc&forcekml=1",
-  "miyagiExcelUrl": "https://www.pref.miyagi.jp/documents/64667/koukaiyou_20260730.xlsx",
+  "miyagiExcelUrl": "https://www.pref.miyagi.jp/documents/64667/koukaiyou_20260731.xlsx",
   "miyagiErrors": [],
   "xlsxDiagnostics": {
-    "xlsxByteCount": 132311,
+    "xlsxByteCount": 133572,
     "sheetCount": 3,
     "selectedSheetName": "公表用シート（報告順）",
     "selectedHeaderRowIndex": 3,
@@ -23,7 +23,7 @@
       "発見頭数ハッケントウスウ",
       "痕跡コンセキ"
     ],
-    "miyagiRowCount": 1009,
+    "miyagiRowCount": 1021,
     "miyagiSampleRows": [
       {
         "serial": "1",
@@ -229,11 +229,11 @@
     "candidateSheets": [
       {
         "sheetName": "公表用シート（報告順）",
-        "miyagiRowCount": 1009
+        "miyagiRowCount": 1021
       },
       {
         "sheetName": "公表用シート（目撃順）",
-        "miyagiRowCount": 1009
+        "miyagiRowCount": 1021
       }
     ]
   },
@@ -427,9 +427,9 @@
     ]
   },
   "joinDiagnostics": {
-    "xlsxMiyagiCount": 1009,
+    "xlsxMiyagiCount": 1021,
     "matchedPointCount": 989,
-    "unmatchedPointCount": 20,
+    "unmatchedPointCount": 32,
     "dateMismatchCount": 61,
     "unmatchedSamples": [
       {
@@ -631,10 +631,110 @@
         "district": "苗代端",
         "count": "１頭",
         "category": "目撃"
+      },
+      {
+        "serial": "1015",
+        "date": "2026-07-30",
+        "time": "09:50",
+        "office": "大河原",
+        "municipality": "蔵王町",
+        "district": "大字円田字土浮山地内",
+        "count": "１頭",
+        "category": "目撃"
+      },
+      {
+        "serial": "1016",
+        "date": "2026-07-23",
+        "time": "16:45",
+        "office": "大河原",
+        "municipality": "川崎町",
+        "district": "川内字荒羽賀山",
+        "count": "１頭",
+        "category": "目撃"
+      },
+      {
+        "serial": "1017",
+        "date": "2026-07-24",
+        "time": "不明",
+        "office": "大河原",
+        "municipality": "川崎町",
+        "district": "川内字溜水",
+        "count": "１頭",
+        "category": "痕跡"
+      },
+      {
+        "serial": "1018",
+        "date": "2026-07-25",
+        "time": "不明",
+        "office": "大河原",
+        "municipality": "川崎町",
+        "district": "川内字溜水",
+        "count": "１頭",
+        "category": "痕跡"
+      },
+      {
+        "serial": "1019",
+        "date": "2026-07-26",
+        "time": "不明",
+        "office": "大河原",
+        "municipality": "川崎町",
+        "district": "川内字溜水",
+        "count": "１頭",
+        "category": "痕跡"
+      },
+      {
+        "serial": "1020",
+        "date": "2026-07-27",
+        "time": "不明",
+        "office": "大河原",
+        "municipality": "川崎町",
+        "district": "川内字溜水",
+        "count": "１頭",
+        "category": "痕跡"
+      },
+      {
+        "serial": "1021",
+        "date": "2026-07-28",
+        "time": "不明",
+        "office": "大河原",
+        "municipality": "川崎町",
+        "district": "川内字溜水",
+        "count": "１頭",
+        "category": "目撃"
+      },
+      {
+        "serial": "1022",
+        "date": "2026-07-29",
+        "time": "22:00",
+        "office": "大河原",
+        "municipality": "川崎町",
+        "district": "川内字溜水",
+        "count": "１頭",
+        "category": "目撃"
+      },
+      {
+        "serial": "1023",
+        "date": "2026-07-28",
+        "time": "09:00",
+        "office": "大河原",
+        "municipality": "川崎町",
+        "district": "支倉字鳥屋沢山",
+        "count": "１頭",
+        "category": "目撃"
+      },
+      {
+        "serial": "1024",
+        "date": "2026-07-30",
+        "time": "13:20",
+        "office": "仙台",
+        "municipality": "富谷市",
+        "district": "富谷唐竹沢 地内",
+        "count": "１頭",
+        "category": "目撃"
       }
     ]
   },
-  "miyagiExcelCount": 1009,
+  "miyagiExcelCount": 1021,
   "miyagiMunicipalityCount": 30,
   "miyagiMatchedPointCount": 989,
   "miyagiJoinedCount": 989,
