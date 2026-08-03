@@ -1,5 +1,61 @@
 [
   {
+    "id": "MIYAGI-1e8f56ce89757695",
+    "date": "2026-08-02",
+    "prefecture": "宮城県",
+    "municipality": "七ヶ宿町",
+    "locationText": "七ヶ宿町 矢立平",
+    "category": "目撃",
+    "description": "時刻：17:30 / 頭数：１頭 / 宮城県一覧番号：1031",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 37.984375,
+    "longitude": 140.466398
+  },
+  {
+    "id": "MIYAGI-d44f4605afb0af11",
+    "date": "2026-07-31",
+    "prefecture": "宮城県",
+    "municipality": "大和町",
+    "locationText": "大和町 吉田字荻ケ倉西",
+    "category": "目撃",
+    "description": "時刻：09:30 / 頭数：１頭 / 宮城県一覧番号：1027",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.425861,
+    "longitude": 140.790799
+  },
+  {
+    "id": "MIYAGI-a669621f8cfa36c4",
+    "date": "2026-07-31",
+    "prefecture": "宮城県",
+    "municipality": "栗原市",
+    "locationText": "栗原市 花山字本沢浅沼 地内",
+    "category": "目撃",
+    "description": "時刻：15:00 / 頭数：１頭 / 宮城県一覧番号：1030",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.825301,
+    "longitude": 140.796197
+  },
+  {
+    "id": "MIYAGI-8d877adcb651e630",
+    "date": "2026-07-31",
+    "prefecture": "宮城県",
+    "municipality": "栗原市",
+    "locationText": "栗原市 花山字本沢沼山 地内",
+    "category": "痕跡",
+    "description": "時刻：08:00 / 頭数：不明 / 宮城県一覧番号：1029",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.806559,
+    "longitude": 140.826236
+  },
+  {
     "id": "SENDAI-81802b2c72a0cd05",
     "date": "2026-07-28",
     "prefecture": "宮城県",
@@ -1832,6 +1888,20 @@
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
     "latitude": 38.70636,
     "longitude": 141.108119
+  },
+  {
+    "id": "MIYAGI-a59bef9a7abf1df2",
+    "date": "2026-07-09",
+    "prefecture": "宮城県",
+    "municipality": "栗原市",
+    "locationText": "栗原市 鶯沢南郷南沢 地内",
+    "category": "目撃",
+    "description": "時刻：19:00 / 頭数：１頭 / 宮城県一覧番号：1028",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.799845,
+    "longitude": 140.891985
   },
   {
     "id": "MIYAGI-9905ea272c4d6bad",
