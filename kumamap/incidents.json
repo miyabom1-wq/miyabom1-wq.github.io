@@ -1,5 +1,19 @@
 [
   {
+    "id": "MIYAGI-97b4f1372362381d",
+    "date": "2026-08-05",
+    "prefecture": "宮城県",
+    "municipality": "蔵王町",
+    "locationText": "蔵王町 遠刈田温泉字北原尾",
+    "category": "痕跡",
+    "description": "時刻：06:00 / 頭数：不明 / 宮城県一覧番号：1048",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.09353,
+    "longitude": 140.566596
+  },
+  {
     "id": "SENDAI-ebdffe133064cb4d",
     "date": "2026-08-03",
     "prefecture": "宮城県",
@@ -112,6 +126,20 @@
     "longitude": 141.060255
   },
   {
+    "id": "MIYAGI-b9c7622c66432368",
+    "date": "2026-08-02",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "仙台市青葉区 みやぎ台1丁目31-1",
+    "category": "目撃",
+    "description": "時刻：13:30 / 頭数：１頭 / 宮城県一覧番号：1046",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.30735283,
+    "longitude": 140.7782034
+  },
+  {
     "id": "MIYAGI-44d01d1c7afa9181",
     "date": "2026-08-02",
     "prefecture": "宮城県",
@@ -138,6 +166,20 @@
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
     "latitude": 37.984375,
     "longitude": 140.466398
+  },
+  {
+    "id": "MIYAGI-02dd57da38053096",
+    "date": "2026-08-02",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "仙台市青葉区 芋沢字大竹原23-1",
+    "category": "目撃",
+    "description": "時刻：16:12 / 頭数：１頭 / 宮城県一覧番号：1047",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.28353361,
+    "longitude": 140.7671725
   },
   {
     "id": "MIYAGI-c04fc9ce507fdc5e",
