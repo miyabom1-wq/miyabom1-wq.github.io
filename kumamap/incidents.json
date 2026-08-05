@@ -1,5 +1,19 @@
 [
   {
+    "id": "SENDAI-6934d13808d0b774",
+    "date": "2026-08-05",
+    "prefecture": "宮城県",
+    "municipality": "仙台市太白区",
+    "locationText": "太白区茂庭字町北",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長不明 / 目撃情報精査の結果、他の動物の可能性あり",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.222652465085,
+    "longitude": 140.786568145603
+  },
+  {
     "id": "MIYAGI-97b4f1372362381d",
     "date": "2026-08-05",
     "prefecture": "宮城県",
