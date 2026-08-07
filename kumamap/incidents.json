@@ -6384,20 +6384,6 @@
     "longitude": 140.35478
   },
   {
-    "id": "MIYAGI-d7fe3435b404dc9a",
-    "date": "2026-06-10",
-    "prefecture": "宮城県",
-    "municipality": "仙台市泉区",
-    "locationText": "仙台市泉区 福岡岳山",
-    "category": "目撃",
-    "description": "時刻：17:57 / 頭数：１頭 / 宮城県一覧番号：559",
-    "riskLevel": "中",
-    "sourceName": "宮城県",
-    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
-    "latitude": 38.232334,
-    "longitude": 140.434184
-  },
-  {
     "id": "MIYAGI-c3c19a9cb22d1167",
     "date": "2026-06-10",
     "prefecture": "宮城県",
