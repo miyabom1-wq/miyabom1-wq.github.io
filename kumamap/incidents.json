@@ -14,6 +14,20 @@
     "longitude": 140.728304
   },
   {
+    "id": "SENDAI-28f9b80b4e05dc32",
+    "date": "2026-08-09",
+    "prefecture": "宮城県",
+    "municipality": "仙台市太白区",
+    "locationText": "太白区大野田４丁目",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.209568869896,
+    "longitude": 140.876687726266
+  },
+  {
     "id": "MIYAGI-9022d97e6a84d9bd",
     "date": "2026-08-08",
     "prefecture": "宮城県",
@@ -56,6 +70,20 @@
     "longitude": 140.821975414883
   },
   {
+    "id": "SENDAI-1cfb24c458b4241b",
+    "date": "2026-08-07",
+    "prefecture": "宮城県",
+    "municipality": "仙台市太白区",
+    "locationText": "太白区茂庭字中谷地南",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長50cm前後",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2175873523456,
+    "longitude": 140.748615118854
+  },
+  {
     "id": "SENDAI-1b590092cc5712e9",
     "date": "2026-08-07",
     "prefecture": "宮城県",
@@ -82,20 +110,6 @@
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
     "latitude": 38.428194,
     "longitude": 140.875278
-  },
-  {
-    "id": "MIYAGI-5448e8c839344478",
-    "date": "2026-08-07",
-    "prefecture": "宮城県",
-    "municipality": "仙台市太白区",
-    "locationText": "仙台市太白区 茂庭字中谷地南地内",
-    "category": "目撃",
-    "description": "時刻：15:00 / 頭数：１頭 / 宮城県一覧番号：1072",
-    "riskLevel": "中",
-    "sourceName": "宮城県",
-    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
-    "latitude": 38.21758073,
-    "longitude": 140.7486474
   },
   {
     "id": "SENDAI-4b4756c9f8d43297",
