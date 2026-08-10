@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-08-10T02:32:24Z",
+  "updatedAt": "2026-08-10T08:02:44Z",
   "sendaiCitySourceCount": 209,
   "miyagiPageUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
   "miyagiStatus": "取得成功",
   "miyagiMapId": "12_b92SRipXWwvkUfNCsDdEUWhEOmzUc",
   "miyagiKmlUrl": "https://www.google.com/maps/d/kml?mid=12_b92SRipXWwvkUfNCsDdEUWhEOmzUc&forcekml=1",
-  "miyagiExcelUrl": "https://www.pref.miyagi.jp/documents/64667/koukaiyou_20260807.xlsx",
+  "miyagiExcelUrl": "https://www.pref.miyagi.jp/documents/64667/koukaiyou_20260810.xlsx",
   "miyagiErrors": [],
   "xlsxDiagnostics": {
-    "xlsxByteCount": 137324,
+    "xlsxByteCount": 138931,
     "sheetCount": 3,
     "selectedSheetName": "公表用シート（報告順）",
     "selectedHeaderRowIndex": 3,
@@ -23,7 +23,7 @@
       "発見頭数ハッケントウスウ",
       "痕跡コンセキ"
     ],
-    "miyagiRowCount": 1054,
+    "miyagiRowCount": 1068,
     "miyagiSampleRows": [
       {
         "serial": "1",
@@ -229,11 +229,11 @@
     "candidateSheets": [
       {
         "sheetName": "公表用シート（報告順）",
-        "miyagiRowCount": 1054
+        "miyagiRowCount": 1068
       },
       {
         "sheetName": "公表用シート（目撃順）",
-        "miyagiRowCount": 1054
+        "miyagiRowCount": 1068
       }
     ]
   },
@@ -427,8 +427,8 @@
     ]
   },
   "joinDiagnostics": {
-    "xlsxMiyagiCount": 1054,
-    "matchedPointCount": 1022,
+    "xlsxMiyagiCount": 1068,
+    "matchedPointCount": 1036,
     "unmatchedPointCount": 32,
     "dateMismatchCount": 61,
     "unmatchedSamples": [
@@ -734,14 +734,14 @@
       }
     ]
   },
-  "miyagiExcelCount": 1054,
+  "miyagiExcelCount": 1068,
   "miyagiMunicipalityCount": 30,
-  "miyagiMatchedPointCount": 1022,
-  "miyagiJoinedCount": 1022,
-  "miyagiAddedCount": 848,
-  "sendaiDuplicateCount": 174,
-  "finalCount": 1057,
+  "miyagiMatchedPointCount": 1036,
+  "miyagiJoinedCount": 1036,
+  "miyagiAddedCount": 859,
+  "sendaiDuplicateCount": 177,
+  "finalCount": 1068,
   "municipalityCount": 30,
-  "sendaiAreaCount": 301,
-  "otherAreaCount": 756
+  "sendaiAreaCount": 302,
+  "otherAreaCount": 766
 }
