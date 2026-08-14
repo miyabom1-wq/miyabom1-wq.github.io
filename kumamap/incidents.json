@@ -14,6 +14,20 @@
     "longitude": 140.728304
   },
   {
+    "id": "MIYAGI-b2dcdf60a4c34ad2",
+    "date": "2026-08-13",
+    "prefecture": "宮城県",
+    "municipality": "大崎市",
+    "locationText": "大崎市 古川小野",
+    "category": "目撃",
+    "description": "時刻：07:00 / 頭数：１頭 / 宮城県一覧番号：1096",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.622494,
+    "longitude": 140.000352
+  },
+  {
     "id": "SENDAI-9549f5d841494d99",
     "date": "2026-08-12",
     "prefecture": "宮城県",
@@ -70,6 +84,20 @@
     "longitude": 140.909164
   },
   {
+    "id": "MIYAGI-1ea7b0a0f5911c0d",
+    "date": "2026-08-12",
+    "prefecture": "宮城県",
+    "municipality": "美里町",
+    "locationText": "美里町 大柳字高出",
+    "category": "目撃",
+    "description": "時刻：13:30 / 頭数：１頭 / 宮城県一覧番号：1097",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.50508,
+    "longitude": 141.120519
+  },
+  {
     "id": "MIYAGI-ced932ab2a33300b",
     "date": "2026-08-11",
     "prefecture": "宮城県",
@@ -96,6 +124,20 @@
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
     "latitude": 38.692149,
     "longitude": 140.957289
+  },
+  {
+    "id": "MIYAGI-acade7fee03ecb11",
+    "date": "2026-08-11",
+    "prefecture": "宮城県",
+    "municipality": "大崎市",
+    "locationText": "大崎市 三本木",
+    "category": "目撃",
+    "description": "時刻：05:40 / 頭数：１頭 / 宮城県一覧番号：1098",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.517475,
+    "longitude": 140.895465
   },
   {
     "id": "MIYAGI-655828e24681722b",
