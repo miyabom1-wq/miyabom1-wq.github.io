@@ -14,6 +14,34 @@
     "longitude": 140.728304
   },
   {
+    "id": "SENDAI-2bf8f88944b001b0",
+    "date": "2026-08-16",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区芋沢字要害",
+    "category": "痕跡",
+    "description": "頭数・体長：頭数、体長不明 / クマの糞",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3049860770493,
+    "longitude": 140.772146050982
+  },
+  {
+    "id": "SENDAI-35dc931a42551eb9",
+    "date": "2026-08-15",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区荒巻仁田谷地",
+    "category": "目撃",
+    "description": "頭数・体長：1頭、100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2829276583949,
+    "longitude": 140.819017294355
+  },
+  {
     "id": "MIYAGI-b2dcdf60a4c34ad2",
     "date": "2026-08-13",
     "prefecture": "宮城県",
