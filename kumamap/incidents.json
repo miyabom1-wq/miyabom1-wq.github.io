@@ -14,6 +14,20 @@
     "longitude": 140.728304
   },
   {
+    "id": "SENDAI-0374a51aae13ea57",
+    "date": "2026-08-19",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区小松島4丁目",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上 / 現地調査の結果、他の動物の可能性有",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2863404901188,
+    "longitude": 140.887839709628
+  },
+  {
     "id": "SENDAI-1dce2620a12f3ff6",
     "date": "2026-08-18",
     "prefecture": "宮城県",
@@ -26,6 +40,20 @@
     "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
     "latitude": 38.2680832791035,
     "longitude": 140.749424476887
+  },
+  {
+    "id": "SENDAI-95753d1125fee199",
+    "date": "2026-08-16",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区小松島4丁目",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上 / 現地調査の結果、他の動物の可能性有",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.286329226257,
+    "longitude": 140.887842559838
   },
   {
     "id": "SENDAI-2bf8f88944b001b0",
