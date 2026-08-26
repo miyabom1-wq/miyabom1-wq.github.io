@@ -28,6 +28,34 @@
     "longitude": 140.819700582935
   },
   {
+    "id": "MIYAGI-38b8c8c6b071356b",
+    "date": "2026-08-25",
+    "prefecture": "宮城県",
+    "municipality": "大和町",
+    "locationText": "大和町 吉田字西風",
+    "category": "目撃",
+    "description": "時刻：09:05 / 頭数：１頭 / 宮城県一覧番号：1139",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.429464,
+    "longitude": 140.877903
+  },
+  {
+    "id": "MIYAGI-740b4e96affb37a9",
+    "date": "2026-08-24",
+    "prefecture": "宮城県",
+    "municipality": "大崎市",
+    "locationText": "大崎市 岩出山池月字上宮根岸前",
+    "category": "目撃",
+    "description": "時刻：16:00 / 頭数：１頭 / 宮城県一覧番号：1142",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.720394,
+    "longitude": 140.820402
+  },
+  {
     "id": "MIYAGI-51f29038709a91ec",
     "date": "2026-08-24",
     "prefecture": "宮城県",
@@ -68,6 +96,20 @@
     "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
     "latitude": 38.2920540261537,
     "longitude": 140.757825454426
+  },
+  {
+    "id": "MIYAGI-ea1168dd580bc69e",
+    "date": "2026-08-23",
+    "prefecture": "宮城県",
+    "municipality": "大衡村",
+    "locationText": "大衡村 奥田地区 中沢地内",
+    "category": "目撃",
+    "description": "時刻：18:30 / 頭数：１頭 / 宮城県一覧番号：1141",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.4600492,
+    "longitude": 140.9049385
   },
   {
     "id": "MIYAGI-e2e68c01864771c4",
@@ -124,6 +166,20 @@
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
     "latitude": 37.95876,
     "longitude": 140.7141
+  },
+  {
+    "id": "MIYAGI-25dedb517a1711f4",
+    "date": "2026-08-22",
+    "prefecture": "宮城県",
+    "municipality": "大衡村",
+    "locationText": "大衡村 駒場地区 小板橋地内",
+    "category": "目撃",
+    "description": "時刻：11:45 / 頭数：１頭 / 宮城県一覧番号：1140",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.4787863,
+    "longitude": 140.9043688
   },
   {
     "id": "SENDAI-93243d3e98c41043",
