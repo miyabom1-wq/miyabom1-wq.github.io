@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-08-31T05:30:16Z",
+  "updatedAt": "2026-08-31T13:44:27Z",
   "sendaiCitySourceCount": 235,
   "miyagiPageUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
   "miyagiStatus": "取得成功",
   "miyagiMapId": "12_b92SRipXWwvkUfNCsDdEUWhEOmzUc",
   "miyagiKmlUrl": "https://www.google.com/maps/d/kml?mid=12_b92SRipXWwvkUfNCsDdEUWhEOmzUc&forcekml=1",
-  "miyagiExcelUrl": "https://www.pref.miyagi.jp/documents/64667/koukaiyou_20260827.xlsx",
+  "miyagiExcelUrl": "https://www.pref.miyagi.jp/documents/64667/koukaiyou_20260831.xlsx",
   "miyagiErrors": [],
   "xlsxDiagnostics": {
-    "xlsxByteCount": 147411,
+    "xlsxByteCount": 148607,
     "sheetCount": 3,
     "selectedSheetName": "公表用シート（報告順）",
     "selectedHeaderRowIndex": 3,
@@ -23,7 +23,7 @@
       "発見頭数ハッケントウスウ",
       "痕跡コンセキ"
     ],
-    "miyagiRowCount": 1146,
+    "miyagiRowCount": 1153,
     "miyagiSampleRows": [
       {
         "serial": "1",
@@ -229,11 +229,11 @@
     "candidateSheets": [
       {
         "sheetName": "公表用シート（報告順）",
-        "miyagiRowCount": 1146
+        "miyagiRowCount": 1153
       },
       {
         "sheetName": "公表用シート（目撃順）",
-        "miyagiRowCount": 1146
+        "miyagiRowCount": 1153
       }
     ]
   },
@@ -427,10 +427,10 @@
     ]
   },
   "joinDiagnostics": {
-    "xlsxMiyagiCount": 1146,
-    "matchedPointCount": 1113,
-    "unmatchedPointCount": 33,
-    "dateMismatchCount": 62,
+    "xlsxMiyagiCount": 1153,
+    "matchedPointCount": 1114,
+    "unmatchedPointCount": 39,
+    "dateMismatchCount": 63,
     "unmatchedSamples": [
       {
         "serial": "103",
@@ -734,14 +734,14 @@
       }
     ]
   },
-  "miyagiExcelCount": 1146,
+  "miyagiExcelCount": 1153,
   "miyagiMunicipalityCount": 32,
-  "miyagiMatchedPointCount": 1113,
-  "miyagiJoinedCount": 1113,
-  "miyagiAddedCount": 917,
+  "miyagiMatchedPointCount": 1114,
+  "miyagiJoinedCount": 1114,
+  "miyagiAddedCount": 918,
   "sendaiDuplicateCount": 196,
-  "finalCount": 1152,
+  "finalCount": 1153,
   "municipalityCount": 32,
   "sendaiAreaCount": 329,
-  "otherAreaCount": 823
+  "otherAreaCount": 824
 }

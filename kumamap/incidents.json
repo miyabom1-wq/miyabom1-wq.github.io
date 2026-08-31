@@ -28,6 +28,20 @@
     "longitude": 140.705846042934
   },
   {
+    "id": "MIYAGI-3a96251807df2455",
+    "date": "2026-08-27",
+    "prefecture": "宮城県",
+    "municipality": "大郷町",
+    "locationText": "大郷町 東成田字長松沢山",
+    "category": "目撃",
+    "description": "時刻：08:25 / 頭数：１頭 / 宮城県一覧番号：1152",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.27701858,
+    "longitude": 140.7380868
+  },
+  {
     "id": "SENDAI-6cd29fbee5c35c1d",
     "date": "2026-08-26",
     "prefecture": "宮城県",
