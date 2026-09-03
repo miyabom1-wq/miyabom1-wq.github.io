@@ -56,20 +56,6 @@
     "longitude": 140.805661502177
   },
   {
-    "id": "MIYAGI-8a3e5fcda2d5efcd",
-    "date": "2026-08-31",
-    "prefecture": "宮城県",
-    "municipality": "富谷市",
-    "locationText": "富谷市 大亀漆穂二番地内",
-    "category": "目撃",
-    "description": "時刻：15:20 / 頭数：複数頭 / 宮城県一覧番号：1162",
-    "riskLevel": "中",
-    "sourceName": "宮城県",
-    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
-    "latitude": 38.371287,
-    "longitude": 140.932338
-  },
-  {
     "id": "MIYAGI-09e71a292ef50b7f",
     "date": "2026-08-31",
     "prefecture": "宮城県",
@@ -110,20 +96,6 @@
     "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
     "latitude": 38.3159198450271,
     "longitude": 140.705846042934
-  },
-  {
-    "id": "MIYAGI-6a44a6aed011c7f1",
-    "date": "2026-08-28",
-    "prefecture": "宮城県",
-    "municipality": "大崎市",
-    "locationText": "大崎市 岩出山上野目字下鎌",
-    "category": "目撃",
-    "description": "時刻：14:00 / 頭数：１頭 / 宮城県一覧番号：1159",
-    "riskLevel": "中",
-    "sourceName": "宮城県",
-    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
-    "latitude": 38.676072,
-    "longitude": 140.87878
   },
   {
     "id": "MIYAGI-2b0a3978dd83c4b7",
@@ -336,7 +308,7 @@
     "longitude": 141.278847
   },
   {
-    "id": "MIYAGI-7ca16346885a6e7e",
+    "id": "MIYAGI-c0138c24babe7776",
     "date": "2026-08-25",
     "prefecture": "宮城県",
     "municipality": "富谷市",
@@ -347,7 +319,7 @@
     "sourceName": "宮城県",
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
     "latitude": 38.3393,
-    "longitude": 139.0
+    "longitude": 140.9053
   },
   {
     "id": "MIYAGI-38b8c8c6b071356b",
