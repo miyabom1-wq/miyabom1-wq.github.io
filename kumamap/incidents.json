@@ -1,17 +1,17 @@
 [
   {
-    "id": "MIYAGI-c1112240742721c2",
+    "id": "SENDAI-3fc5bf366ca1b9e9",
     "date": "2026-09-06",
     "prefecture": "宮城県",
     "municipality": "仙台市太白区",
-    "locationText": "仙台市太白区 坪沼字川添東",
+    "locationText": "太白区坪沼字川添東",
     "category": "目撃",
-    "description": "時刻：11:25 / 頭数：１頭 / 宮城県一覧番号：1184",
+    "description": "頭数・体長：1頭・体長不明",
     "riskLevel": "中",
-    "sourceName": "宮城県",
-    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
-    "latitude": 38.21250759,
-    "longitude": 140.7696155
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2125143146513,
+    "longitude": 140.769582541234
   },
   {
     "id": "MIYAGI-a03e74555fc043ba",
