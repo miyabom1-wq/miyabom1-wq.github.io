@@ -1,5 +1,19 @@
 [
   {
+    "id": "MIYAGI-2d8b63e4b142a851",
+    "date": "2026-09-07",
+    "prefecture": "宮城県",
+    "municipality": "富谷市",
+    "locationText": "富谷市 穀田瀬戸ノ沢地内",
+    "category": "目撃",
+    "description": "時刻：14:55 / 頭数：１頭 / 宮城県一覧番号：1186",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.376284,
+    "longitude": 140.886816
+  },
+  {
     "id": "SENDAI-3fc5bf366ca1b9e9",
     "date": "2026-09-06",
     "prefecture": "宮城県",
@@ -26,6 +40,20 @@
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
     "latitude": 38.428448,
     "longitude": 140.861913
+  },
+  {
+    "id": "MIYAGI-80cbe5aa0ff2a2ba",
+    "date": "2026-09-04",
+    "prefecture": "宮城県",
+    "municipality": "栗原市",
+    "locationText": "栗原市 高清水字下町 地内",
+    "category": "痕跡",
+    "description": "時刻：不明 / 頭数：不明 / 宮城県一覧番号：1185",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.651859,
+    "longitude": 141.009019
   },
   {
     "id": "MIYAGI-74d0fe3786a0d97e",
