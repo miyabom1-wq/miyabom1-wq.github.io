@@ -1,5 +1,19 @@
 [
   {
+    "id": "SENDAI-b7bf953a4892925d",
+    "date": "2026-09-08",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区川内",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2538899131337,
+    "longitude": 140.856307635815
+  },
+  {
     "id": "MIYAGI-2d8b63e4b142a851",
     "date": "2026-09-07",
     "prefecture": "宮城県",
