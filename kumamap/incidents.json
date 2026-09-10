@@ -238,6 +238,20 @@
     "longitude": 140.733411
   },
   {
+    "id": "MIYAGI-49bfcd390b4733ec",
+    "date": "2026-09-02",
+    "prefecture": "宮城県",
+    "municipality": "大崎市",
+    "locationText": "大崎市 松山金谷字赤沼上55-3",
+    "category": "目撃",
+    "description": "時刻：15:10 / 頭数：複数頭 / 宮城県一覧番号：1168",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.3042537,
+    "longitude": 141.0427829
+  },
+  {
     "id": "MIYAGI-48f0deca54ea7d41",
     "date": "2026-09-02",
     "prefecture": "宮城県",
@@ -278,20 +292,6 @@
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
     "latitude": 38.402857,
     "longitude": 140.977464
-  },
-  {
-    "id": "MIYAGI-0f258eabcff62d1b",
-    "date": "2026-09-02",
-    "prefecture": "宮城県",
-    "municipality": "大崎市",
-    "locationText": "大崎市 松山金谷字赤沼上55-3",
-    "category": "目撃",
-    "description": "時刻：15:10 / 頭数：複数頭 / 宮城県一覧番号：1168",
-    "riskLevel": "中",
-    "sourceName": "宮城県",
-    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
-    "latitude": 38.30422,
-    "longitude": 141.04274
   },
   {
     "id": "SENDAI-a63db22d62718118",
