@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-10T16:22:01Z",
-  "sendaiCitySourceCount": 244,
+  "updatedAt": "2026-09-10T20:49:47Z",
+  "sendaiCitySourceCount": 247,
   "miyagiPageUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
   "miyagiStatus": "取得成功",
   "miyagiMapId": "12_b92SRipXWwvkUfNCsDdEUWhEOmzUc",
@@ -740,8 +740,8 @@
   "miyagiJoinedCount": 1154,
   "miyagiAddedCount": 948,
   "sendaiDuplicateCount": 206,
-  "finalCount": 1192,
+  "finalCount": 1195,
   "municipalityCount": 32,
-  "sendaiAreaCount": 340,
+  "sendaiAreaCount": 343,
   "otherAreaCount": 852
 }
