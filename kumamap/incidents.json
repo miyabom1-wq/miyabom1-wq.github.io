@@ -14,6 +14,34 @@
     "longitude": 140.764803320736
   },
   {
+    "id": "MIYAGI-af668c8c395253cf",
+    "date": "2026-09-10",
+    "prefecture": "宮城県",
+    "municipality": "白石市",
+    "locationText": "白石市 福岡八宮字川原子",
+    "category": "目撃",
+    "description": "時刻：00:00 / 頭数：複数頭 / 宮城県一覧番号：1200",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.041297,
+    "longitude": 140.529041
+  },
+  {
+    "id": "MIYAGI-2e6844903c9bf267",
+    "date": "2026-09-10",
+    "prefecture": "宮城県",
+    "municipality": "蔵王町",
+    "locationText": "蔵王町 円田字入青木地内",
+    "category": "目撃",
+    "description": "時刻：08:00 / 頭数：１頭 / 宮城県一覧番号：1197",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.115877,
+    "longitude": 140.655612
+  },
+  {
     "id": "SENDAI-fa1581e1050812aa",
     "date": "2026-09-09",
     "prefecture": "宮城県",
@@ -56,6 +84,20 @@
     "longitude": 140.885196
   },
   {
+    "id": "MIYAGI-b7c1adf4a490e51e",
+    "date": "2026-09-09",
+    "prefecture": "宮城県",
+    "municipality": "松島町",
+    "locationText": "松島町 高城字馬場一",
+    "category": "目撃",
+    "description": "時刻：16:30 / 頭数：１頭 / 宮城県一覧番号：1201",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.38563,
+    "longitude": 141.060242
+  },
+  {
     "id": "MIYAGI-9ae9140a064bfcfc",
     "date": "2026-09-09",
     "prefecture": "宮城県",
@@ -96,6 +138,20 @@
     "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
     "latitude": 38.2538899131337,
     "longitude": 140.856307635815
+  },
+  {
+    "id": "MIYAGI-ccf3ec6c7977480c",
+    "date": "2026-09-08",
+    "prefecture": "宮城県",
+    "municipality": "栗原市",
+    "locationText": "栗原市 築館字城生野唐崎 地内",
+    "category": "痕跡",
+    "description": "時刻：不明 / 頭数：不明 / 宮城県一覧番号：1202",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.766915,
+    "longitude": 141.038296
   },
   {
     "id": "MIYAGI-935bc4b6787d3e1d",
