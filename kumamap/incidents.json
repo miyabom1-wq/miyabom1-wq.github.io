@@ -1,5 +1,19 @@
 [
   {
+    "id": "SENDAI-20b5a4758502db42",
+    "date": "2026-09-11",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区芋沢字大竹",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長不明",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2831227542242,
+    "longitude": 140.790119881162
+  },
+  {
     "id": "SENDAI-d418009ba1b7d99c",
     "date": "2026-09-10",
     "prefecture": "宮城県",
