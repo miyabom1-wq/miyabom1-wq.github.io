@@ -1,5 +1,19 @@
 [
   {
+    "id": "SENDAI-f3fa4c5e9aa364bc",
+    "date": "2026-09-16",
+    "prefecture": "宮城県",
+    "municipality": "仙台市太白区",
+    "locationText": "太白区ひより台",
+    "category": "目撃",
+    "description": "頭数・体長：1頭、体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.230418340161,
+    "longitude": 140.827074581834
+  },
+  {
     "id": "SENDAI-918f1d6da2dd216a",
     "date": "2026-09-16",
     "prefecture": "宮城県",
@@ -40,20 +54,6 @@
     "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
     "latitude": 38.3195200313991,
     "longitude": 140.705264679371
-  },
-  {
-    "id": "MIYAGI-bacebbf4da58adbe",
-    "date": "2026-09-16",
-    "prefecture": "宮城県",
-    "municipality": "仙台市太白区",
-    "locationText": "仙台市太白区 ひより台13－25",
-    "category": "目撃",
-    "description": "時刻：17:10 / 頭数：１頭 / 宮城県一覧番号：1227",
-    "riskLevel": "中",
-    "sourceName": "宮城県",
-    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
-    "latitude": 38.23029836,
-    "longitude": 140.8270381
   },
   {
     "id": "MIYAGI-a9604abfb8f7a155",
