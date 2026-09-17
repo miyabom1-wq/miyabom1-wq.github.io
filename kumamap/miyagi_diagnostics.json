@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-16T21:15:35Z",
+  "updatedAt": "2026-09-17T04:49:22Z",
   "sendaiCitySourceCount": 253,
   "miyagiPageUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
   "miyagiStatus": "取得成功",
@@ -239,11 +239,11 @@
     ]
   },
   "kmlDiagnostics": {
-    "placemarkCount": 1227,
-    "pointPlacemarkCount": 1227,
-    "serialPointCount": 1227,
-    "uniqueSerialCount": 1182,
-    "duplicateSerialCount": 45,
+    "placemarkCount": 1189,
+    "pointPlacemarkCount": 1189,
+    "serialPointCount": 1189,
+    "uniqueSerialCount": 1189,
+    "duplicateSerialCount": 0,
     "pointSamples": [
       {
         "serial": "1",
