@@ -1,5 +1,75 @@
 [
   {
+    "id": "MIYAGI-c90f72c8090862ea",
+    "date": "2026-09-17",
+    "prefecture": "宮城県",
+    "municipality": "大郷町",
+    "locationText": "大郷町 山崎字鳥屋場山",
+    "category": "目撃",
+    "description": "時刻：11:40 / 頭数：１頭 / 宮城県一覧番号：1235",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.432413,
+    "longitude": 141.041408
+  },
+  {
+    "id": "MIYAGI-ae85bbf572e6d00b",
+    "date": "2026-09-17",
+    "prefecture": "宮城県",
+    "municipality": "富谷市",
+    "locationText": "富谷市 日吉台一丁目 地内",
+    "category": "目撃",
+    "description": "時刻：10:30 / 頭数：１頭 / 宮城県一覧番号：1231",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.372532,
+    "longitude": 140.866764
+  },
+  {
+    "id": "MIYAGI-a5b67b99edb6b1b3",
+    "date": "2026-09-17",
+    "prefecture": "宮城県",
+    "municipality": "大崎市",
+    "locationText": "大崎市 岩出山字大学町",
+    "category": "目撃",
+    "description": "時刻：13:50 / 頭数：１頭 / 宮城県一覧番号：1234",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.653114,
+    "longitude": 140.855842
+  },
+  {
+    "id": "MIYAGI-4cf3e9daac1f8934",
+    "date": "2026-09-17",
+    "prefecture": "宮城県",
+    "municipality": "大崎市",
+    "locationText": "大崎市 松山金谷字向田50-40",
+    "category": "目撃",
+    "description": "時刻：07:00 / 頭数：１頭 / 宮城県一覧番号：1232",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.5138195,
+    "longitude": 141.072823
+  },
+  {
+    "id": "MIYAGI-3823c5035ad06b55",
+    "date": "2026-09-17",
+    "prefecture": "宮城県",
+    "municipality": "大崎市",
+    "locationText": "大崎市 松山長尾字兵庫屋敷45-2",
+    "category": "目撃",
+    "description": "時刻：07:20 / 頭数：１頭 / 宮城県一覧番号：1233",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.504261,
+    "longitude": 141.0741788
+  },
+  {
     "id": "SENDAI-f3fa4c5e9aa364bc",
     "date": "2026-09-16",
     "prefecture": "宮城県",
@@ -56,6 +126,20 @@
     "longitude": 140.705264679371
   },
   {
+    "id": "MIYAGI-ad08091eccbb3113",
+    "date": "2026-09-16",
+    "prefecture": "宮城県",
+    "municipality": "美里町",
+    "locationText": "美里町 字素山町地内",
+    "category": "目撃",
+    "description": "時刻：21:30 / 頭数：１頭 / 宮城県一覧番号：1229",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.534462,
+    "longitude": 141.064557
+  },
+  {
     "id": "MIYAGI-a9604abfb8f7a155",
     "date": "2026-09-16",
     "prefecture": "宮城県",
@@ -68,6 +152,20 @@
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
     "latitude": 38.125251,
     "longitude": 140.716356
+  },
+  {
+    "id": "MIYAGI-a5fd49c3d2d497dd",
+    "date": "2026-09-16",
+    "prefecture": "宮城県",
+    "municipality": "気仙沼市",
+    "locationText": "気仙沼市 笹が陣",
+    "category": "目撃",
+    "description": "時刻：15:00 / 頭数：１頭 / 宮城県一覧番号：1228",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.899982,
+    "longitude": 141.569508
   },
   {
     "id": "MIYAGI-96916e3ad1fad5da",
@@ -124,6 +222,20 @@
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
     "latitude": 38.648567,
     "longitude": 141.082402
+  },
+  {
+    "id": "MIYAGI-047d51cc025141af",
+    "date": "2026-09-16",
+    "prefecture": "宮城県",
+    "municipality": "涌谷町",
+    "locationText": "涌谷町 中島乙地内",
+    "category": "目撃",
+    "description": "時刻：14:00 / 頭数：１頭 / 宮城県一覧番号：1230",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.552942,
+    "longitude": 141.100293
   },
   {
     "id": "MIYAGI-b7340402893f63be",
