@@ -1,5 +1,19 @@
 [
   {
+    "id": "SENDAI-e58ae64222bb229d",
+    "date": "2026-09-23",
+    "prefecture": "宮城県",
+    "municipality": "仙台市泉区",
+    "locationText": "泉区根白石字青笹山",
+    "category": "目撃",
+    "description": "頭数・体長：3頭・体長100cm以上1頭、体長50cm前後2頭",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3492494050618,
+    "longitude": 140.814785744545
+  },
+  {
     "id": "MIYAGI-190d3e9211f36caf",
     "date": "2026-09-20",
     "prefecture": "宮城県",
