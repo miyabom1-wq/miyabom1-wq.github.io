@@ -1,5 +1,19 @@
 [
   {
+    "id": "SENDAI-0ad172a7585b2a99",
+    "date": "2026-09-24",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区芋沢字横向山",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2893213149731,
+    "longitude": 140.789329472283
+  },
+  {
     "id": "MIYAGI-c0cbd5c83bbe62ff",
     "date": "2026-09-24",
     "prefecture": "宮城県",
@@ -54,6 +68,20 @@
     "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
     "latitude": 38.3492494050618,
     "longitude": 140.814785744545
+  },
+  {
+    "id": "SENDAI-1c7ad5fa6664fc7f",
+    "date": "2026-09-23",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区芋沢字大勝草畑",
+    "category": "目撃",
+    "description": "頭数・体長：頭数・体長ともに不明",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2761600338554,
+    "longitude": 140.773823100366
   },
   {
     "id": "MIYAGI-678af2df02e56e0b",
@@ -126,18 +154,18 @@
     "longitude": 141.234551
   },
   {
-    "id": "MIYAGI-86058ccda9d8e782",
+    "id": "SENDAI-4397408d95022bbf",
     "date": "2026-09-20",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
-    "locationText": "仙台市青葉区 錦ケ丘5丁目（仙台市天文台東側茂みの中）",
+    "locationText": "青葉区錦ケ丘5丁目",
     "category": "目撃",
-    "description": "時刻：05:10 / 頭数：１頭 / 宮城県一覧番号：1247",
+    "description": "頭数・体長：1頭・体長100cm以上",
     "riskLevel": "中",
-    "sourceName": "宮城県",
-    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
-    "latitude": 38.25688103,
-    "longitude": 140.7571095
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2568880997237,
+    "longitude": 140.757076781299
   },
   {
     "id": "MIYAGI-3d56694c00fbbe00",
