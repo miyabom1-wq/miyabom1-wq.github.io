@@ -14,6 +14,20 @@
     "longitude": 140.635524
   },
   {
+    "id": "SENDAI-d21db782d573b0ef",
+    "date": "2026-09-26",
+    "prefecture": "宮城県",
+    "municipality": "仙台市泉区",
+    "locationText": "泉区西田中字萱場",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3240077827688,
+    "longitude": 140.790842127641
+  },
+  {
     "id": "MIYAGI-ff2d1e156723d756",
     "date": "2026-09-25",
     "prefecture": "宮城県",
