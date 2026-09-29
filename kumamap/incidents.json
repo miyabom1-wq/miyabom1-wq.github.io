@@ -1,5 +1,19 @@
 [
   {
+    "id": "SENDAI-c6d81651871906b8",
+    "date": "2026-09-28",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区芋沢字赤坂",
+    "category": "目撃",
+    "description": "頭数・体長：頭数・体長ともに不明",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2865926090975,
+    "longitude": 140.748123018623
+  },
+  {
     "id": "MIYAGI-e567028ebb7c1134",
     "date": "2026-09-28",
     "prefecture": "宮城県",
@@ -124,6 +138,20 @@
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
     "latitude": 38.45584,
     "longitude": 140.918313
+  },
+  {
+    "id": "SENDAI-55dffaa7a8b151c7",
+    "date": "2026-09-25",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区芋沢字鍛冶屋前",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長50cm前後 / 他の動物の可能性あり",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2952682195617,
+    "longitude": 140.776437989791
   },
   {
     "id": "MIYAGI-ff2d1e156723d756",
