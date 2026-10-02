@@ -1,5 +1,33 @@
 [
   {
+    "id": "SENDAI-b25d74161d010651",
+    "date": "2026-10-02",
+    "prefecture": "宮城県",
+    "municipality": "仙台市太白区",
+    "locationText": "太白区茂庭字松場",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長70cm前後",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2208255981361,
+    "longitude": 140.740968288436
+  },
+  {
+    "id": "SENDAI-8f50c5d4fc0c888e",
+    "date": "2026-10-01",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区芋沢字横向山",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2908429893192,
+    "longitude": 140.799637646705
+  },
+  {
     "id": "SENDAI-313cc460b918d055",
     "date": "2026-09-30",
     "prefecture": "宮城県",
@@ -12,6 +40,20 @@
     "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
     "latitude": 38.2270684061782,
     "longitude": 140.726867969831
+  },
+  {
+    "id": "SENDAI-16a220bba8bcd597",
+    "date": "2026-09-30",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区上愛子字中斉",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2687183458077,
+    "longitude": 140.748679937791
   },
   {
     "id": "MIYAGI-a6c66f15870dc78c",
@@ -516,6 +558,20 @@
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
     "latitude": 38.4683448,
     "longitude": 140.9087506
+  },
+  {
+    "id": "SENDAI-20fdb35288dbdc83",
+    "date": "2026-09-21",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区愛子中央3丁目",
+    "category": "目撃",
+    "description": "頭数・体長：頭数・体長ともに不明",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.276055829876,
+    "longitude": 140.758375647067
   },
   {
     "id": "MIYAGI-57ff4fab75d11a34",
