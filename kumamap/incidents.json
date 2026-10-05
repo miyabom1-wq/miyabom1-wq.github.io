@@ -1,5 +1,61 @@
 [
   {
+    "id": "MIYAGI-68ace51aa426e575",
+    "date": "2026-10-29",
+    "prefecture": "宮城県",
+    "municipality": "大衡村",
+    "locationText": "大衡村 駒場字上五仏",
+    "category": "目撃",
+    "description": "時刻：15:20 / 頭数：１頭 / 宮城県一覧番号：1304",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.4868758,
+    "longitude": 140.9057046
+  },
+  {
+    "id": "MIYAGI-682d8976f23bb76e",
+    "date": "2026-10-05",
+    "prefecture": "宮城県",
+    "municipality": "大和町",
+    "locationText": "大和町 松坂字銅山",
+    "category": "目撃",
+    "description": "時刻：07:40 / 頭数：１頭 / 宮城県一覧番号：1307",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.456819,
+    "longitude": 140.948129
+  },
+  {
+    "id": "MIYAGI-e248c3ec44f376c5",
+    "date": "2026-10-04",
+    "prefecture": "宮城県",
+    "municipality": "富谷市",
+    "locationText": "富谷市 富ヶ丘四丁目 地内",
+    "category": "目撃",
+    "description": "時刻：08:20 / 頭数：１頭 / 宮城県一覧番号：1306",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.369471,
+    "longitude": 140.867343
+  },
+  {
+    "id": "MIYAGI-73934efe8885c7fc",
+    "date": "2026-10-04",
+    "prefecture": "宮城県",
+    "municipality": "富谷市",
+    "locationText": "富谷市 鷹乃杜四丁目地内",
+    "category": "目撃",
+    "description": "時刻：08:45 / 頭数：１頭 / 宮城県一覧番号：1308",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.370968,
+    "longitude": 140.869575
+  },
+  {
     "id": "SENDAI-b25d74161d010651",
     "date": "2026-10-02",
     "prefecture": "宮城県",
@@ -12,6 +68,48 @@
     "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
     "latitude": 38.2208255981361,
     "longitude": 140.740968288436
+  },
+  {
+    "id": "MIYAGI-d751fa852fa20e83",
+    "date": "2026-10-02",
+    "prefecture": "宮城県",
+    "municipality": "富谷市",
+    "locationText": "富谷市 鷹乃森二丁目 地内",
+    "category": "目撃",
+    "description": "時刻：17:30 / 頭数：１頭 / 宮城県一覧番号：1305",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.367098,
+    "longitude": 140.86936
+  },
+  {
+    "id": "MIYAGI-a2f9d0bc422383e7",
+    "date": "2026-10-02",
+    "prefecture": "宮城県",
+    "municipality": "栗原市",
+    "locationText": "栗原市 高清水外沢田 地内",
+    "category": "目撃",
+    "description": "時刻：14:06 / 頭数：１頭 / 宮城県一覧番号：1301",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.645115,
+    "longitude": 141.027864
+  },
+  {
+    "id": "MIYAGI-9bbeab39b56e70b5",
+    "date": "2026-10-02",
+    "prefecture": "宮城県",
+    "municipality": "富谷市",
+    "locationText": "富谷市 富谷落合地内",
+    "category": "目撃",
+    "description": "時刻：11:10 / 頭数：１頭 / 宮城県一覧番号：1299",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.377318,
+    "longitude": 140.870524
   },
   {
     "id": "SENDAI-8f50c5d4fc0c888e",
@@ -40,6 +138,20 @@
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
     "latitude": 38.469719,
     "longitude": 140.967121
+  },
+  {
+    "id": "MIYAGI-a598a281bc2258fe",
+    "date": "2026-10-01",
+    "prefecture": "宮城県",
+    "municipality": "登米市",
+    "locationText": "登米市 東和町米谷字越路地内",
+    "category": "目撃",
+    "description": "時刻：07:30 / 頭数：１頭 / 宮城県一覧番号：1300",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.707281,
+    "longitude": 141.296486
   },
   {
     "id": "MIYAGI-41c6dab198421e6b",
@@ -112,6 +224,20 @@
     "longitude": 140.748679937791
   },
   {
+    "id": "MIYAGI-f9cd21cd5719019b",
+    "date": "2026-09-30",
+    "prefecture": "宮城県",
+    "municipality": "大衡村",
+    "locationText": "大衡村 桔梗平地内",
+    "category": "目撃",
+    "description": "時刻：07:50 / 頭数：１頭 / 宮城県一覧番号：1303",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.465483,
+    "longitude": 140.9165611
+  },
+  {
     "id": "MIYAGI-a6c66f15870dc78c",
     "date": "2026-09-30",
     "prefecture": "宮城県",
@@ -152,6 +278,34 @@
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
     "latitude": 38.437791,
     "longitude": 141.030464
+  },
+  {
+    "id": "MIYAGI-cb755a95b5b86b4b",
+    "date": "2026-09-29",
+    "prefecture": "宮城県",
+    "municipality": "大衡村",
+    "locationText": "大衡村 駒場字上五仏",
+    "category": "目撃",
+    "description": "時刻：15:20 / 頭数：１頭 / 宮城県一覧番号：1302",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.4868758,
+    "longitude": 140.9057046
+  },
+  {
+    "id": "MIYAGI-4a68380410551f74",
+    "date": "2026-09-29",
+    "prefecture": "宮城県",
+    "municipality": "大崎市",
+    "locationText": "大崎市 三本木",
+    "category": "目撃",
+    "description": "時刻：19:05 / 頭数：１頭 / 宮城県一覧番号：1309",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.513732,
+    "longitude": 140.976171
   },
   {
     "id": "SENDAI-c6d81651871906b8",
