@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-10-08T05:59:22Z",
+  "updatedAt": "2026-10-08T13:24:39Z",
   "sendaiCitySourceCount": 267,
   "miyagiPageUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
   "miyagiStatus": "取得成功",
   "miyagiMapId": "12_b92SRipXWwvkUfNCsDdEUWhEOmzUc",
   "miyagiKmlUrl": "https://www.google.com/maps/d/kml?mid=12_b92SRipXWwvkUfNCsDdEUWhEOmzUc&forcekml=1",
-  "miyagiExcelUrl": "https://www.pref.miyagi.jp/documents/64667/koukaiyou_20261006.xlsx",
+  "miyagiExcelUrl": "https://www.pref.miyagi.jp/documents/64667/koukaiyou_20261008.xlsx",
   "miyagiErrors": [],
   "xlsxDiagnostics": {
-    "xlsxByteCount": 178917,
+    "xlsxByteCount": 179300,
     "sheetCount": 3,
     "selectedSheetName": "公表用シート（報告順）",
     "selectedHeaderRowIndex": 3,
@@ -24,7 +24,7 @@
       "痕跡コンセキ",
       "市街地判定"
     ],
-    "miyagiRowCount": 1319,
+    "miyagiRowCount": 1325,
     "miyagiSampleRows": [
       {
         "serial": "1",
@@ -230,11 +230,11 @@
     "candidateSheets": [
       {
         "sheetName": "公表用シート（報告順）",
-        "miyagiRowCount": 1319
+        "miyagiRowCount": 1325
       },
       {
         "sheetName": "公表用シート（目撃順）",
-        "miyagiRowCount": 1319
+        "miyagiRowCount": 1325
       }
     ]
   },
@@ -428,8 +428,8 @@
     ]
   },
   "joinDiagnostics": {
-    "xlsxMiyagiCount": 1319,
-    "matchedPointCount": 1281,
+    "xlsxMiyagiCount": 1325,
+    "matchedPointCount": 1287,
     "unmatchedPointCount": 38,
     "dateMismatchCount": 61,
     "unmatchedSamples": [
@@ -735,14 +735,14 @@
       }
     ]
   },
-  "miyagiExcelCount": 1319,
+  "miyagiExcelCount": 1325,
   "miyagiMunicipalityCount": 33,
-  "miyagiMatchedPointCount": 1281,
-  "miyagiJoinedCount": 1281,
-  "miyagiAddedCount": 1051,
+  "miyagiMatchedPointCount": 1287,
+  "miyagiJoinedCount": 1287,
+  "miyagiAddedCount": 1057,
   "sendaiDuplicateCount": 230,
-  "finalCount": 1318,
+  "finalCount": 1324,
   "municipalityCount": 33,
   "sendaiAreaCount": 366,
-  "otherAreaCount": 952
+  "otherAreaCount": 958
 }
