@@ -14,6 +14,34 @@
     "longitude": 140.9057046
   },
   {
+    "id": "SENDAI-c14f461b5edcbbc0",
+    "date": "2026-10-13",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区上愛子字下十三枚田",
+    "category": "目撃",
+    "description": "頭数・体長：2頭・体長ともに不明",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2757178879299,
+    "longitude": 140.714490465515
+  },
+  {
+    "id": "SENDAI-7859388b7bd50502",
+    "date": "2026-10-13",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区荒巻字三居沢",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2684123824342,
+    "longitude": 140.838897344141
+  },
+  {
     "id": "MIYAGI-fc6f50ce76905345",
     "date": "2026-10-11",
     "prefecture": "宮城県",
@@ -54,6 +82,20 @@
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
     "latitude": 38.51839049,
     "longitude": 140.8655203
+  },
+  {
+    "id": "SENDAI-ce852c030cfa18b6",
+    "date": "2026-10-09",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区荒巻字仁田谷地",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長70cm前後",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2832009186382,
+    "longitude": 140.818638509977
   },
   {
     "id": "MIYAGI-8df0f3a998a2cfe8",
