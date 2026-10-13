@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-10-13T00:36:47Z",
+  "updatedAt": "2026-10-13T14:07:15Z",
   "sendaiCitySourceCount": 269,
   "miyagiPageUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
   "miyagiStatus": "取得成功",
   "miyagiMapId": "12_b92SRipXWwvkUfNCsDdEUWhEOmzUc",
   "miyagiKmlUrl": "https://www.google.com/maps/d/kml?mid=12_b92SRipXWwvkUfNCsDdEUWhEOmzUc&forcekml=1",
-  "miyagiExcelUrl": "https://www.pref.miyagi.jp/documents/64667/koukaiyou_20261009.xlsx",
+  "miyagiExcelUrl": "https://www.pref.miyagi.jp/documents/64667/koukaiyou_20261013.xlsx",
   "miyagiErrors": [],
   "xlsxDiagnostics": {
-    "xlsxByteCount": 180124,
+    "xlsxByteCount": 181207,
     "sheetCount": 3,
     "selectedSheetName": "公表用シート（報告順）",
     "selectedHeaderRowIndex": 3,
@@ -24,7 +24,7 @@
       "痕跡コンセキ",
       "市街地判定"
     ],
-    "miyagiRowCount": 1332,
+    "miyagiRowCount": 1342,
     "miyagiSampleRows": [
       {
         "serial": "1",
@@ -230,19 +230,19 @@
     "candidateSheets": [
       {
         "sheetName": "公表用シート（報告順）",
-        "miyagiRowCount": 1332
+        "miyagiRowCount": 1342
       },
       {
         "sheetName": "公表用シート（目撃順）",
-        "miyagiRowCount": 1332
+        "miyagiRowCount": 1342
       }
     ]
   },
   "kmlDiagnostics": {
-    "placemarkCount": 1295,
-    "pointPlacemarkCount": 1295,
-    "serialPointCount": 1295,
-    "uniqueSerialCount": 1295,
+    "placemarkCount": 1305,
+    "pointPlacemarkCount": 1305,
+    "serialPointCount": 1305,
+    "uniqueSerialCount": 1305,
     "duplicateSerialCount": 0,
     "pointSamples": [
       {
@@ -428,8 +428,8 @@
     ]
   },
   "joinDiagnostics": {
-    "xlsxMiyagiCount": 1332,
-    "matchedPointCount": 1294,
+    "xlsxMiyagiCount": 1342,
+    "matchedPointCount": 1304,
     "unmatchedPointCount": 38,
     "dateMismatchCount": 61,
     "unmatchedSamples": [
@@ -735,14 +735,14 @@
       }
     ]
   },
-  "miyagiExcelCount": 1332,
+  "miyagiExcelCount": 1342,
   "miyagiMunicipalityCount": 33,
-  "miyagiMatchedPointCount": 1294,
-  "miyagiJoinedCount": 1294,
-  "miyagiAddedCount": 1063,
+  "miyagiMatchedPointCount": 1304,
+  "miyagiJoinedCount": 1304,
+  "miyagiAddedCount": 1073,
   "sendaiDuplicateCount": 231,
-  "finalCount": 1332,
+  "finalCount": 1342,
   "municipalityCount": 33,
   "sendaiAreaCount": 368,
-  "otherAreaCount": 964
+  "otherAreaCount": 974
 }
