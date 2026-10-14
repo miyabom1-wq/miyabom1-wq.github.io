@@ -42,6 +42,20 @@
     "longitude": 140.838897344141
   },
   {
+    "id": "SENDAI-5355a10bfe5481c1",
+    "date": "2026-10-13",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区中山台4丁目",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2955747583092,
+    "longitude": 140.808297528089
+  },
+  {
     "id": "MIYAGI-53ecc3527cfeba1a",
     "date": "2026-10-13",
     "prefecture": "宮城県",
