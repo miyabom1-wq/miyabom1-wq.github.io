@@ -28,6 +28,20 @@
     "longitude": 140.818905843416
   },
   {
+    "id": "MIYAGI-0caf0c285b60c650",
+    "date": "2026-10-14",
+    "prefecture": "宮城県",
+    "municipality": "大崎市",
+    "locationText": "大崎市 鳴子温泉字町西",
+    "category": "目撃",
+    "description": "時刻：14:50 / 頭数：１頭 / 宮城県一覧番号：1373",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.736373,
+    "longitude": 140.770537
+  },
+  {
     "id": "SENDAI-c14f461b5edcbbc0",
     "date": "2026-10-13",
     "prefecture": "宮城県",
@@ -124,6 +138,20 @@
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
     "latitude": 38.4627147,
     "longitude": 140.9119105
+  },
+  {
+    "id": "MIYAGI-7d3db92e75601d51",
+    "date": "2026-10-12",
+    "prefecture": "宮城県",
+    "municipality": "大崎市",
+    "locationText": "大崎市 鹿島台大迫字北金沢地内",
+    "category": "目撃",
+    "description": "時刻：07:50 / 頭数：１頭 / 宮城県一覧番号：1372",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.469607,
+    "longitude": 141.047319
   },
   {
     "id": "MIYAGI-5126f378d875ed0a",
