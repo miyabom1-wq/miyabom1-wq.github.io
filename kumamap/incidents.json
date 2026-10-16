@@ -28,6 +28,20 @@
     "longitude": 140.818905843416
   },
   {
+    "id": "MIYAGI-5a5d1d5fb3551f48",
+    "date": "2026-10-15",
+    "prefecture": "宮城県",
+    "municipality": "仙台市泉区",
+    "locationText": "仙台市泉区 大沢3丁目",
+    "category": "目撃",
+    "description": "時刻：16:45 / 頭数：１頭 / 宮城県一覧番号：1374",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.35625251,
+    "longitude": 140.8761499
+  },
+  {
     "id": "MIYAGI-0caf0c285b60c650",
     "date": "2026-10-14",
     "prefecture": "宮城県",
