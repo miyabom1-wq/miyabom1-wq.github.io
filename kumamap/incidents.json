@@ -14,6 +14,20 @@
     "longitude": 140.9057046
   },
   {
+    "id": "SENDAI-ea8375ea4909e12f",
+    "date": "2026-10-16",
+    "prefecture": "宮城県",
+    "municipality": "仙台市泉区",
+    "locationText": "泉区大沢3丁目",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長70cm前後 / 現地調査の結果、イノシシの可能性有",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3562462817004,
+    "longitude": 140.875148491375
+  },
+  {
     "id": "MIYAGI-71a7e69b77f40ab9",
     "date": "2026-10-16",
     "prefecture": "宮城県",
