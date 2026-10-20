@@ -14,6 +14,20 @@
     "longitude": 140.9057046
   },
   {
+    "id": "SENDAI-435c7108df7cda8d",
+    "date": "2026-10-20",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区作並字神ノ前西",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長70cm前後",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3197675363077,
+    "longitude": 140.621795162048
+  },
+  {
     "id": "MIYAGI-43a5b95da8bc27cf",
     "date": "2026-10-20",
     "prefecture": "宮城県",
@@ -26,6 +40,20 @@
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
     "latitude": 38.351846,
     "longitude": 140.903494
+  },
+  {
+    "id": "SENDAI-28400449927eff4e",
+    "date": "2026-10-19",
+    "prefecture": "宮城県",
+    "municipality": "仙台市泉区",
+    "locationText": "泉区朝日1丁目",
+    "category": "目撃",
+    "description": "頭数・体長：2頭・体長100cm以上1頭、体長50cm前後1頭",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3388540682027,
+    "longitude": 140.819229283714
   },
   {
     "id": "MIYAGI-c469e89c87cc066b",
@@ -11354,6 +11382,20 @@
     "longitude": 140.704276808719
   },
   {
+    "id": "SENDAI-614cf49a3ee5de04",
+    "date": "2026-06-09",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区芋沢字横手",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長不明",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3088430223969,
+    "longitude": 140.765193877993
+  },
+  {
     "id": "SENDAI-5b41339729700210",
     "date": "2026-06-09",
     "prefecture": "宮城県",
@@ -11480,20 +11522,6 @@
     "longitude": 140.970902
   },
   {
-    "id": "MIYAGI-533b6ccb5e53fb91",
-    "date": "2026-06-09",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "仙台市青葉区 芋沢字横手",
-    "category": "目撃",
-    "description": "時刻：08:10 / 頭数：１頭 / 宮城県一覧番号：517",
-    "riskLevel": "中",
-    "sourceName": "宮城県",
-    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
-    "latitude": 38.30883564,
-    "longitude": 140.7652268
-  },
-  {
     "id": "MIYAGI-4aabf5a253ca1bb6",
     "date": "2026-06-09",
     "prefecture": "宮城県",
@@ -11578,6 +11606,34 @@
     "longitude": 141.053707
   },
   {
+    "id": "SENDAI-f40211df51b7d8da",
+    "date": "2026-06-08",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区芋沢字中田東",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長70cm前後",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.30415476718,
+    "longitude": 140.713923478829
+  },
+  {
+    "id": "SENDAI-cc717d7f361f5af5",
+    "date": "2026-06-08",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区上愛子字折葉",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2834718026574,
+    "longitude": 140.679545822879
+  },
+  {
     "id": "SENDAI-a0fc0c1cf84e6133",
     "date": "2026-06-08",
     "prefecture": "宮城県",
@@ -11606,20 +11662,6 @@
     "longitude": 140.872077
   },
   {
-    "id": "MIYAGI-ee8ab1f8878d1a09",
-    "date": "2026-06-08",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "仙台市青葉区 上愛子字折葉13-1",
-    "category": "目撃",
-    "description": "時刻：17:42 / 頭数：１頭 / 宮城県一覧番号：514",
-    "riskLevel": "中",
-    "sourceName": "宮城県",
-    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
-    "latitude": 38.28309562,
-    "longitude": 140.6794419
-  },
-  {
     "id": "MIYAGI-da77982fc6732681",
     "date": "2026-06-08",
     "prefecture": "宮城県",
@@ -11632,20 +11674,6 @@
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
     "latitude": 38.732945,
     "longitude": 141.0401
-  },
-  {
-    "id": "MIYAGI-991d66be923533e4",
-    "date": "2026-06-08",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "仙台市青葉区 芋沢字中田東１－２付近",
-    "category": "目撃",
-    "description": "時刻：17:15 / 頭数：１頭 / 宮城県一覧番号：516",
-    "riskLevel": "中",
-    "sourceName": "宮城県",
-    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
-    "latitude": 38.30414776,
-    "longitude": 140.713955
   },
   {
     "id": "MIYAGI-8a433f6428146d5b",
@@ -11718,6 +11746,62 @@
     "longitude": 140.783645589213
   },
   {
+    "id": "SENDAI-c1a0141485487b31",
+    "date": "2026-06-07",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区芋沢字田尻",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長50cm前後",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2928274733191,
+    "longitude": 140.706381332036
+  },
+  {
+    "id": "SENDAI-c1a0141485487b31",
+    "date": "2026-06-07",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区芋沢字田尻",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長50cm前後",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2928274733191,
+    "longitude": 140.706381332036
+  },
+  {
+    "id": "SENDAI-a480517f3bf9faa9",
+    "date": "2026-06-07",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区上愛子字大岩",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長不明",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2688601573258,
+    "longitude": 140.73124913282
+  },
+  {
+    "id": "SENDAI-530815380b431bfe",
+    "date": "2026-06-07",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区上愛子字折葉",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2831022675987,
+    "longitude": 140.679411219763
+  },
+  {
     "id": "SENDAI-1700ab7b5cd92fd0",
     "date": "2026-06-07",
     "prefecture": "宮城県",
@@ -11744,20 +11828,6 @@
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
     "latitude": 38.181553,
     "longitude": 140.6566
-  },
-  {
-    "id": "MIYAGI-ec148bc4c3569171",
-    "date": "2026-06-07",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "仙台市青葉区 上愛子字折葉13-1",
-    "category": "目撃",
-    "description": "時刻：15:20 / 頭数：１頭 / 宮城県一覧番号：513",
-    "riskLevel": "中",
-    "sourceName": "宮城県",
-    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
-    "latitude": 38.28309562,
-    "longitude": 140.6794419
   },
   {
     "id": "MIYAGI-e148e8e824883196",
@@ -11856,34 +11926,6 @@
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
     "latitude": 38.365887,
     "longitude": 140.874231
-  },
-  {
-    "id": "MIYAGI-1a2d580c6df6aa98",
-    "date": "2026-06-07",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "仙台市青葉区 上愛子字大岩８番地付近",
-    "category": "目撃",
-    "description": "時刻：19:00 / 頭数：１頭 / 宮城県一覧番号：512",
-    "riskLevel": "中",
-    "sourceName": "宮城県",
-    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
-    "latitude": 38.26885322,
-    "longitude": 140.7312811
-  },
-  {
-    "id": "MIYAGI-10af98721fc1b5ff",
-    "date": "2026-06-07",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "仙台市青葉区 芋沢字田尻65",
-    "category": "目撃",
-    "description": "時刻：17:00 / 頭数：１頭 / 宮城県一覧番号：499",
-    "riskLevel": "中",
-    "sourceName": "宮城県",
-    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
-    "latitude": 38.29282059,
-    "longitude": 140.7064127
   },
   {
     "id": "MIYAGI-0ab1a3a7e78418a2",
@@ -12054,6 +12096,34 @@
     "longitude": 140.703643781505
   },
   {
+    "id": "SENDAI-bb3cc274000cf662",
+    "date": "2026-06-05",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区芋沢字滝ノ瀬",
+    "category": "目撃",
+    "description": "頭数・体長：頭数・体長ともに不明",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2790154393688,
+    "longitude": 140.78250442874
+  },
+  {
+    "id": "SENDAI-b31ad7597b8ac488",
+    "date": "2026-06-05",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区大倉字滝ノ上",
+    "category": "目撃",
+    "description": "頭数・体長：頭数・体長ともに不明",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.3509158329353,
+    "longitude": 140.681382284595
+  },
+  {
     "id": "SENDAI-a9836b68995b8145",
     "date": "2026-06-05",
     "prefecture": "宮城県",
@@ -12066,20 +12136,6 @@
     "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
     "latitude": 38.2924477004148,
     "longitude": 140.857082655786
-  },
-  {
-    "id": "MIYAGI-da7a1f08c37c93f3",
-    "date": "2026-06-05",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "仙台市青葉区 芋沢字滝の瀬",
-    "category": "痕跡",
-    "description": "時刻：09:00 / 頭数：不明 / 宮城県一覧番号：578",
-    "riskLevel": "中",
-    "sourceName": "宮城県",
-    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
-    "latitude": 38.27900809,
-    "longitude": 140.782538
   },
   {
     "id": "MIYAGI-b9b425de17769340",
@@ -12108,20 +12164,6 @@
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
     "latitude": 38.737092,
     "longitude": 140.769217
-  },
-  {
-    "id": "MIYAGI-b4cca9ed14ee62c4",
-    "date": "2026-06-05",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "仙台市青葉区 大倉字滝ノ上",
-    "category": "痕跡",
-    "description": "時刻：11:00 / 頭数：不明 / 宮城県一覧番号：579",
-    "riskLevel": "中",
-    "sourceName": "宮城県",
-    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
-    "latitude": 38.35090865,
-    "longitude": 140.6814128
   },
   {
     "id": "MIYAGI-9a4c9675f70aefc0",
@@ -15456,6 +15498,20 @@
     "longitude": 140.860845
   },
   {
+    "id": "SENDAI-cf77e8b6b537c2dc",
+    "date": "2026-05-15",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "青葉区郷六字岩下",
+    "category": "目撃",
+    "description": "頭数・体長：頭数・体長ともに不明",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2713588159784,
+    "longitude": 140.799129490724
+  },
+  {
     "id": "SENDAI-956be761526ea5e8",
     "date": "2026-05-15",
     "prefecture": "宮城県",
@@ -15608,20 +15664,6 @@
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
     "latitude": 38.7387,
     "longitude": 140.714011
-  },
-  {
-    "id": "MIYAGI-304fe4449e6e5438",
-    "date": "2026-05-15",
-    "prefecture": "宮城県",
-    "municipality": "仙台市青葉区",
-    "locationText": "仙台市青葉区 郷六字岩下１７",
-    "category": "その他",
-    "description": "時刻：不明 / 頭数：不明 / 宮城県一覧番号：624",
-    "riskLevel": "低",
-    "sourceName": "宮城県",
-    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
-    "latitude": 38.27135139,
-    "longitude": 140.7991636
   },
   {
     "id": "MIYAGI-0a86b4544ca8a49d",
