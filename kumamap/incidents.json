@@ -28,6 +28,20 @@
     "longitude": 140.621795162048
   },
   {
+    "id": "MIYAGI-64a42069a680e9d6",
+    "date": "2026-10-20",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "仙台市青葉区 高野原１丁目２０－１２付近（南側茂みの中）",
+    "category": "目撃",
+    "description": "時刻：07:50 / 頭数：複数頭 / 宮城県一覧番号：1393",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.2876005,
+    "longitude": 140.7645839
+  },
+  {
     "id": "MIYAGI-43a5b95da8bc27cf",
     "date": "2026-10-20",
     "prefecture": "宮城県",
@@ -54,6 +68,20 @@
     "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
     "latitude": 38.3388540682027,
     "longitude": 140.819229283714
+  },
+  {
+    "id": "MIYAGI-d9eb0ec47af0322e",
+    "date": "2026-10-19",
+    "prefecture": "宮城県",
+    "municipality": "気仙沼市",
+    "locationText": "気仙沼市 松崎片浜",
+    "category": "目撃",
+    "description": "時刻：05:55 / 頭数：１頭 / 宮城県一覧番号：1390",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.873538,
+    "longitude": 141.583965
   },
   {
     "id": "MIYAGI-c469e89c87cc066b",
@@ -84,6 +112,20 @@
     "longitude": 140.985393
   },
   {
+    "id": "MIYAGI-3cc7e0bb0fcde284",
+    "date": "2026-10-19",
+    "prefecture": "宮城県",
+    "municipality": "気仙沼市",
+    "locationText": "気仙沼市 長崎",
+    "category": "目撃",
+    "description": "時刻：16:40 / 頭数：１頭 / 宮城県一覧番号：1391",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.856814,
+    "longitude": 141.616741
+  },
+  {
     "id": "MIYAGI-4291ecf8c62e8f6a",
     "date": "2026-10-18",
     "prefecture": "宮城県",
@@ -110,6 +152,20 @@
     "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
     "latitude": 38.3562462817004,
     "longitude": 140.875148491375
+  },
+  {
+    "id": "MIYAGI-e1774e1f390ede5c",
+    "date": "2026-10-16",
+    "prefecture": "宮城県",
+    "municipality": "気仙沼市",
+    "locationText": "気仙沼市 唐桑町只越",
+    "category": "目撃",
+    "description": "時刻：06:00 / 頭数：１頭 / 宮城県一覧番号：1389",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.921067,
+    "longitude": 141.635195
   },
   {
     "id": "MIYAGI-71a7e69b77f40ab9",
@@ -194,6 +250,20 @@
     "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
     "latitude": 38.2806537155529,
     "longitude": 140.818905843416
+  },
+  {
+    "id": "MIYAGI-39e5a91986e08ccf",
+    "date": "2026-10-15",
+    "prefecture": "宮城県",
+    "municipality": "気仙沼市",
+    "locationText": "気仙沼市 唐桑町明戸",
+    "category": "目撃",
+    "description": "時刻：17:30 / 頭数：１頭 / 宮城県一覧番号：1388",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.910338,
+    "longitude": 141.647474
   },
   {
     "id": "MIYAGI-ad2c9d2808aceb24",
