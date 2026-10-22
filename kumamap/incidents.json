@@ -1,17 +1,17 @@
 [
   {
-    "id": "MIYAGI-68ace51aa426e575",
-    "date": "2026-10-29",
+    "id": "MIYAGI-f0c1ec46e7979220",
+    "date": "2026-10-21",
     "prefecture": "宮城県",
-    "municipality": "大衡村",
-    "locationText": "大衡村 駒場字上五仏",
+    "municipality": "村田町",
+    "locationText": "村田町 足立字馬立",
     "category": "目撃",
-    "description": "時刻：15:20 / 頭数：１頭 / 宮城県一覧番号：1304",
+    "description": "時刻：正午 / 頭数：１頭 / 宮城県一覧番号：1394",
     "riskLevel": "中",
     "sourceName": "宮城県",
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
-    "latitude": 38.4868758,
-    "longitude": 140.9057046
+    "latitude": 38.135438,
+    "longitude": 140.727106
   },
   {
     "id": "SENDAI-9439e48fdec7d665",
@@ -1708,6 +1708,20 @@
     "longitude": 140.926124
   },
   {
+    "id": "MIYAGI-57e3302f6ab9ce95",
+    "date": "2026-09-24",
+    "prefecture": "宮城県",
+    "municipality": "塩竈市",
+    "locationText": "塩竈市 杉ノ入表（内裡島）",
+    "category": "目撃",
+    "description": "時刻：15:00 / 頭数：１頭 / 宮城県一覧番号：1401",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.336369,
+    "longitude": 141.053633
+  },
+  {
     "id": "MIYAGI-50fa94a07e09dc08",
     "date": "2026-09-24",
     "prefecture": "宮城県",
@@ -1790,6 +1804,20 @@
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
     "latitude": 38.365921,
     "longitude": 140.87599
+  },
+  {
+    "id": "MIYAGI-0ae7b4d601650d7b",
+    "date": "2026-09-23",
+    "prefecture": "宮城県",
+    "municipality": "塩竈市",
+    "locationText": "塩竈市 杉ノ入表（内裡島）",
+    "category": "目撃",
+    "description": "時刻：10:30 / 頭数：１頭 / 宮城県一覧番号：1400",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.336369,
+    "longitude": 141.053633
   },
   {
     "id": "MIYAGI-b2eb44fa3970956b",
@@ -1918,6 +1946,20 @@
     "longitude": 140.880604
   },
   {
+    "id": "MIYAGI-249a16a41edc0e0b",
+    "date": "2026-09-20",
+    "prefecture": "宮城県",
+    "municipality": "塩竈市",
+    "locationText": "塩竈市 新浜町三丁目",
+    "category": "目撃",
+    "description": "時刻：02:20 / 頭数：１頭 / 宮城県一覧番号：1399",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.332561,
+    "longitude": 141.051192
+  },
+  {
     "id": "MIYAGI-190d3e9211f36caf",
     "date": "2026-09-20",
     "prefecture": "宮城県",
@@ -1960,6 +2002,20 @@
     "longitude": 140.909229
   },
   {
+    "id": "MIYAGI-e406d24f23285030",
+    "date": "2026-09-19",
+    "prefecture": "宮城県",
+    "municipality": "塩竈市",
+    "locationText": "塩竈市 新浜町二丁目",
+    "category": "目撃",
+    "description": "時刻：20:00 / 頭数：１頭 / 宮城県一覧番号：1397",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.331892,
+    "longitude": 141.040217
+  },
+  {
     "id": "MIYAGI-bea675fb17ebd842",
     "date": "2026-09-19",
     "prefecture": "宮城県",
@@ -1986,6 +2042,20 @@
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
     "latitude": 38.456613,
     "longitude": 140.998449
+  },
+  {
+    "id": "MIYAGI-af3d805702c28d4c",
+    "date": "2026-09-19",
+    "prefecture": "宮城県",
+    "municipality": "塩竈市",
+    "locationText": "塩竈市 新浜町三丁目",
+    "category": "目撃",
+    "description": "時刻：08:00 / 頭数：１頭 / 宮城県一覧番号：1396",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.332549,
+    "longitude": 141.045823
   },
   {
     "id": "MIYAGI-9590f4cadd09295d",
@@ -2028,6 +2098,20 @@
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
     "latitude": 38.730135,
     "longitude": 141.003862
+  },
+  {
+    "id": "MIYAGI-207a0d939d7ce3f4",
+    "date": "2026-09-19",
+    "prefecture": "宮城県",
+    "municipality": "塩竈市",
+    "locationText": "塩竈市 新浜町一丁目（漁船）",
+    "category": "目撃",
+    "description": "時刻：20:40 / 頭数：１頭 / 宮城県一覧番号：1398",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.325559,
+    "longitude": 141.04556
   },
   {
     "id": "MIYAGI-dfb12516b5ffbf01",
@@ -2084,6 +2168,20 @@
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
     "latitude": 38.351475,
     "longitude": 141.044938
+  },
+  {
+    "id": "MIYAGI-b715783c7f80fa3b",
+    "date": "2026-09-18",
+    "prefecture": "宮城県",
+    "municipality": "塩竈市",
+    "locationText": "塩竈市 新浜町二丁目",
+    "category": "目撃",
+    "description": "時刻：20:00 / 頭数：１頭 / 宮城県一覧番号：1395",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.331808,
+    "longitude": 141.040244
   },
   {
     "id": "MIYAGI-084d8c63521f1c82",
