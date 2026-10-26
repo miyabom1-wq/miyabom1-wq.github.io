@@ -1,5 +1,33 @@
 [
   {
+    "id": "MIYAGI-169819ec30d36294",
+    "date": "2026-10-24",
+    "prefecture": "宮城県",
+    "municipality": "大和町",
+    "locationText": "大和町 もみじヶ丘三丁目地内",
+    "category": "痕跡",
+    "description": "時刻：13:54 / 頭数：不明 / 宮城県一覧番号：1404",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.374405,
+    "longitude": 140.859461
+  },
+  {
+    "id": "MIYAGI-5b8012c9d7a42ca8",
+    "date": "2026-10-22",
+    "prefecture": "宮城県",
+    "municipality": "大和町",
+    "locationText": "大和町 小野字馬場地内",
+    "category": "目撃",
+    "description": "時刻：18:30 / 頭数：１頭 / 宮城県一覧番号：1403",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.388233,
+    "longitude": 140.858148
+  },
+  {
     "id": "MIYAGI-f0c1ec46e7979220",
     "date": "2026-10-21",
     "prefecture": "宮城県",
@@ -12,6 +40,20 @@
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
     "latitude": 38.135438,
     "longitude": 140.727106
+  },
+  {
+    "id": "MIYAGI-c4a5d1f2a6dfda73",
+    "date": "2026-10-21",
+    "prefecture": "宮城県",
+    "municipality": "登米市",
+    "locationText": "登米市 登米町日根牛上羽沢地内",
+    "category": "目撃",
+    "description": "時刻：21:30 / 頭数：１頭 / 宮城県一覧番号：1402",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.677537,
+    "longitude": 141.365204
   },
   {
     "id": "SENDAI-9439e48fdec7d665",
