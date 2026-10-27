@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-10-27T04:59:21Z",
+  "updatedAt": "2026-10-27T12:06:21Z",
   "sendaiCitySourceCount": 307,
   "miyagiPageUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
   "miyagiStatus": "取得成功",
   "miyagiMapId": "12_b92SRipXWwvkUfNCsDdEUWhEOmzUc",
   "miyagiKmlUrl": "https://www.google.com/maps/d/kml?mid=12_b92SRipXWwvkUfNCsDdEUWhEOmzUc&forcekml=1",
-  "miyagiExcelUrl": "https://www.pref.miyagi.jp/documents/64667/koukaiyou_20261026.xlsx",
+  "miyagiExcelUrl": "https://www.pref.miyagi.jp/documents/64667/koukaiyou_20261027.xlsx",
   "miyagiErrors": [],
   "xlsxDiagnostics": {
-    "xlsxByteCount": 187999,
+    "xlsxByteCount": 188486,
     "sheetCount": 3,
     "selectedSheetName": "公表用シート（報告順）",
     "selectedHeaderRowIndex": 3,
@@ -24,7 +24,7 @@
       "痕跡コンセキ",
       "市街地判定"
     ],
-    "miyagiRowCount": 1396,
+    "miyagiRowCount": 1400,
     "miyagiSampleRows": [
       {
         "serial": "1",
@@ -230,11 +230,11 @@
     "candidateSheets": [
       {
         "sheetName": "公表用シート（報告順）",
-        "miyagiRowCount": 1396
+        "miyagiRowCount": 1400
       },
       {
         "sheetName": "公表用シート（目撃順）",
-        "miyagiRowCount": 1396
+        "miyagiRowCount": 1400
       }
     ]
   },
@@ -428,8 +428,8 @@
     ]
   },
   "joinDiagnostics": {
-    "xlsxMiyagiCount": 1396,
-    "matchedPointCount": 1358,
+    "xlsxMiyagiCount": 1400,
+    "matchedPointCount": 1362,
     "unmatchedPointCount": 38,
     "dateMismatchCount": 61,
     "unmatchedSamples": [
@@ -735,14 +735,14 @@
       }
     ]
   },
-  "miyagiExcelCount": 1396,
+  "miyagiExcelCount": 1400,
   "miyagiMunicipalityCount": 34,
-  "miyagiMatchedPointCount": 1358,
-  "miyagiJoinedCount": 1358,
-  "miyagiAddedCount": 1091,
+  "miyagiMatchedPointCount": 1362,
+  "miyagiJoinedCount": 1362,
+  "miyagiAddedCount": 1095,
   "sendaiDuplicateCount": 267,
-  "finalCount": 1398,
+  "finalCount": 1402,
   "municipalityCount": 34,
-  "sendaiAreaCount": 380,
-  "otherAreaCount": 1018
+  "sendaiAreaCount": 381,
+  "otherAreaCount": 1021
 }

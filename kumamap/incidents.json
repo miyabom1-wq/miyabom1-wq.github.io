@@ -1,5 +1,47 @@
 [
   {
+    "id": "MIYAGI-286f6c370e110ad1",
+    "date": "2026-10-26",
+    "prefecture": "宮城県",
+    "municipality": "気仙沼市",
+    "locationText": "気仙沼市 松崎浦田",
+    "category": "目撃",
+    "description": "時刻：02:10 / 頭数：１頭 / 宮城県一覧番号：1405",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.87771,
+    "longitude": 141.578536
+  },
+  {
+    "id": "MIYAGI-ba3effb4f2cd18a1",
+    "date": "2026-10-25",
+    "prefecture": "宮城県",
+    "municipality": "仙台市青葉区",
+    "locationText": "仙台市青葉区 作並字湯ノ原３２－７付近（国道４８号線上）",
+    "category": "目撃",
+    "description": "時刻：21:30 / 頭数：１頭 / 宮城県一覧番号：1407",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.32582409,
+    "longitude": 140.6178896
+  },
+  {
+    "id": "MIYAGI-3133d1653c8c5086",
+    "date": "2026-10-24",
+    "prefecture": "宮城県",
+    "municipality": "大和町",
+    "locationText": "大和町 もみじヶ丘一丁目地内",
+    "category": "痕跡",
+    "description": "時刻：13:54 / 頭数：不明 / 宮城県一覧番号：1408",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.374405,
+    "longitude": 140.859461
+  },
+  {
     "id": "MIYAGI-169819ec30d36294",
     "date": "2026-10-24",
     "prefecture": "宮城県",
@@ -12,6 +54,20 @@
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
     "latitude": 38.374405,
     "longitude": 140.859461
+  },
+  {
+    "id": "MIYAGI-fd6300041e1280ae",
+    "date": "2026-10-23",
+    "prefecture": "宮城県",
+    "municipality": "栗原市",
+    "locationText": "栗原市 築館字下待井 地内",
+    "category": "目撃",
+    "description": "時刻：17:50 / 頭数：複数頭 / 宮城県一覧番号：1406",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.722184,
+    "longitude": 141.032318
   },
   {
     "id": "MIYAGI-5b8012c9d7a42ca8",
