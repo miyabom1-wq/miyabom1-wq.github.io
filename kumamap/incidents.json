@@ -42,20 +42,6 @@
     "longitude": 140.859461
   },
   {
-    "id": "MIYAGI-169819ec30d36294",
-    "date": "2026-10-24",
-    "prefecture": "宮城県",
-    "municipality": "大和町",
-    "locationText": "大和町 もみじヶ丘三丁目地内",
-    "category": "痕跡",
-    "description": "時刻：13:54 / 頭数：不明 / 宮城県一覧番号：1404",
-    "riskLevel": "中",
-    "sourceName": "宮城県",
-    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
-    "latitude": 38.374405,
-    "longitude": 140.859461
-  },
-  {
     "id": "MIYAGI-fd6300041e1280ae",
     "date": "2026-10-23",
     "prefecture": "宮城県",
