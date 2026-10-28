@@ -1,5 +1,19 @@
 [
   {
+    "id": "MIYAGI-51026889aab8bb61",
+    "date": "2026-10-27",
+    "prefecture": "宮城県",
+    "municipality": "白石市",
+    "locationText": "白石市 福岡八宮字不忘山",
+    "category": "目撃",
+    "description": "時刻：08:27 / 頭数：１頭 / 宮城県一覧番号：1409",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.047052,
+    "longitude": 140.515372
+  },
+  {
     "id": "MIYAGI-286f6c370e110ad1",
     "date": "2026-10-26",
     "prefecture": "宮城県",
@@ -40,6 +54,20 @@
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
     "latitude": 38.374405,
     "longitude": 140.859461
+  },
+  {
+    "id": "MIYAGI-28910209f2a638b1",
+    "date": "2026-10-24",
+    "prefecture": "宮城県",
+    "municipality": "名取市",
+    "locationText": "名取市 相互台東一丁目",
+    "category": "目撃",
+    "description": "時刻：14:00 / 頭数：１頭 / 宮城県一覧番号：1410",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.20868,
+    "longitude": 140.817904
   },
   {
     "id": "MIYAGI-fd6300041e1280ae",
