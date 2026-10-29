@@ -1,5 +1,33 @@
 [
   {
+    "id": "MIYAGI-6947fa7d2da45771",
+    "date": "2026-10-28",
+    "prefecture": "宮城県",
+    "municipality": "登米市",
+    "locationText": "登米市 迫町北方地内(永田行政区)",
+    "category": "目撃",
+    "description": "時刻：14:50 / 頭数：１頭 / 宮城県一覧番号：1412",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.692461,
+    "longitude": 141.170653
+  },
+  {
+    "id": "MIYAGI-593173431728f153",
+    "date": "2026-10-27",
+    "prefecture": "宮城県",
+    "municipality": "利府町",
+    "locationText": "利府町 春日字芦ノ口地内",
+    "category": "目撃",
+    "description": "時刻：21:10 / 頭数：１頭 / 宮城県一覧番号：1411",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.347346,
+    "longitude": 141.0025
+  },
+  {
     "id": "MIYAGI-51026889aab8bb61",
     "date": "2026-10-27",
     "prefecture": "宮城県",
