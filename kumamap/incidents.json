@@ -1,5 +1,33 @@
 [
   {
+    "id": "MIYAGI-2a0ee4ef57f15a35",
+    "date": "2026-10-31",
+    "prefecture": "宮城県",
+    "municipality": "南三陸町",
+    "locationText": "南三陸町 志津川字沼田",
+    "category": "目撃",
+    "description": "時刻：16:25 / 頭数：１頭 / 宮城県一覧番号：1415",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.682451,
+    "longitude": 141.46328
+  },
+  {
+    "id": "MIYAGI-7d3ae5ec3fb36beb",
+    "date": "2026-10-30",
+    "prefecture": "宮城県",
+    "municipality": "利府町",
+    "locationText": "利府町 沢乙字北橋",
+    "category": "目撃",
+    "description": "時刻：22:10 / 頭数：１頭 / 宮城県一覧番号：1414",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.332292,
+    "longitude": 140.972281
+  },
+  {
     "id": "SENDAI-68c52798747e0f22",
     "date": "2026-10-29",
     "prefecture": "宮城県",
