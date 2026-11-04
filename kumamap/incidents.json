@@ -1,5 +1,19 @@
 [
   {
+    "id": "SENDAI-c8c2d382a025a678",
+    "date": "2026-11-04",
+    "prefecture": "宮城県",
+    "municipality": "仙台市太白区",
+    "locationText": "太白区茂庭字原",
+    "category": "目撃",
+    "description": "頭数・体長：1頭・体長100cm以上",
+    "riskLevel": "中",
+    "sourceName": "仙台市",
+    "sourceUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
+    "latitude": 38.2141156617,
+    "longitude": 140.781858432744
+  },
+  {
     "id": "MIYAGI-2a0ee4ef57f15a35",
     "date": "2026-10-31",
     "prefecture": "宮城県",
@@ -9548,11 +9562,11 @@
     "longitude": 140.817542095866
   },
   {
-    "id": "SENDAI-a100085f779601da",
+    "id": "SENDAI-894368d49fb8a0f0",
     "date": "2026-06-20",
     "prefecture": "宮城県",
     "municipality": "仙台市青葉区",
-    "locationText": "宮城県仙台市青葉区上愛子字松原",
+    "locationText": "青葉区上愛子字松原",
     "category": "目撃",
     "description": "頭数・体長：頭数・体長ともに不明",
     "riskLevel": "中",
