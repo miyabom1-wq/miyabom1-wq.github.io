@@ -9,6 +9,7 @@ import json
 import math
 import re
 import sys
+import time
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -58,21 +59,47 @@ SENDAI_WARDS = (
 )
 
 
-def fetch_bytes(url: str) -> bytes:
-    request = urllib.request.Request(
-        url,
-        headers={
-            "User-Agent": USER_AGENT,
-            "Accept": "*/*",
-            "Cache-Control": "no-cache",
-        },
-    )
+def fetch_bytes(
+    url: str,
+    attempts: int = 3,
+    timeout: int = 25,
+) -> bytes:
+    last_error: Exception | None = None
 
-    with urllib.request.urlopen(
-        request,
-        timeout=60,
-    ) as response:
-        return response.read()
+    for attempt in range(1, attempts + 1):
+        request = urllib.request.Request(
+            url,
+            headers={
+                "User-Agent": USER_AGENT,
+                "Accept": "*/*",
+                "Cache-Control": "no-cache",
+            },
+        )
+
+        try:
+            with urllib.request.urlopen(
+                request,
+                timeout=timeout,
+            ) as response:
+                return response.read()
+        except Exception as error:
+            last_error = error
+
+            if attempt >= attempts:
+                break
+
+            wait_seconds = 2 * attempt
+            print(
+                f"取得失敗 {attempt}/{attempts}: "
+                f"{url} / {error} / "
+                f"{wait_seconds}秒後に再試行"
+            )
+            time.sleep(wait_seconds)
+
+    raise RuntimeError(
+        f"取得失敗（{attempts}回試行）: "
+        f"{url} / {last_error}"
+    )
 
 
 def decode_text(raw: bytes) -> str:
@@ -123,7 +150,11 @@ def find_column(
 def discover_sendai_csv_url() -> str:
     try:
         page_html = decode_text(
-            fetch_bytes(SENDAI_DETAIL_PAGE_URL)
+            fetch_bytes(
+                SENDAI_DETAIL_PAGE_URL,
+                attempts=1,
+                timeout=15,
+            )
         )
     except Exception as error:
         print(
@@ -1849,6 +1880,50 @@ def write_json(
 
 
 
+def load_previous_sendai_incidents() -> list[dict[str, object]]:
+    if not OUTPUT_JSON.exists():
+        return []
+
+    try:
+        value = json.loads(
+            OUTPUT_JSON.read_text(encoding="utf-8")
+        )
+    except Exception:
+        return []
+
+    if not isinstance(value, list):
+        return []
+
+    preserved: list[dict[str, object]] = []
+
+    for item in value:
+        if not isinstance(item, dict):
+            continue
+
+        source_name = str(
+            item.get("sourceName", "")
+        )
+
+        if "仙台市" not in source_name:
+            continue
+
+        latitude = item.get("latitude")
+        longitude = item.get("longitude")
+
+        if not isinstance(
+            latitude,
+            (int, float),
+        ) or not isinstance(
+            longitude,
+            (int, float),
+        ):
+            continue
+
+        preserved.append(item)
+
+    return preserved
+
+
 def load_previous_miyagi_incidents() -> list[dict[str, object]]:
     if not OUTPUT_JSON.exists():
         return []
@@ -1894,35 +1969,28 @@ def load_previous_miyagi_incidents() -> list[dict[str, object]]:
 
 
 def main() -> int:
-    sendai_csv_url = discover_sendai_csv_url()
-    print(f"仙台市CSV取得先: {sendai_csv_url}")
-
-    sendai_raw = fetch_bytes(sendai_csv_url)
-    sendai_rows = parse_sendai_rows(
-        decode_text(sendai_raw)
-    )
-    sendai_incidents = build_sendai_incidents(
-        sendai_rows
-    )
-
-    if not sendai_incidents:
-        raise RuntimeError(
-            "仙台市データが0件のため、"
-            "既存JSONを更新しません。"
-        )
-
     updated_at = (
         datetime.now(timezone.utc)
         .isoformat(timespec="seconds")
         .replace("+00:00", "Z")
     )
+
+    previous_sendai_incidents = (
+        load_previous_sendai_incidents()
+    )
     previous_miyagi_incidents = (
         load_previous_miyagi_incidents()
     )
 
+    sendai_csv_url = SENDAI_FALLBACK_CSV_URL
+    sendai_incidents: list[dict[str, object]] = []
+
     diagnostics: dict[str, object] = {
         "updatedAt": updated_at,
-        "sendaiCitySourceCount": len(sendai_incidents),
+        "sendaiStatus": "未取得",
+        "sendaiPreservedCount": 0,
+        "sendaiErrors": [],
+        "sendaiCitySourceCount": 0,
         "miyagiPageUrl": MIYAGI_SOURCE_PAGE_URL,
         "miyagiStatus": "未取得",
         "miyagiMapId": "",
@@ -1930,6 +1998,82 @@ def main() -> int:
         "miyagiExcelUrl": "",
         "miyagiErrors": [],
     }
+
+    try:
+        sendai_csv_url = discover_sendai_csv_url()
+        print(f"仙台市CSV取得先: {sendai_csv_url}")
+
+        sendai_raw = fetch_bytes(
+            sendai_csv_url,
+            attempts=3,
+            timeout=25,
+        )
+        sendai_rows = parse_sendai_rows(
+            decode_text(sendai_raw)
+        )
+        sendai_incidents = build_sendai_incidents(
+            sendai_rows
+        )
+
+        if len(sendai_incidents) < 50:
+            raise RuntimeError(
+                "仙台市データの件数が異常に少ないため、"
+                "前回データを保持します。"
+            )
+
+        if (
+            len(previous_sendai_incidents) >= 100
+            and len(sendai_incidents)
+            < len(previous_sendai_incidents) * 0.65
+        ):
+            raise RuntimeError(
+                "仙台市データが前回から大幅に減少したため、"
+                "前回データを保持します。"
+            )
+
+        diagnostics["sendaiStatus"] = "取得成功"
+        diagnostics["sendaiCitySourceCount"] = len(
+            sendai_incidents
+        )
+    except Exception as error:
+        errors = list(
+            diagnostics.get("sendaiErrors", [])
+        )
+        errors.append(str(error))
+        diagnostics["sendaiErrors"] = errors
+
+        if previous_sendai_incidents:
+            diagnostics["sendaiStatus"] = (
+                "前回データ保持"
+            )
+            diagnostics["sendaiPreservedCount"] = (
+                len(previous_sendai_incidents)
+            )
+            diagnostics["sendaiCitySourceCount"] = (
+                len(previous_sendai_incidents)
+            )
+            sendai_incidents = (
+                previous_sendai_incidents
+            )
+            print(
+                "仙台市データ取得に失敗したため、"
+                f"前回の仙台市データ"
+                f"{len(previous_sendai_incidents)}件を保持して"
+                "宮城県データの更新を続行します: "
+                f"{error}"
+            )
+        else:
+            diagnostics["sendaiStatus"] = "取得失敗"
+            diagnostics["sendaiPreservedCount"] = 0
+            diagnostics["sendaiCitySourceCount"] = 0
+            sendai_incidents = []
+            print(
+                "仙台市データ取得に失敗しました。"
+                "保持可能な前回データはありませんが、"
+                "宮城県データの更新を続行します: "
+                f"{error}"
+            )
+
     miyagi_incidents: list[dict[str, object]] = []
 
     try:
@@ -2044,6 +2188,13 @@ def main() -> int:
                 f"{error}"
             )
 
+    if not sendai_incidents and not miyagi_incidents:
+        raise RuntimeError(
+            "仙台市・宮城県とも取得できず、"
+            "保持可能な前回データもありません。"
+            "既存JSONは更新しません。"
+        )
+
     (
         incidents,
         miyagi_added_count,
@@ -2102,6 +2253,14 @@ def main() -> int:
         "sendaiCitySourceCount": len(
             sendai_incidents
         ),
+        "sendaiStatus": diagnostics.get(
+            "sendaiStatus",
+            "未取得",
+        ),
+        "sendaiPreservedCount": diagnostics.get(
+            "sendaiPreservedCount",
+            0,
+        ),
         "miyagiExcelCount": diagnostics.get(
             "miyagiExcelCount",
             0,
@@ -2137,8 +2296,10 @@ def main() -> int:
 
     print(
         "更新完了: "
-        f"仙台市公式 {len(sendai_incidents)}件 / "
-        f"宮城県照合 {len(miyagi_incidents)}件 / "
+        f"仙台市 {len(sendai_incidents)}件 "
+        f"({diagnostics.get('sendaiStatus', '未取得')}) / "
+        f"宮城県照合 {len(miyagi_incidents)}件 "
+        f"({diagnostics.get('miyagiStatus', '未取得')}) / "
         f"仙台市重複除外 "
         f"{sendai_duplicate_count}件 / "
         f"宮城県全域 最終 "
