@@ -1,17 +1,17 @@
 {
-  "updatedAt": "2026-11-15T18:48:15Z",
-  "count": 1431,
+  "updatedAt": "2026-11-16T06:21:45Z",
+  "count": 1436,
   "coverage": "宮城県全域",
   "sourceName": "宮城県・仙台市",
   "municipalityCount": 34,
-  "sendaiAreaCount": 386,
-  "otherAreaCount": 1045,
+  "sendaiAreaCount": 387,
+  "otherAreaCount": 1049,
   "sendaiCitySourceCount": 312,
   "sendaiStatus": "前回データ保持",
   "sendaiPreservedCount": 312,
-  "miyagiExcelCount": 1426,
-  "miyagiMatchedPointCount": 1388,
-  "miyagiAddedCount": 1119,
+  "miyagiExcelCount": 1431,
+  "miyagiMatchedPointCount": 1393,
+  "miyagiAddedCount": 1124,
   "sendaiDuplicateCount": 269,
   "miyagiStatus": "取得成功",
   "miyagiPreservedCount": 0,
@@ -19,5 +19,5 @@
   "sourcePageUrl": "https://www.city.sendai.jp/joho-kikaku/shise/security/kokai/opendeta_r08kumashutubotu.html",
   "miyagiSourcePageUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
   "miyagiKmlUrl": "https://www.google.com/maps/d/kml?mid=12_b92SRipXWwvkUfNCsDdEUWhEOmzUc&forcekml=1",
-  "miyagiExcelUrl": "https://www.pref.miyagi.jp/documents/64667/koukaiyou_20261113.xlsx"
+  "miyagiExcelUrl": "https://www.pref.miyagi.jp/documents/64667/koukaiyou_20261116.xlsx"
 }
