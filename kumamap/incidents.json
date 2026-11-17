@@ -1,5 +1,19 @@
 [
   {
+    "id": "MIYAGI-02244d28aa2e201d",
+    "date": "2026-11-15",
+    "prefecture": "宮城県",
+    "municipality": "富谷市",
+    "locationText": "富谷市 石積堂ケ沢地区",
+    "category": "目撃",
+    "description": "時刻：16:20 / 頭数：複数頭 / 宮城県一覧番号：1441",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.357937,
+    "longitude": 140.918863
+  },
+  {
     "id": "MIYAGI-ebdda9fd4cad142c",
     "date": "2026-11-13",
     "prefecture": "宮城県",
