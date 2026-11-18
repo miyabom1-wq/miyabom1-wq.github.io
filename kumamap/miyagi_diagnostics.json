@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T07:21:46Z",
+  "updatedAt": "2026-11-18T20:27:38Z",
   "sendaiStatus": "前回データ保持",
   "sendaiPreservedCount": 312,
   "sendaiErrors": [
@@ -10,10 +10,10 @@
   "miyagiStatus": "取得成功",
   "miyagiMapId": "12_b92SRipXWwvkUfNCsDdEUWhEOmzUc",
   "miyagiKmlUrl": "https://www.google.com/maps/d/kml?mid=12_b92SRipXWwvkUfNCsDdEUWhEOmzUc&forcekml=1",
-  "miyagiExcelUrl": "https://www.pref.miyagi.jp/documents/64667/koukaiyou_20261117.xlsx",
+  "miyagiExcelUrl": "https://www.pref.miyagi.jp/documents/64667/koukaiyou_20261118.xlsx",
   "miyagiErrors": [],
   "xlsxDiagnostics": {
-    "xlsxByteCount": 192215,
+    "xlsxByteCount": 192682,
     "sheetCount": 3,
     "selectedSheetName": "公表用シート（報告順）",
     "selectedHeaderRowIndex": 3,
@@ -29,7 +29,7 @@
       "痕跡コンセキ",
       "市街地判定"
     ],
-    "miyagiRowCount": 1432,
+    "miyagiRowCount": 1436,
     "miyagiSampleRows": [
       {
         "serial": "1",
@@ -235,11 +235,11 @@
     "candidateSheets": [
       {
         "sheetName": "公表用シート（報告順）",
-        "miyagiRowCount": 1432
+        "miyagiRowCount": 1436
       },
       {
         "sheetName": "公表用シート（目撃順）",
-        "miyagiRowCount": 1432
+        "miyagiRowCount": 1436
       }
     ]
   },
@@ -433,8 +433,8 @@
     ]
   },
   "joinDiagnostics": {
-    "xlsxMiyagiCount": 1432,
-    "matchedPointCount": 1394,
+    "xlsxMiyagiCount": 1436,
+    "matchedPointCount": 1398,
     "unmatchedPointCount": 38,
     "dateMismatchCount": 61,
     "unmatchedSamples": [
@@ -740,14 +740,14 @@
       }
     ]
   },
-  "miyagiExcelCount": 1432,
+  "miyagiExcelCount": 1436,
   "miyagiMunicipalityCount": 34,
-  "miyagiMatchedPointCount": 1394,
-  "miyagiJoinedCount": 1394,
-  "miyagiAddedCount": 1125,
+  "miyagiMatchedPointCount": 1398,
+  "miyagiJoinedCount": 1398,
+  "miyagiAddedCount": 1129,
   "sendaiDuplicateCount": 269,
-  "finalCount": 1437,
+  "finalCount": 1441,
   "municipalityCount": 34,
-  "sendaiAreaCount": 387,
+  "sendaiAreaCount": 391,
   "otherAreaCount": 1050
 }
