@@ -1,5 +1,33 @@
 [
   {
+    "id": "MIYAGI-f90205b4082e395e",
+    "date": "2026-11-17",
+    "prefecture": "宮城県",
+    "municipality": "大郷町",
+    "locationText": "大郷町 東成田字新道",
+    "category": "目撃",
+    "description": "時刻：19:00 / 頭数：１頭 / 宮城県一覧番号：1446",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.397013,
+    "longitude": 140.988343
+  },
+  {
+    "id": "MIYAGI-6664ce778d40f0d2",
+    "date": "2026-11-17",
+    "prefecture": "宮城県",
+    "municipality": "気仙沼市",
+    "locationText": "気仙沼市 本吉町長根",
+    "category": "目撃",
+    "description": "時刻：20:00 / 頭数：１頭 / 宮城県一覧番号：1447",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.823019,
+    "longitude": 141.567566
+  },
+  {
     "id": "MIYAGI-f7962ca6b3d9f2e1",
     "date": "2026-11-16",
     "prefecture": "宮城県",
