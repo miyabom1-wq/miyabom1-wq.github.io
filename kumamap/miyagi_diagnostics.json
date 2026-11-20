@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-19T20:30:59Z",
+  "updatedAt": "2026-11-20T07:09:11Z",
   "sendaiStatus": "前回データ保持",
   "sendaiPreservedCount": 312,
   "sendaiErrors": [
@@ -10,10 +10,10 @@
   "miyagiStatus": "取得成功",
   "miyagiMapId": "12_b92SRipXWwvkUfNCsDdEUWhEOmzUc",
   "miyagiKmlUrl": "https://www.google.com/maps/d/kml?mid=12_b92SRipXWwvkUfNCsDdEUWhEOmzUc&forcekml=1",
-  "miyagiExcelUrl": "https://www.pref.miyagi.jp/documents/64667/koukaiyou_20261119.xlsx",
+  "miyagiExcelUrl": "https://www.pref.miyagi.jp/documents/64667/koukaiyou_20261120.xlsx",
   "miyagiErrors": [],
   "xlsxDiagnostics": {
-    "xlsxByteCount": 192872,
+    "xlsxByteCount": 192784,
     "sheetCount": 3,
     "selectedSheetName": "公表用シート（報告順）",
     "selectedHeaderRowIndex": 3,
