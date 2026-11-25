@@ -1,5 +1,33 @@
 [
   {
+    "id": "MIYAGI-cb487de7c40c0519",
+    "date": "2026-11-24",
+    "prefecture": "宮城県",
+    "municipality": "東松島市",
+    "locationText": "東松島市 野蒜字後沢",
+    "category": "目撃",
+    "description": "時刻：14:40 / 頭数：１頭 / 宮城県一覧番号：1453",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.382523,
+    "longitude": 141.154866
+  },
+  {
+    "id": "MIYAGI-2a8ff449f60ff1fc",
+    "date": "2026-11-24",
+    "prefecture": "宮城県",
+    "municipality": "富谷市",
+    "locationText": "富谷市 大清水一丁目 付近",
+    "category": "目撃",
+    "description": "時刻：15:41 / 頭数：１頭 / 宮城県一覧番号：1454",
+    "riskLevel": "中",
+    "sourceName": "宮城県",
+    "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
+    "latitude": 38.369067,
+    "longitude": 140.875089
+  },
+  {
     "id": "MIYAGI-e409277bb7d2c5e1",
     "date": "2026-11-23",
     "prefecture": "宮城県",
