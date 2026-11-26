@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T08:10:28Z",
+  "updatedAt": "2026-11-26T21:27:33Z",
   "sendaiStatus": "前回データ保持",
   "sendaiPreservedCount": 312,
   "sendaiErrors": [
@@ -244,10 +244,10 @@
     ]
   },
   "kmlDiagnostics": {
-    "placemarkCount": 1408,
-    "pointPlacemarkCount": 1408,
-    "serialPointCount": 1408,
-    "uniqueSerialCount": 1408,
+    "placemarkCount": 1417,
+    "pointPlacemarkCount": 1417,
+    "serialPointCount": 1417,
+    "uniqueSerialCount": 1417,
     "duplicateSerialCount": 0,
     "pointSamples": [
       {

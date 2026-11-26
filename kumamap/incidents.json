@@ -70,7 +70,7 @@
     "longitude": 140.8635645
   },
   {
-    "id": "MIYAGI-c17851f7998e33cb",
+    "id": "MIYAGI-720233eaefe4b850",
     "date": "2026-11-21",
     "prefecture": "宮城県",
     "municipality": "柴田町",
@@ -80,11 +80,11 @@
     "riskLevel": "中",
     "sourceName": "宮城県",
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
-    "latitude": 38.06117,
-    "longitude": 140.46536
+    "latitude": 38.103339,
+    "longitude": 140.781918
   },
   {
-    "id": "MIYAGI-b246a3ad2527f478",
+    "id": "MIYAGI-90638ab1abed59f9",
     "date": "2026-11-19",
     "prefecture": "宮城県",
     "municipality": "柴田町",
@@ -94,8 +94,8 @@
     "riskLevel": "中",
     "sourceName": "宮城県",
     "sourceUrl": "https://www.pref.miyagi.jp/soshiki/sizenhogo/r8kumamokugeki.html",
-    "latitude": 38.05323,
-    "longitude": 140.46101
+    "latitude": 38.091918,
+    "longitude": 140.770378
   },
   {
     "id": "MIYAGI-f90205b4082e395e",
